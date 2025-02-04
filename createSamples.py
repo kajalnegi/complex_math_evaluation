@@ -3,6 +3,7 @@
 
 import os
 import re
+import errno
 import random
 import math
 import json
@@ -89,12 +90,12 @@ def create_alternate_question(q, n=1):
 def main(input_file, output_filepath):
     isExist = os.path.exists(input_file)
     if not isExist:
-        error = "FileNotFoundError: unable to find file" + input_file
-        raise(error)
+        raise FileNotFoundError(
+            errno.ENOENT, os.strerror(errno.ENOENT), input_file)
     isExist = os.path.exists(output_filepath)
     if not isExist:    
-        error = "FileNotFoundError: unable to find file" + output_filepath
-        raise(error)
+        raise NotADirectoryError(
+            errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
     output_filepath = os.path.join(output_filepath, "output.csv")  
     try: 
         with open(input_file, 'r') as f:

@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
+import os
+import errno
 import transformers
 import torch
 import pandas as pd
@@ -173,14 +174,13 @@ def new_query_model(problem_text: str):
 def main(input_file, output_filepath):
     isExist = os.path.exists(input_file)
     if not isExist:
-        error = "FileNotFoundError: unable to find file" + input_file
-        raise(error)
+        raise FileNotFoundError(
+            errno.ENOENT, os.strerror(errno.ENOENT), input_file)
     isExist = os.path.exists(output_filepath)
     if not isExist:    
-        error = "FileNotFoundError: unable to find file" + output_filepath
-        raise(error)
+        raise NotADirectoryError(
+            errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
     output_filepath = os.path.join(output_filepath, "output.csv")
-    
     try: 
         df = pd.read_csv(input_file)
         print("Generating new questions \n")
@@ -214,6 +214,6 @@ def load_args():
 if __name__ == '__main__':
     args = load_args()
     main(
-        args['input_file'],
+        args['input_filepath'],
         args['output_directory'],
     )
