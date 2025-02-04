@@ -92,13 +92,10 @@ def main(input_file, output_filepath):
         error = "FileNotFoundError: unable to find file" + input_file
         raise(error)
     isExist = os.path.exists(output_filepath)
-    if not isExist:
-        dir_path = "/".join(output_filepath.split('/')[:-2])
-        isExist = os.path.exists(dir_path)
-        isExist = os.path.exists(dir_path) 
+    if not isExist:    
         error = "FileNotFoundError: unable to find file" + output_filepath
         raise(error)
-    
+    output_filepath = os.path.join(output_filepath, "output.csv")  
     try: 
         with open(input_file, 'r') as f:
             df = pd.DataFrame([json.loads(l) for l in f.readlines()])
@@ -113,8 +110,8 @@ def load_args():
     parser = argparse.ArgumentParser(description="Optimized implementation of SaGe method")
     parser.add_argument("--input_filepath", required=True,
                         help="input filepath with the question")
-    parser.add_argument("--output_filepath", required=True,
-                        help="output filepath for local output dump")
+    parser.add_argument("--output_directory", required=True,
+                        help="output directory for local output dump")
 
     return vars(parser.parse_args())
 
@@ -122,6 +119,6 @@ if __name__ == '__main__':
     args = load_args()
     main(
         args['input_file'],
-        args['output_filepath'],
+        args['output_directory'],
     )
 

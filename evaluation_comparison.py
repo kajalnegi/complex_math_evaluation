@@ -1,31 +1,23 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import transformers
 import torch
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-# In[2]:
-
-
 #model_id = "meta-llama/Llama-2-7b-chat-hf"
 #model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
 model_id = "mistralai/Mistral-Nemo-Instruct-2407"
-# In[3]:
-
+model_id = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
-#model = AutoModelForCausalLM.from_pretrained(model_id, load_in_8bit=True, device_map="auto") #load_in_8bit and device_map are optional but recommended for larger models
+
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="auto")
-
-# In[ ]:
 
 
 def create_math_prompt(problem_text: str) -> str:
@@ -139,19 +131,17 @@ def create_example_trick_prompt(problem_text: str) -> str:
 def query_model(problem_text: str):
     try:
         prompt = create_math_prompt(problem_text)
-        #"""
-        response = generate_text(prompt, #temperature=0.9, 
-                                    #top_k=1, 
-                                    #top_p=0.9,
+        
+        response = generate_text(prompt, 
                                     max_length=2000, 
                                     num_return_sequences=1,
                                     truncation=True
                                     )
-        #"""
+        
         for t in response[0]['generated_text']:
             if t['role'] == 'assistant':
                 return t['content'].strip()
-        return response[0]['generated_text']#[0]#.strip()#model_generate(prompt)#
+        return response[0]['generated_text']
     except Exception as inst:
         print(type(inst))    # the exception type
 
@@ -163,19 +153,15 @@ def query_model(problem_text: str):
 def new_query_model(problem_text: str):
     try:
         prompt = create_example_trick_prompt(problem_text)
-        #""" 
-        response = generate_text(prompt, #temperature=0.9, 
-                                    #top_k=1, 
-                                    #top_p=0.9,
+        response = generate_text(prompt, 
                                     max_length=2000, 
                                     num_return_sequences=1,
                                     truncation=True
                                     )
-        #"""
         for t in response[0]['generated_text']:
             if t['role'] == 'assistant':
                 return t['content'].strip()
-        return response[0]['generated_text']#[0]#.strip()#model_generate(prompt)#response[0]['generated_text'].strip()
+        return response[0]['generated_text']
     except Exception as inst:
         print(type(inst))    # the exception type
 
@@ -183,44 +169,51 @@ def new_query_model(problem_text: str):
 
         print(inst)
         return pd.NA
+        
+def main(input_file, output_filepath):
+    isExist = os.path.exists(input_file)
+    if not isExist:
+        error = "FileNotFoundError: unable to find file" + input_file
+        raise(error)
+    isExist = os.path.exists(output_filepath)
+    if not isExist:    
+        error = "FileNotFoundError: unable to find file" + output_filepath
+        raise(error)
+    output_filepath = os.path.join(output_filepath, "output.csv")
+    
+    try: 
+        df = pd.read_csv(input_file)
+        print("Generating new questions \n")
+        df['new_question'] = df['question'].apply(create_alternate_question)
+        print("Dumping the output file \n")
+        df.to_csv(output_filepath, index=False)
+        df['new_question'] = df['new_question'].fillna(df['question'])
+        #my_list = [0,2,4]#8, 19, 70, 53, 1317, 1312, 1316]
+        #df = df[df.index.isin(my_list)]
+        df['question_response'] = df['question'].apply(query_model)
+
+        df.to_csv(output_filepath, index=False)
+
+        df['new_question_response'] = df['new_question'].apply(query_model)
+
+        df.to_csv(output_filepath, index=False)
+    except Exception as e:
+        print(e)    
+        
+
+def load_args():
+    parser = argparse.ArgumentParser(description="Optimized implementation of SaGe method")
+    parser.add_argument("--input_filepath", required=True,
+                        help="input filepath with the question in csv format")
+    parser.add_argument("--output_directory", required=True,
+                        help="output directory for local output dump")
+
+    return vars(parser.parse_args())
 
 
-# In[ ]:
-df = pd.read_csv('./dataset/test_new_question.csv')
-
-#df = df.head(2)
-# In[ ]:
-
-df['new_question'] = df['new_question'].fillna(df['question'])
-#my_list = [0,2,4]#8, 19, 70, 53, 1317, 1312, 1316]
-#df = df[df.index.isin(my_list)]
-
-# In[ ]:
-
-#question_prompts = df['question'].apply(create_math_prompt)
-
-#print(list(question_prompts.values))
-df['question_response'] = df['question'].apply(query_model)
-
-
-file_name = './dataset/test_response_new_question_freshrun_2.csv'
-
-df.to_csv(file_name, index=False)
-
-# In[ ]:
-#new_question_prompts = df['question'].apply(create_math_trick_prompt)
-
-
-df['new_question_response'] = df['new_question'].apply(query_model)
-
-
-# In[ ]:
-
-
-df.to_csv(file_name, index=False)
-
-#from json import loads, dumps
-#parsed = loads(df.to_json(orient="records"))
-#with open("./dataset/test_response_new_question_new_prompt.json", "w") as f:
- #   f.write(dumps(parsed, indent=4))
-#f.close()
+if __name__ == '__main__':
+    args = load_args()
+    main(
+        args['input_file'],
+        args['output_directory'],
+    )
