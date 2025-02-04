@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-
+import os
 import re
 import random
 import math
@@ -118,7 +118,6 @@ def load_args():
 if __name__ == '__main__':
     args = load_args()
     main(
-        args['input_file'],
+        args['input_filepath'],
         args['output_directory'],
     )
-
