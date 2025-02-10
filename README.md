@@ -14,3 +14,12 @@ python evaluation_comparison.py --input_filepath <input_filepath> --output_direc
 
 input_filepath is .csv file with two columns "question", "new_question"
 
+<br>
+
+### To calculate accuracy from model output from evaluation_comparison.py
+
+
+python parsing_generated_output.py --input_filepath <input_filepath>
+
+
+<br> For extracting answer from "deepseek-ai/DeepSeek-R1-Distill-Llama-8B" use parsing_generated_output-deepseek.py
