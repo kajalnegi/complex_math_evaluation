@@ -93,7 +93,7 @@ def main(input_file):
 
 
 def load_args():
-    parser = argparse.ArgumentParser(description="Optimized implementation of SaGe method")
+    parser = argparse.ArgumentParser(description="Parsing output for GSM8K")
     parser.add_argument("--input_filepath", required=True,
                         help="input csv filepath with the columns, ['answer', 'question_response', 'new_question_response']")
     

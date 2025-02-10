@@ -183,10 +183,7 @@ def main(input_file, output_filepath):
     output_filepath = os.path.join(output_filepath, "output.csv")
     try: 
         df = pd.read_csv(input_file)
-        print("Generating new questions \n")
-        df['new_question'] = df['question'].apply(create_alternate_question)
-        print("Dumping the output file \n")
-        df.to_csv(output_filepath, index=False)
+        
         df['new_question'] = df['new_question'].fillna(df['question'])
         #my_list = [0,2,4]#8, 19, 70, 53, 1317, 1312, 1316]
         #df = df[df.index.isin(my_list)]
@@ -202,7 +199,7 @@ def main(input_file, output_filepath):
         
 
 def load_args():
-    parser = argparse.ArgumentParser(description="Optimized implementation of SaGe method")
+    parser = argparse.ArgumentParser(description="Generating answers for GSM8K")
     parser.add_argument("--input_filepath", required=True,
                         help="input filepath with the question in csv format")
     parser.add_argument("--output_directory", required=True,

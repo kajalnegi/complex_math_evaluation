@@ -108,7 +108,7 @@ def main(input_file, output_filepath):
         print(e)
     
 def load_args():
-    parser = argparse.ArgumentParser(description="Optimized implementation of SaGe method")
+    parser = argparse.ArgumentParser(description="Generating new questions from GSM8K")
     parser.add_argument("--input_filepath", required=True,
                         help="input filepath with the question")
     parser.add_argument("--output_directory", required=True,
