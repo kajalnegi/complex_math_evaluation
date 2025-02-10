@@ -3,23 +3,32 @@
 
 import os
 import errno
+import argparse
 import transformers
 import torch
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-#model_id = "meta-llama/Llama-2-7b-chat-hf"
-#model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
-model_id = "mistralai/Mistral-Nemo-Instruct-2407"
-model_id = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+def return_model(model_id):
+    #model_id = "meta-llama/Llama-2-7b-chat-hf"
+    #model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
-tokenizer = AutoTokenizer.from_pretrained(model_id)
+    #model_id = "mistralai/Mistral-Nemo-Instruct-2407"
+    #model_id = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-if tokenizer.pad_token is None:
-    tokenizer.pad_token = tokenizer.eos_token
-generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="auto")
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+        generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="auto")
+    except Exception as inst:
+        print(type(inst))    # the exception type
 
+        print(inst.args)     # arguments stored in .args
+
+        raise Exception("Check model_id")
+    return generate_text
 
 def create_math_prompt(problem_text: str) -> str:
     prompt = f"""
@@ -129,7 +138,7 @@ def create_example_trick_prompt(problem_text: str) -> str:
     """
     return [{"role": "user", "content": str(prompt)}]
 
-def query_model(problem_text: str):
+def query_model(problem_text: str, generate_text):
     try:
         prompt = create_math_prompt(problem_text)
         
@@ -151,7 +160,7 @@ def query_model(problem_text: str):
         print(inst)
         return pd.NA
 
-def new_query_model(problem_text: str):
+def new_query_model(problem_text: str, generate_text):
     try:
         prompt = create_example_trick_prompt(problem_text)
         response = generate_text(prompt, 
@@ -171,7 +180,7 @@ def new_query_model(problem_text: str):
         print(inst)
         return pd.NA
         
-def main(input_file, output_filepath):
+def main(input_file, output_filepath, model_id):
     isExist = os.path.exists(input_file)
     if not isExist:
         raise FileNotFoundError(
@@ -183,15 +192,16 @@ def main(input_file, output_filepath):
     output_filepath = os.path.join(output_filepath, "output.csv")
     try: 
         df = pd.read_csv(input_file)
-        
+        generate_text = return_model(model_id)
         df['new_question'] = df['new_question'].fillna(df['question'])
+        #df = df.head(2)
         #my_list = [0,2,4]#8, 19, 70, 53, 1317, 1312, 1316]
         #df = df[df.index.isin(my_list)]
-        df['question_response'] = df['question'].apply(query_model)
+        df['question_response'] = df['question'].apply(lambda x: query_model(x, generate_text))
 
         df.to_csv(output_filepath, index=False)
 
-        df['new_question_response'] = df['new_question'].apply(query_model)
+        df['new_question_response'] = df['new_question'].apply(lambda x: query_model(x, generate_text))
 
         df.to_csv(output_filepath, index=False)
     except Exception as e:
@@ -201,9 +211,11 @@ def main(input_file, output_filepath):
 def load_args():
     parser = argparse.ArgumentParser(description="Generating answers for GSM8K")
     parser.add_argument("--input_filepath", required=True,
-                        help="input filepath with the question in csv format")
+                        help="input filepath with the question in csv format with columns ['question', 'new_question']")
     parser.add_argument("--output_directory", required=True,
                         help="output directory for local output dump")
+    parser.add_argument("--model_id", required=True,
+                        help="model_id")
 
     return vars(parser.parse_args())
 
@@ -213,4 +225,5 @@ if __name__ == '__main__':
     main(
         args['input_filepath'],
         args['output_directory'],
+        args['model_id']
     )
