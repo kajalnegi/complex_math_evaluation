@@ -231,10 +231,24 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32):
         df = pd.read_csv(input_file)
         generate_text = return_model(model_id, model_type=model_type)
         df['new_question'] = df['new_question'].fillna(df['question'])
-        question_response = query_model(df['question'].to_list(), generate_text, model_type)
+        if model_type == "hf":
+            question_response = [
+                query_model(x, generate_text, model_type)
+                for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)
+            ]
+            question_response = [sample for batch in question_response for sample in batch]
+        elif model_type == "vllm":
+            question_response = query_model(df['question'].to_list(), generate_text, model_type)
         df['question_response'] = question_response
         df.to_csv(output_filepath, index=False)
-        new_question_response = new_query_model(df['new_question'].to_list(), generate_text, model_type)
+        if model_type == "hf":
+            new_question_response = [
+                new_query_model(x, generate_text, model_type)
+                for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)
+            ]
+            new_question_response = [sample for batch in new_question_response for sample in batch]
+        elif model_type == "vllm":
+            new_question_response = new_query_model(df['new_question'].to_list(), generate_text, model_type)
         df['new_question_response'] = new_question_response
         df.to_csv(output_filepath, index=False)
     except Exception as e:
