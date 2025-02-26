@@ -11,7 +11,7 @@ import pandas as pd
 import argparse
 
 
-# using $ as a proxy for replacing with any value
+# using $ as a proxy for replacing with any integer value
 math_exp = {1:["cos^2($) + sin^2($)", "sec^2($)-tan^2($)", "$/$", "0.5*2", "cosec^2($) - cot^2($)"], 
             'x':["LOG(EXPONENTIAL($))", "EXPONENTIAL(LOG($))"]
            }
