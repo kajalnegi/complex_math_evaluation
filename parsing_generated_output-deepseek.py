@@ -4,6 +4,7 @@
 import re
 import argparse
 import pandas as pd
+import json
 
 
 def extract_answer(data, column, new_column):
@@ -14,7 +15,7 @@ def extract_answer(data, column, new_column):
         split4 = row.split('**Answer:**')
         split5 = row.split('**')
         split6 = row.split('\nboxed{')
-        
+
         if len(split2)>1:
             if len(split2[1]) > len(split2[0]):
                 return split2[0].split('}')[0]
@@ -30,7 +31,7 @@ def extract_answer(data, column, new_column):
                 return split1[1]
             else:
                 return split1[0]
-        
+
         if len(split3)>1:
             if len(split3[1]) > len(split3[0]):
                 return split3[0]
@@ -48,8 +49,8 @@ def extract_answer(data, column, new_column):
                 return split5[1]
 
     data[new_column] = data[column].apply(find_answer)
-    
-    return data    
+
+    return data
 
 
 def clean_column(data, col):
@@ -59,8 +60,8 @@ def clean_column(data, col):
     data[col] = data[col].str.replace('\\', '')
     data[col] = data[col].str.strip()
     return data
-    
-def main(input_file): 
+
+def main(input_file):
     answer_column = 'answer'
     model_response_column = 'question_response'
     model_response_complex = 'new_question_response'
@@ -79,10 +80,12 @@ def main(input_file):
     print("No response extracted from column, ", 'numeric_answer_new_question_response')
     print(df[df['numeric_answer_new_question_response'].isnull()]['new_question_response'])
 
+    out_dict = {}
     df_ = df[['numeric_answer', 'numeric_answer_question_response']][df['numeric_answer']==df['numeric_answer_question_response']]
 
     print("Matched answers for ", df_.shape[0], "out of ", df.shape[0])
     acc = df_.shape[0]/df.shape[0]
+    out_dict['regular_acc'] = acc
 
     print("Accuracy on GSM8K question: ", round(acc, 4)*100)
 
@@ -90,17 +93,20 @@ def main(input_file):
     print("Matched answers for ", df_.shape[0], "out of ", df.shape[0])
     acc = df_.shape[0]/df.shape[0]
     print("Accuracy on complex GSM8K question: ", round(acc, 4)*100)
+    out_dict['complex_acc'] = acc
 
+    with open("/".join(input_file.split('/')[:-1] + ["results.csv"]), "w") as f:
+        f.write(json.dumps(out_dict))
 
 def load_args():
     parser = argparse.ArgumentParser(description="Parsing output for GSM8K")
     parser.add_argument("--input_filepath", required=True,
                         help="input csv filepath with the columns, ['answer', 'question_response', 'new_question_response']")
-    
+
     return vars(parser.parse_args())
 
 if __name__ == '__main__':
     args = load_args()
     main(
-        args['input_filepath'] 
+        args['input_filepath']
     )

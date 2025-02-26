@@ -157,10 +157,10 @@ def query_model(problem_text: str, generate_text, model_type="hf"):
 
         if model_type == 'hf':
             responses = generate_text(prompts,
-                                    max_length=2000,
-                                    num_return_sequences=1,
-                                    truncation=True
-                                    )
+                max_length=2000,
+                num_return_sequences=1,
+                truncation=True)
+
         elif model_type == 'vllm':
             responses = generate_text(prompts)
 
@@ -188,10 +188,10 @@ def new_query_model(problem_text: str, generate_text, model_type):
         prompts = create_example_trick_prompt(problem_text)
         if model_type == "hf":
             responses = generate_text(prompts,
-                                    max_length=2000,
-                                    num_return_sequences=1,
-                                    truncation=True
-                                    )
+                max_length=2000,
+                num_return_sequences=1,
+                truncation=True)
+
         elif model_type == "vllm":
             responses = generate_text(prompts)
 
@@ -234,8 +234,7 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32):
         if model_type == "hf":
             question_response = [
                 query_model(x, generate_text, model_type)
-                for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)
-            ]
+                for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
             question_response = [sample for batch in question_response for sample in batch]
         elif model_type == "vllm":
             question_response = query_model(df['question'].to_list(), generate_text, model_type)
@@ -244,8 +243,7 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32):
         if model_type == "hf":
             new_question_response = [
                 new_query_model(x, generate_text, model_type)
-                for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)
-            ]
+                for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
             new_question_response = [sample for batch in new_question_response for sample in batch]
         elif model_type == "vllm":
             new_question_response = new_query_model(df['new_question'].to_list(), generate_text, model_type)
