@@ -70,7 +70,7 @@ def create_math_trick_prompt(problem_texts: str) -> str:
     Also, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
     """ for problem_text in problem_texts]
-    return [{"role": "user", "content": str(prompt)} for prompt in prompts]
+    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
 
 def create_example_prompt(problem_texts: str) -> str:
     prompts = [f"""
@@ -109,7 +109,7 @@ def create_example_prompt(problem_texts: str) -> str:
     Always follow the format.
 
     """ for problem_text in problem_texts]
-    return [{"role": "user", "content": str(prompt)} for prompt in prompts]
+    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
 
 def create_example_trick_prompt(problem_texts: str) -> str:
 
@@ -219,11 +219,11 @@ def create_complex_example_trick_prompt(problem_texts: str) -> str:
     Also, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
     """ for problem_text in problem_texts]
-    return [{"role": "user", "content": str(prompt)} for prompt in prompts]
+    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
 
-def query_model(problem_text: str, generate_text, model_type):
+def query_model(problem_text: str, generate_text, model_type, prompt_func):
     try:
-        prompts = create_math_prompt(problem_text)
+        prompts = prompt_func(problem_text)
 
         if model_type == 'hf':
             responses = generate_text(prompts,
@@ -301,24 +301,29 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32):
         df = pd.read_csv(input_file)
         generate_text = return_model(model_id, model_type=model_type)
         df['new_question'] = df['new_question'].fillna(df['question'])
-        if model_type == "hf":
-            question_response = [
-                query_model(x, generate_text, model_type)
-                for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
-            question_response = [sample for batch in question_response for sample in batch]
-        elif model_type == "vllm":
-            question_response = query_model(df['question'].to_list(), generate_text, model_type)
-        df['question_response'] = question_response
-        df.to_csv(output_filepath, index=False)
-        if model_type == "hf":
-            new_question_response = [
-                new_query_model(x, generate_text, model_type)
-                for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
-            new_question_response = [sample for batch in new_question_response for sample in batch]
-        elif model_type == "vllm":
-            new_question_response = new_query_model(df['new_question'].to_list(), generate_text, model_type)
-        df['new_question_response'] = new_question_response
-        df.to_csv(output_filepath, index=False)
+        prompt_funcs = [
+            create_math_prompt, create_math_trick_prompt, create_example_prompt, create_example_trick_prompt, create_complex_example_trick_prompt
+        ]
+        prompt_funcs = {func.__name__.replace('create_', ""): func for func in prompt_funcs}
+        for col_name, prompt_func in prompt_funcs.items():
+            if model_type == "hf":
+                question_response = [
+                    query_model(x, generate_text, model_type, prompt_func)
+                    for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
+                question_response = [sample for batch in question_response for sample in batch]
+            elif model_type == "vllm":
+                question_response = query_model(df['question'].to_list(), generate_text, model_type, prompt_func)
+            df[col_name] = question_response
+            # df.to_csv(output_filepath, index=False)
+            # if model_type == "hf":
+            #     new_question_response = [
+            #             query_model(x, generate_text, model_type)
+            #             for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
+            #     new_question_response = [sample for batch in new_question_response for sample in batch]
+            # elif model_type == "vllm":
+            #     new_question_response = new_query_model(df['new_question'].to_list(), generate_text, model_type)
+            # df['new_question_response'] = new_question_response
+            # df.to_csv(output_filepath, index=False)
     except Exception as e:
         print(e)
 
