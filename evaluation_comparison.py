@@ -9,11 +9,8 @@ import torch
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-try:
-    from vllm import LLM, SamplingParams
-except:
-    LLM, SamplingParams = None, None
-    
+from vllm import LLM, SamplingParams
+
 class vllmPipeline:
     def __init__(self, model_id):
         self.llm = LLM(model_id)
@@ -33,7 +30,7 @@ def return_model(model_id, model_type="hf"):
 
             if tokenizer.pad_token is None:
                 tokenizer.pad_token = tokenizer.eos_token
-            generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="auto")
+            generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="cuda:4")
         elif model_type == "vllm":
             generate_text = vllmPipeline(model_id)
 
@@ -52,8 +49,8 @@ def create_math_prompt(problem_texts: list) -> list:
     {problem_text}
     Provide your solution in the following format:
     1. A step-by-step brief numeric calculations on how to arrive at the solution (No programming code)
-    2. Place the final numeric answer without any unit or sentence after #### 
-    
+    2. Place the final numeric answer without any unit or sentence after ####
+
     Remember, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
 
@@ -67,8 +64,8 @@ def create_math_trick_prompt(problem_texts: str) -> str:
     {problem_text}
     Provide your solution in the following format:
     1. A step-by-step brief numeric calculations on how to arrive at the solution (No programming code)
-    2. Place the final numeric answer without any unit or sentence after #### 
-    
+    2. Place the final numeric answer without any unit or sentence after ####
+
     Remember, this question contains mathematical identities and trivialities; therefore, resolve them before calculating the answer.
     Also, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
@@ -106,8 +103,8 @@ def create_example_prompt(problem_texts: str) -> str:
     {problem_text}
     Provide your solution in the following format:
     1. A step-by-step brief numeric calculations on how to arrive at the solution (No programming code)
-    2. Place the final numeric answer without any unit or sentence after #### 
-    
+    2. Place the final numeric answer without any unit or sentence after ####
+
     Remember, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
 
@@ -146,8 +143,8 @@ def create_example_trick_prompt(problem_texts: str) -> str:
     {problem_text}
     Provide your solution in the following format:
     1. A step-by-step brief numeric calculations on how to arrive at the solution (No programming code)
-    2. Place the final numeric answer without any unit or sentence after #### 
-    
+    2. Place the final numeric answer without any unit or sentence after ####
+
     Remember, this question contains mathematical identities and trivialities; therefore, resolve them before calculating the answer.
     Also, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
@@ -156,20 +153,18 @@ def create_example_trick_prompt(problem_texts: str) -> str:
 
 def query_model(problem_text: str, generate_text, model_type="hf"):
     try:
-        prompts = create_math_prompt(problem_text)    
-        # if model_type == "vllm":
-        #     prompts = [prompt['content'] for prompt in prompts]
-        
+        prompts = create_math_prompt(problem_text)
+
         if model_type == 'hf':
-            responses = generate_text(prompts, 
-                                    max_length=2000, 
+            responses = generate_text(prompts,
+                                    max_length=2000,
                                     num_return_sequences=1,
                                     truncation=True
                                     )
         elif model_type == 'vllm':
             responses = generate_text(prompts)
 
-        out = []        
+        out = []
         for response in responses:
             if model_type == "hf":
                 for t in response[0]['generated_text']:
@@ -192,8 +187,8 @@ def new_query_model(problem_text: str, generate_text, model_type):
     try:
         prompts = create_example_trick_prompt(problem_text)
         if model_type == "hf":
-            responses = generate_text(prompts, 
-                                    max_length=2000, 
+            responses = generate_text(prompts,
+                                    max_length=2000,
                                     num_return_sequences=1,
                                     truncation=True
                                     )
@@ -216,7 +211,7 @@ def new_query_model(problem_text: str, generate_text, model_type):
 
         print(inst)
         return pd.NA
-    
+
 # batched iter on list:
 def batched_iter(lst, batch_size):
     for i in range(0, len(lst), batch_size):
@@ -228,36 +223,32 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32):
         raise FileNotFoundError(
             errno.ENOENT, os.strerror(errno.ENOENT), input_file)
     isExist = os.path.exists(output_filepath)
-    if not isExist:    
+    if not isExist:
         raise NotADirectoryError(
             errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
     output_filepath = os.path.join(output_filepath, "output.csv")
-    # try: 
-    df = pd.read_csv(input_file)
-    df = df.iloc[:100, :]
-    generate_text = return_model(model_id, model_type=model_type)
-    df['new_question'] = df['new_question'].fillna(df['question'])
-    #df = df.head(2)
-    #my_list = [0,2,4]#8, 19, 70, 53, 1317, 1312, 1316]
-    #df = df[df.index.isin(my_list)]
-    # df['question_response'] = df['question'].apply(lambda x: query_model(x, generate_text))
-    question_response = [
-        query_model(x, generate_text, model_type)
-        for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)
-    ]
-    question_response = [sample for batch in question_response for sample in batch]
-    df['question_response'] = question_response
-    df.to_csv(output_filepath, index=False)
-    new_question_response = [
-        new_query_model(x, generate_text, model_type)
-        for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)
-    ]
-    new_question_response = [sample for batch in new_question_response for sample in batch]
-    df['new_question_response'] = new_question_response
-    df.to_csv(output_filepath, index=False)
-    # except Exception as e:
-    #     print(e)    
+    try:
+        df = pd.read_csv(input_file)
+        generate_text = return_model(model_id, model_type=model_type)
+        df['new_question'] = df['new_question'].fillna(df['question'])
         
+        question_response = [
+            query_model(x, generate_text, model_type)
+            for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)
+        ]
+        question_response = [sample for batch in question_response for sample in batch]
+        df['question_response'] = question_response
+        df.to_csv(output_filepath, index=False)
+        new_question_response = [
+            new_query_model(x, generate_text, model_type)
+            for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)
+        ]
+        new_question_response = [sample for batch in new_question_response for sample in batch]
+        df['new_question_response'] = new_question_response
+        df.to_csv(output_filepath, index=False)
+    except Exception as e:
+        print(e)
+
 
 def load_args():
     parser = argparse.ArgumentParser(description="Generating answers for GSM8K")
