@@ -17,42 +17,44 @@ def clean_column(data, col):
 
 def main(input_file): 
     answer_column = 'answer'
-    model_response_column = 'question_response'
-    model_response_complex = 'new_question_response'
-    df = pd.read_csv(input_file)
-    df[['calculation','numeric_answer']] = df[answer_column].str.rsplit('####', n=1, expand=True)
-
-    df[['calculation_question_response', 'numeric_answer_question_response']] = df[model_response_column].str.rsplit('####', n=1, expand=True)
-
-    df[['calculation_new_question_response', 'numeric_answer_new_question_response']] = df[model_response_complex].str.rsplit('####', n=1, expand=True)
-
-
-    df = clean_column(df, 'numeric_answer_question_response')
-
-
-    df = clean_column(df, 'numeric_answer')
-    df = clean_column(df, 'numeric_answer_new_question_response')
-
-    print("No response extracted from column, ", 'numeric_answer_question_response')
-    print(df[df['numeric_answer_question_response'].isnull()]['question_response'])
-    print("No response extracted from column, ", 'numeric_answer_new_question_response')
-    print(df[df['numeric_answer_new_question_response'].isnull()]['new_question_response'])
-
+    col_names = [
+        "math_prompt",
+        "math_trick_prompt",
+        "example_prompt",
+        "example_trick_prompt",
+        "complex_example_trick_prompt"
+    ]
     out_dict = {}
-    df_ = df[['numeric_answer', 'numeric_answer_question_response']][df['numeric_answer']==df['numeric_answer_question_response']]
+    for col_name in col_names:
+        out_dict[col_name] = {}
+        model_response_column = col_name
+        model_response_complex = f'new_question_{col_name}'
+        df = pd.read_csv(input_file)
+        df[['calculation','numeric_answer']] = df[answer_column].str.rsplit('####', n=1, expand=True)
+        df[['calculation_question_response', 'numeric_answer_question_response']] = df[model_response_column].str.rsplit('####', n=1, expand=True)
+        df[['calculation_new_question_response', 'numeric_answer_new_question_response']] = df[model_response_complex].str.rsplit('####', n=1, expand=True)
+        df = clean_column(df, 'numeric_answer_question_response')
+        df = clean_column(df, 'numeric_answer')
+        df = clean_column(df, 'numeric_answer_new_question_response')
+        print("No response extracted from column, ", 'numeric_answer_question_response')
+        print(df[df['numeric_answer_question_response'].isnull()][model_response_column])
+        print("No response extracted from column, ", 'numeric_answer_new_question_response')
+        print(df[df['numeric_answer_new_question_response'].isnull()][model_response_complex])
 
-    
-    print("Matched answers for ", df_.shape[0], "out of ", df.shape[0])
-    acc = df_.shape[0]/df.shape[0]
-    out_dict['regular_acc'] = acc
-    print("Accuracy on GSM8K question: ", round(acc,4)*100)
 
-    df_ = df[['numeric_answer', 'numeric_answer_new_question_response']][df['numeric_answer']==df['numeric_answer_new_question_response']]
-    print("Matched answers for ", df_.shape[0], "out of ", df.shape[0])
-    acc = df_.shape[0]/df.shape[0]
-    print("Accuracy on complex GSM8K question: ", round(acc,4)*100)
-    out_dict['complex_acc'] = acc
-    with open("/".join(input_file.split('/')[:-1] + ["results.csv"]), "w") as f:
+        df_ = df[['numeric_answer', 'numeric_answer_question_response']][df['numeric_answer']==df['numeric_answer_question_response']]
+
+        print("Matched answers for ", df_.shape[0], "out of ", df.shape[0])
+        acc = df_.shape[0]/df.shape[0]
+        out_dict[col_name]['regular_acc'] = acc
+        print("Accuracy on GSM8K question: ", round(acc,4)*100)
+
+        df_ = df[['numeric_answer', 'numeric_answer_new_question_response']][df['numeric_answer']==df['numeric_answer_new_question_response']]
+        print("Matched answers for ", df_.shape[0], "out of ", df.shape[0])
+        acc = df_.shape[0]/df.shape[0]
+        print("Accuracy on complex GSM8K question: ", round(acc,4)*100)
+        out_dict[col_name]['complex_acc'] = acc
+    with open("/".join(input_file.split('/')[:-1] + ["results.json"]), "w") as f:
         f.write(json.dumps(out_dict))
 
 def load_args():
