@@ -138,6 +138,76 @@ def create_example_trick_prompt(problem_text: str) -> str:
     """
     return [{"role": "user", "content": str(prompt)}]
 
+def create_complex_example_trick_prompt(problem_text: str) -> str:
+
+    prompt = f"""
+    Here are some mathematical questions along with their answers.
+    	Question 1: Natalia sold clips to LOG(EXPONENTIAL(48)) of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?
+
+    Answer 1:  
+    * Calculate LOG(EXPONENTIAL(48)):  Since the exponential function and the logarithm function are inverses of each other, LOG(EXPONENTIAL(48)) = 48.
+    * Calculate the number of clips sold in May: 48 / 2 = 24
+    * Calculate the total number of clips sold: 48 + 24 = 72
+
+	#### 72
+    Question 2: Weng earns $12 an hour for babysitting. Yesterday, she just did (50/(cos^2(2) + sin^2(2))) minutes of babysitting. How much did she earn?
+
+    Answer 2: "  
+		* cos^2(2) + sin^2(2) = 1 (Trigonometric Identity)
+		* 50 / (cos^2(2) + sin^2(2)) = 50 / 1 = 50 minutes
+		* Weng earns $12 per hour, and there are 60 minutes in an hour.
+		*  Earnings = (50 minutes / 60 minutes/hour) * $12/hour 
+		
+	 #### 10"
+
+    Question 3: Randy has (60.0*(0.5*2)) mango trees on his farm. He also has 5 less than half as many coconut trees as mango trees. How many trees does Randy have in all on his farm?
+    Answer 3: " 
+    * Calculate the number of mango trees: 60.0 * (0.5 * 2) = 60.0
+    * Calculate half the number of mango trees: 60.0 / 2 = 30.0
+    * Calculate the number of coconut trees: 30.0 - 5 = 25.0
+    * Calculate the total number of trees: 60.0 + 25.0 = 85.0
+
+	#### 85"
+
+    Question 4: A deep-sea monster rises from the waters once every hundred years to feast on a ship and sate its hunger. Over three hundred years, it has consumed (846+(7/7)) people. Ships have been built larger over time, so each new ship has twice as many people as the last ship. How many people were on the ship the monster ate in the first hundred years?
+
+    Answer 4: "  Calculate the total number of people eaten: 846 + (7 / 7) = 846 + 1 = 847 people
+	2.  Let 'x' be the number of people on the first ship.
+	3.  The second ship had 2*x people.
+	4.  The third ship had 2*(2*x) = 4*x people.
+	5.  The total number of people eaten is x + 2x + 4x = 847
+	6.  Combine like terms: 7x = 847
+	7.  Divide both sides by 7: x = 121
+
+	#### 121"
+
+    Question 5: Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read LOG(EXPONENTIAL(120)) pages?
+    Answer 5:   **Find Joy's reading rate:** 
+    * Joy reads 8 pages / 20 minutes = 0.4 pages per minute.
+
+    **Calculate the total number of pages:**
+    *  LOG(EXPONENTIAL(120)) = 120 (The logarithm and exponential functions cancel each other out)
+
+    **Calculate the total time in minutes:**
+    * 120 pages / 0.4 pages/minute = 300 minutes
+
+    **Convert minutes to hours:**
+    * 300 minutes / 60 minutes/hour = 5 hours
+
+	#### 5
+
+    Solve the following  mathematics problem:
+    {problem_text}
+    Provide your solution in the following format:
+    1. A step-by-step brief numeric calculations on how to arrive at the solution (No programming code)
+    2. Place the final numeric answer without any unit or sentence after #### 
+    
+    Remember, this question contains mathematical identities and trivialities; therefore, resolve them before calculating the answer.
+    Also, this is a high school level problem, so advanced mathematical concepts should not be used.
+    Always follow the format.
+    """
+    return [{"role": "user", "content": str(prompt)}]
+
 def query_model(problem_text: str, generate_text):
     try:
         prompt = create_math_prompt(problem_text)
