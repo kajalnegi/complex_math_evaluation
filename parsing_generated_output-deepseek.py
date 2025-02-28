@@ -54,6 +54,7 @@ def extract_answer(data, column, new_column):
 
 
 def clean_column(data, col):
+    data[col] = data[col].apply(lambda x: x.split('</think>')[-1] if isinstance(x, str) else x)
     data[col] = data[col].str.replace('$', '')
     data[col] = data[col].str.replace(',', '')
     data[col] = data[col].str.replace('}', '')
@@ -104,7 +105,8 @@ def main(input_file):
         print("Accuracy on complex GSM8K question: ", round(acc, 4)*100)
         out_dict[col_name]['complex_acc'] = acc
 
-    with open("/".join(input_file.split('/')[:-1] + ["results.json"]), "w") as f:
+    seed = input_file.split("/")[-1].split("_")[1].split(".")[0]
+    with open("/".join(input_file.split('/')[:-1] + [f"results_{seed}.json"]), "w") as f:
         f.write(json.dumps(out_dict))
 
 def load_args():

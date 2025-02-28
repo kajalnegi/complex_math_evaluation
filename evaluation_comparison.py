@@ -18,7 +18,7 @@ class vllmPipeline:
         self.sampling_params = SamplingParams(
             temperature=self.hf_generation_config.temperature,
             top_p=self.hf_generation_config.top_p,
-            max_tokens=2000,
+            max_tokens=3000,
             seed=seed
         )
         print("#################", self.sampling_params)
