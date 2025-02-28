@@ -7,27 +7,36 @@ import argparse
 import transformers
 import torch
 import pandas as pd
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, GenerationConfig, set_seed
 
 from vllm import LLM, SamplingParams
 
 class vllmPipeline:
-    def __init__(self, model_id, tp_size):
+    def __init__(self, model_id, tp_size, seed):
         self.llm = LLM(model_id, gpu_memory_utilization=0.9, max_model_len=4096, max_seq_len_to_capture=4096, tensor_parallel_size=tp_size)
-        self.sampling_params = SamplingParams(max_tokens=2000)
+        self.hf_generation_config = GenerationConfig.from_pretrained(model_id)
+        self.sampling_params = SamplingParams(
+            temperature=self.hf_generation_config.temperature,
+            top_p=self.hf_generation_config.top_p,
+            max_tokens=2000,
+            seed=seed
+        )
+        print("#################", self.sampling_params)
+        # self.sampling_params = SamplingParams(max_tokens=2000, temperature=temp, top_p=top_p)
     def __call__(self, prompt):
         return self.llm.chat(messages=prompt, sampling_params=self.sampling_params)
 
-def return_model(model_id, model_type="hf", tp_size=1):
+def return_model(model_id, model_type="hf", tp_size=1, seed=42):
     try:
         if model_type == "hf":
+            set_seed(seed)
             tokenizer = AutoTokenizer.from_pretrained(model_id)
 
             if tokenizer.pad_token is None:
                 tokenizer.pad_token = tokenizer.eos_token
             generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="cuda:4")
         elif model_type == "vllm":
-            generate_text = vllmPipeline(model_id, tp_size=tp_size)
+            generate_text = vllmPipeline(model_id, tp_size=tp_size, seed=seed)
 
     except Exception as inst:
         print(type(inst))    # the exception type
@@ -282,7 +291,7 @@ def batched_iter(lst, batch_size):
     for i in range(0, len(lst), batch_size):
         yield lst[i:i + batch_size]
 
-def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_size=1):
+def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_size=1, seed=42):
     isExist = os.path.exists(input_file)
     if not isExist:
         raise FileNotFoundError(
@@ -292,9 +301,11 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_si
         raise NotADirectoryError(
             errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
     output_filepath = os.path.join(output_filepath, "output.csv")
+    assert output_filepath.endswith(".csv")
+    output_filepath = output_filepath.replace('.csv', f'_{seed}.csv')
     try:
         df = pd.read_csv(input_file)
-        generate_text = return_model(model_id, model_type=model_type, tp_size=tp_size)
+        generate_text = return_model(model_id, model_type=model_type, tp_size=tp_size, seed=seed)
         df['new_question'] = df['new_question'].fillna(df['question'])
         prompt_funcs = [
             create_math_prompt, create_math_trick_prompt, create_example_prompt, create_example_trick_prompt, create_complex_example_trick_prompt
@@ -334,6 +345,7 @@ def load_args():
     parser.add_argument("--model_type", default="hf", choices=["hf", "vllm"])
     parser.add_argument("--batch_size", default=32, type=int)
     parser.add_argument('--tp_size', default=1, type=int)
+    parser.add_argument('--seed', default=42, type=int)
 
     return vars(parser.parse_args())
 
@@ -347,5 +359,6 @@ if __name__ == '__main__':
         model_id=args['model_id'],
         model_type=args["model_type"],
         batch_size=args["batch_size"],
-        tp_size=args["tp_size"]
+        tp_size=args["tp_size"],
+        seed=args["seed"]
     )

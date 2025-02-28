@@ -74,7 +74,7 @@ def main(input_file):
     for col_name in col_names:
         out_dict[col_name] = {}
         model_response_column = col_name
-        model_response_complex = col_name
+        model_response_complex = f"new_question_{col_name}"
         df = pd.read_csv(input_file)
         df = extract_answer(df, model_response_column, 'numeric_answer_question_response')
         df = extract_answer(df, model_response_complex, 'numeric_answer_new_question_response')
