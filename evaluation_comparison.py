@@ -301,7 +301,7 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_si
         raise NotADirectoryError(
             errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
     output_filepath = os.path.join(output_filepath, "output.csv")
-    assert output_filepath.endswith(".csv")
+    assert output_filepath.endswith(".csv"), "output_filepath must be a csv file, e.g. end with .csv"
     output_filepath = output_filepath.replace('.csv', f'_{seed}.csv')
     try:
         df = pd.read_csv(input_file)

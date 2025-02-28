@@ -31,6 +31,9 @@ python evaluation_comparison.py --input_filepath datasets/output.csv \
     --tp_size 4
 ```
 
+## Seeding generations
+
+There is now a `--seed` argument that will seed the generation that use sampling.
 
 
 ### To calculate accuracy from model output from evaluation_comparison.py
