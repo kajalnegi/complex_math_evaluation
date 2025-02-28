@@ -12,18 +12,13 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from vllm import LLM, SamplingParams
 
 class vllmPipeline:
-    def __init__(self, model_id):
-        self.llm = LLM(model_id)
+    def __init__(self, model_id, tp_size):
+        self.llm = LLM(model_id, gpu_memory_utilization=0.9, max_model_len=4096, max_seq_len_to_capture=4096, tensor_parallel_size=tp_size)
         self.sampling_params = SamplingParams(max_tokens=2000)
     def __call__(self, prompt):
         return self.llm.chat(messages=prompt, sampling_params=self.sampling_params)
 
-def return_model(model_id, model_type="hf"):
-    #model_id = "meta-llama/Llama-2-7b-chat-hf"
-    #model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
-
-    #model_id = "mistralai/Mistral-Nemo-Instruct-2407"
-    #model_id = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
+def return_model(model_id, model_type="hf", tp_size=1):
     try:
         if model_type == "hf":
             tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -32,7 +27,7 @@ def return_model(model_id, model_type="hf"):
                 tokenizer.pad_token = tokenizer.eos_token
             generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="cuda:4")
         elif model_type == "vllm":
-            generate_text = vllmPipeline(model_id)
+            generate_text = vllmPipeline(model_id, tp_size=tp_size)
 
     except Exception as inst:
         print(type(inst))    # the exception type
@@ -287,7 +282,7 @@ def batched_iter(lst, batch_size):
     for i in range(0, len(lst), batch_size):
         yield lst[i:i + batch_size]
 
-def main(input_file, output_filepath, model_id, model_type, batch_size=32):
+def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_size=1):
     isExist = os.path.exists(input_file)
     if not isExist:
         raise FileNotFoundError(
@@ -299,7 +294,7 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32):
     output_filepath = os.path.join(output_filepath, "output.csv")
     try:
         df = pd.read_csv(input_file)
-        generate_text = return_model(model_id, model_type=model_type)
+        generate_text = return_model(model_id, model_type=model_type, tp_size=tp_size)
         df['new_question'] = df['new_question'].fillna(df['question'])
         prompt_funcs = [
             create_math_prompt, create_math_trick_prompt, create_example_prompt, create_example_trick_prompt, create_complex_example_trick_prompt
@@ -338,6 +333,7 @@ def load_args():
                         help="model_id")
     parser.add_argument("--model_type", default="hf", choices=["hf", "vllm"])
     parser.add_argument("--batch_size", default=32, type=int)
+    parser.add_argument('--tp_size', default=1, type=int)
 
     return vars(parser.parse_args())
 
@@ -350,5 +346,6 @@ if __name__ == '__main__':
         output_filepath=args['output_directory'],
         model_id=args['model_id'],
         model_type=args["model_type"],
-        batch_size=args["batch_size"]
+        batch_size=args["batch_size"],
+        tp_size=args["tp_size"]
     )
