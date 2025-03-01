@@ -7,16 +7,19 @@ python create_samples.py --input_filepath <input_filepath> --output_directory <D
 input_filepath is in the format of https://github.com/openai/grade-school-math/tree/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data
 
 
-### To generate model output from the question created from createSamples.py
+### To generate model output from the question created from create_samples.py
 
+using vLLM (for faster inference)
+CUDA_VISIBLE_DEVICES="<>" python evaluation_comparison_vllm.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "vllm" --tp_size 2 --batch_size 16
 
-python evaluation_comparison.py --input_filepath <input_filepath> --output_directory <DIR>
+using hugging face
+CUDA_VISIBLE_DEVICES="<>" python evaluation_comparison_vllm.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "hf" --tp_size 2 --batch_size 16
 
 input_filepath is .csv file with two columns "question", "new_question"
 
 <br>
 
-### To calculate accuracy from model output from evaluation_comparison.py
+### To calculate accuracy from model output from evaluation_comparison_vllm.py
 
 
 python parsing_generated_output.py --input_filepath <input_filepath>

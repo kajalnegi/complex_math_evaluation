@@ -306,8 +306,8 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_si
                             for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
                     new_question_response = [sample for batch in new_question_response for sample in batch]
                 elif model_type == "vllm":
-                    new_question_response = query_model(df['new_question'].to_list(), generate_text, model_type, prompt_func)
-                df[f'new_question_{col_name}'] = new_question_response
+                    question_response = query_model(df['new_question'].to_list(), generate_text, model_type, prompt_func)
+                df[f'{current_question_col}_{col_name}'] = new_question_response
                 """
                 df.to_csv(output_filepath, index=False)
     except Exception as e:
