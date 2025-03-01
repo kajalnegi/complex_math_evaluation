@@ -10,7 +10,7 @@ import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, GenerationConfig, set_seed
 
 from vllm import LLM, SamplingParams
-os.environ['HF_TOKEN'] = "<HF-token>"
+
 import torch._dynamo
 torch._dynamo.config.suppress_errors = True
 class vllmPipeline:
