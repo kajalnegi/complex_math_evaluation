@@ -20,7 +20,7 @@ Using hugging face
 <br>
 *CUDA_VISIBLE_DEVICES="<>" python evaluation_comparison_vllm.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "hf" --tp_size 2 --batch_size 16*
 
-input_filepath is .csv file with  columns "question", and one generated from create_samples.py
+input_filepath is .csv file with  columns "question", and 'bodmas_question', 'elog_question', 'trigno_question'
 
 <br>
 
