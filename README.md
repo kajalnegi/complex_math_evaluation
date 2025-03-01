@@ -10,9 +10,11 @@ input_filepath is in the format of https://github.com/openai/grade-school-math/t
 ### To generate model output from the question created from create_samples.py
 
 using vLLM (for faster inference)
+<br>
 CUDA_VISIBLE_DEVICES="<>" python evaluation_comparison_vllm.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "vllm" --tp_size 2 --batch_size 16
-
+<br>
 using hugging face
+<br>
 CUDA_VISIBLE_DEVICES="<>" python evaluation_comparison_vllm.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "hf" --tp_size 2 --batch_size 16
 
 input_filepath is .csv file with two columns "question", "new_question"
