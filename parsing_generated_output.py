@@ -11,6 +11,7 @@ def clean_column(data, col):
     data[col] = data[col].str.replace('$', '')
     data[col] = data[col].str.replace(',', '')
     data[col] = data[col].str.replace('}', '')
+    data[col] = data[col].str.extract('(-?\d+)')
     data[col] = data[col].str.strip()
     return data
 

@@ -48,7 +48,7 @@ def extract_answer(data, column, new_column):
                 return split5[1]
 
     data[new_column] = data[column].apply(find_answer)
-    
+    data[new_column] = data[new_column].str.extract('(-?\d+)')
     return data    
 
 
@@ -58,6 +58,7 @@ def clean_column(data, col):
     data[col] = data[col].str.replace('}', '')
     data[col] = data[col].str.replace('\\', '')
     data[col] = data[col].str.strip()
+    
     return data
     
 def main(input_file): 
