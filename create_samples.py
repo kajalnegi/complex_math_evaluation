@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+import os
 import re
+import json
 import random
 import math
-
+import argparse
+import pandas as pd
 trig_exp = {1:["cos^2($) + sin^2($)", "sec^2($)-tan^2($)",  "cosec^2($) - cot^2($)"]}
 bodmas_exp =  {1:[ "$/$", "0.5*2"]}
 elog_exp = {'x':["LOG(EXPONENTIAL($))", "EXPONENTIAL(LOG($))"]}
