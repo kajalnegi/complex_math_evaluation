@@ -105,8 +105,8 @@ def remove_punction(s):
     s = s.replace(',', '')
     return s, ''
 
-def create_alternate_question(data, n=1):
-    q = data['question']
+def create_alternate_question(data, header, n=1):
+    q = data[header]
     patt = pattern_digit()
     ind = [(m.start(0), m.end(0)) for m in re.finditer(patt, q)]
     if ind:
@@ -134,7 +134,7 @@ def create_alternate_question(data, n=1):
                 return bodmas_question, elog_question, trigno_question
   
     
-def main(input_file, output_filepath):
+def main(input_file, output_filepath, header):
     isExist = os.path.exists(input_file)
     if not isExist:
         raise FileNotFoundError(
@@ -148,7 +148,7 @@ def main(input_file, output_filepath):
         with open(input_file, 'r') as f:
             df = pd.DataFrame([json.loads(l) for l in f.readlines()])
         print("Generating new questions \n")
-        df[['bodmas_question', 'elog_question', 'trigno_question']] = df.apply(create_alternate_question,axis=1, result_type="expand")
+        df[['bodmas_question', 'elog_question', 'trigno_question']] = df.apply(create_alternate_question,axis=1, args=(header,), result_type="expand")
         print("Dumping the output file \n")
         df.to_csv(output_filepath, index=False)
     except Exception as e:
@@ -160,7 +160,8 @@ def load_args():
                         help="input filepath with the question")
     parser.add_argument("--output_directory", required=True,
                         help="output directory for local output dump")
-
+    parser.add_argument("--header", required=True,
+                        help="header of the field for input question", default="question")
     return vars(parser.parse_args())
 
 if __name__ == '__main__':
@@ -168,5 +169,5 @@ if __name__ == '__main__':
     main(
         args['input_filepath'],
         args['output_directory'],
+        args['header']
     )
-
