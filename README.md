@@ -2,7 +2,7 @@
 
 
 ### To create new questions from with the same result
-python create_samples.py --input_filepath <input_filepath> --output_directory <DIR>
+python create_samples.py --input_filepath <input_filepath> --output_directory <DIR> --header <header for question >
 
 Input_filepath is in the format of https://github.com/openai/grade-school-math/tree/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data
 

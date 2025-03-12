@@ -124,7 +124,7 @@ def create_alternate_question(data, header, n=1):
         if ind:
             nums = random.sample(ind, n)
             for num in nums:
-                ind = [(m.start(0), m.end(0)) for m in re.finditer(patt, q)]
+                
                 int_num = q[num[0]+2:num[1]]
                 #print(int_num)
                 int_num, end = remove_punction(int_num)
