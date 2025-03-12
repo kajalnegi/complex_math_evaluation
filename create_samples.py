@@ -6,6 +6,7 @@ import json
 import random
 import math
 import argparse
+import numpy as np
 import pandas as pd
 trig_exp = {1:["cos^2($) + sin^2($)", "sec^2($)-tan^2($)",  "cosec^2($) - cot^2($)"]}
 bodmas_exp =  {1:[ "$/$", "0.5*2"]}
@@ -26,7 +27,7 @@ def pattern_dollar_digit():
     """
     r = r'\s\$\d+\s'
     r = r'\s\$\d+(\s|,|.)\s'
-    r = r'\s\$\d+(,\d+)?(\s|,|.)\s'
+    r = r'\s\$\d+(,\d+)?(\s|,|.)?\s'
     patt = re.compile(r)
     return patt
 
@@ -107,32 +108,36 @@ def remove_punction(s):
 
 def create_alternate_question(data, header, n=1):
     q = data[header]
-    patt = pattern_digit()
-    ind = [(m.start(0), m.end(0)) for m in re.finditer(patt, q)]
-    if ind:
-        nums = random.sample(ind, n)
-        for num in nums:
-            
-            int_num, end = remove_punction(q[num[0]:num[1]])
-            int_num = int(int_num)
-            bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '', end)
-            
-            return bodmas_question, elog_question, trigno_question
-    else:
-        patt = pattern_dollar_digit()
+    #print(q)
+    try:
+        patt = pattern_digit()
         ind = [(m.start(0), m.end(0)) for m in re.finditer(patt, q)]
         if ind:
             nums = random.sample(ind, n)
             for num in nums:
                 
-                int_num = q[num[0]+2:num[1]]
-                #print(int_num)
-                int_num, end = remove_punction(int_num)
-                #print(int_num, end)
+                int_num, end = remove_punction(q[num[0]:num[1]])
                 int_num = int(int_num)
-                bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '$', end)
+                bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '', end)
+                
                 return bodmas_question, elog_question, trigno_question
-  
+        else:
+            patt = pattern_dollar_digit()
+            ind = [(m.start(0), m.end(0)) for m in re.finditer(patt, q)]
+            if ind:
+                nums = random.sample(ind, n)
+                for num in nums:
+                    int_num = q[num[0]+2:num[1]]
+                    print(int_num)
+                    int_num, end = remove_punction(int_num)
+                    #print(int_num, end)
+                    int_num = int(int_num)
+                    bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '$', end)
+                    return bodmas_question, elog_question, trigno_question
+        return np.nan, np.nan, np.nan
+    except ValueError:
+        #print()
+        return np.nan, np.nan, np.nan
     
 def main(input_file, output_filepath, header):
     isExist = os.path.exists(input_file)
@@ -143,7 +148,12 @@ def main(input_file, output_filepath, header):
     if not isExist:    
         raise NotADirectoryError(
             errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
-    output_filepath = os.path.join(output_filepath, "output.csv")  
+    filename = input_file.split('/')[-1]
+    try:
+        filename = filename.split('.')[0]
+    except:
+        pass
+    output_filepath = os.path.join(output_filepath, filename+ ".csv")  
     try: 
         with open(input_file, 'r') as f:
             df = pd.DataFrame([json.loads(l) for l in f.readlines()])
