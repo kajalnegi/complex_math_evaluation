@@ -8,45 +8,65 @@ import transformers
 import torch
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, GenerationConfig, set_seed
+import json
 
 from vllm import LLM, SamplingParams
 
 class vllmPipeline:
     def __init__(self, model_id, tp_size, seed):
-        self.llm = LLM(model_id, gpu_memory_utilization=0.9, max_model_len=4096, max_seq_len_to_capture=4096, tensor_parallel_size=tp_size)
-        self.hf_generation_config = GenerationConfig.from_pretrained(model_id)
-        self.sampling_params = SamplingParams(
-            temperature=self.hf_generation_config.temperature,
-            top_p=self.hf_generation_config.top_p,
-            max_tokens=3000,
-            seed=seed
-        )
+        self.llm = LLM(model_id, gpu_memory_utilization=0.9, tensor_parallel_size=tp_size, generation_config="auto")
+        self.sampling_params = self.llm.get_default_sampling_params()
+        self.sampling_params.seed = seed
+        if self.sampling_params.top_k == -1:
+            self.sampling_params.top_k = 50
+        self.sampling_params.max_tokens = 5000
         print("#################", self.sampling_params)
-        # self.sampling_params = SamplingParams(max_tokens=2000, temperature=temp, top_p=top_p)
     def __call__(self, prompt):
-        return self.llm.chat(messages=prompt, sampling_params=self.sampling_params)
+        # return self.llm.chat(messages=prompt, sampling_params=self.sampling_params)
+        return self.llm.generate(prompt_token_ids=prompt, sampling_params=self.sampling_params)
+
+    def save_params(self, output_dir):
+        with open(os.path.join(output_dir, "sampling_params.json"), "w") as f:
+            f.write(str(self.sampling_params))
 
 def return_model(model_id, model_type="hf", tp_size=1, seed=42):
-    try:
-        if model_type == "hf":
-            set_seed(seed)
-            tokenizer = AutoTokenizer.from_pretrained(model_id)
+    if model_type == "hf":
+        set_seed(seed)
+        tokenizer = AutoTokenizer.from_pretrained(model_id)
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
 
-            if tokenizer.pad_token is None:
-                tokenizer.pad_token = tokenizer.eos_token
-            generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="cuda:4")
-        elif model_type == "vllm":
-            generate_text = vllmPipeline(model_id, tp_size=tp_size, seed=seed)
+        generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="cuda")
 
-    except Exception as inst:
-        print(type(inst))    # the exception type
+    elif model_type == "vllm":
+        generate_text = vllmPipeline(model_id, tp_size=tp_size, seed=seed)
 
-        print(inst.args)     # arguments stored in .args
-
-        raise Exception("Check model_id")
     return generate_text
 
-def create_math_prompt(problem_texts: list) -> list:
+
+class Postprocessor:
+    def __init__(self, tokenizer, model_id, model_type):
+        self.tokenizer = tokenizer
+        self.model_id = model_id
+        self.model_type = model_type
+
+    def __call__(self, prompts):
+        prompts = [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
+        if self.model_type == "hf":
+            return prompts
+
+        ready_prompts = [self.tokenizer.apply_chat_template(prompt) for prompt in prompts]
+        if self.model_id == "deepseek-ai/DeepSeek-R1-Distill-Llama-8B":
+            prompts = [i + [{"role":"assistant", "content": ""}] for i in prompts]
+            prompts = [self.tokenizer.apply_chat_template(prompt) for prompt in prompts]
+            ready_prompts = [i[:-1] for i in prompts]
+        if self.model_id == "Qwen/Qwen2.5-Math-7B-instruct":
+            prompts = [[{"role":"assistant", "content":"Please reason step by step, and put your final answer after ####"}] + i + [{"role":"assistant", "content": ""}] for i in prompts]
+            prompts = [self.tokenizer.apply_chat_template(prompt) for prompt in prompts]
+            ready_prompts = [i[:-2] for i in prompts]
+        return ready_prompts
+
+def create_math_prompt(problem_texts: list, prompt_processor) -> list:
     prompts = [
     f"""
     Solve the following  mathematics problem:
@@ -59,9 +79,9 @@ def create_math_prompt(problem_texts: list) -> list:
     Always follow the format.
 
     """ for problem_text in problem_texts]
-    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
+    return prompt_processor(prompts)
 
-def create_math_trick_prompt(problem_texts: str) -> str:
+def create_math_trick_prompt(problem_texts: str, prompt_processor) -> str:
 
     prompts = [f"""
     Solve the following  mathematics problem:
@@ -74,9 +94,9 @@ def create_math_trick_prompt(problem_texts: str) -> str:
     Also, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
     """ for problem_text in problem_texts]
-    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
+    return prompt_processor(prompts)
 
-def create_example_prompt(problem_texts: str) -> str:
+def create_example_prompt(problem_texts: str, prompt_processor) -> str:
     prompts = [f"""
     Here are some mathematical questions along with their answers.
     Question 1: Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?
@@ -113,9 +133,9 @@ def create_example_prompt(problem_texts: str) -> str:
     Always follow the format.
 
     """ for problem_text in problem_texts]
-    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
+    return prompt_processor(prompts)
 
-def create_example_trick_prompt(problem_texts: str) -> str:
+def create_example_trick_prompt(problem_texts: str, prompt_processor) -> str:
 
     prompts = [f"""
     Here are some mathematical questions along with their answers.
@@ -153,9 +173,9 @@ def create_example_trick_prompt(problem_texts: str) -> str:
     Also, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
     """ for problem_text in problem_texts]
-    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
+    return prompt_processor(prompts)
 
-def create_complex_example_trick_prompt(problem_texts: str) -> str:
+def create_complex_example_trick_prompt(problem_texts: str, prompt_processor) -> str:
 
     prompts = [f"""
     Here are some mathematical questions along with their answers.
@@ -223,68 +243,33 @@ def create_complex_example_trick_prompt(problem_texts: str) -> str:
     Also, this is a high school level problem, so advanced mathematical concepts should not be used.
     Always follow the format.
     """ for problem_text in problem_texts]
-    return [[{"role": "user", "content": str(prompt)}] for prompt in prompts]
+    return prompt_processor(prompts)
 
-def query_model(problem_text: str, generate_text, model_type, prompt_func):
-    try:
-        prompts = prompt_func(problem_text)
+def query_model(problem_text: str, generate_text, model_type, prompt_func, prompt_processor):
 
-        if model_type == 'hf':
-            responses = generate_text(prompts,
-                max_length=2000,
-                num_return_sequences=1,
-                truncation=True)
+    if model_type == 'hf':
 
-        elif model_type == 'vllm':
-            responses = generate_text(prompts)
+        prompts = prompt_func(problem_text, prompt_processor)
+        responses = generate_text(prompts,
+            max_length=2000,
+            num_return_sequences=1,
+            truncation=True)
+    elif model_type == 'vllm':
+        prompts = prompt_func(problem_text, prompt_processor)
+        responses = generate_text(prompts)
 
-        out = []
-        for response in responses:
-            if model_type == "hf":
-                for t in response[0]['generated_text']:
-                    if t['role'] == 'assistant':
-                        out.append(t['content'].strip())
-            elif model_type == "vllm":
-                out.append(response.outputs[0].text.strip())
-
-        print("Done One")
-        return out
-    except Exception as inst:
-        print(type(inst))    # the exception type
-
-        print(inst.args)     # arguments stored in .args
-
-        print(inst)
-        return pd.NA
-
-def new_query_model(problem_text: str, generate_text, model_type):
-    try:
-        prompts = create_example_trick_prompt(problem_text)
+    out = []
+    for response in responses:
         if model_type == "hf":
-            responses = generate_text(prompts,
-                max_length=2000,
-                num_return_sequences=1,
-                truncation=True)
-
+            for t in response[0]['generated_text']:
+                if t['role'] == 'assistant':
+                    out.append(t['content'].strip())
         elif model_type == "vllm":
-            responses = generate_text(prompts)
+            # print("################ PROMPT", response.prompt)
+            out.append(response.outputs[0].text.strip())
 
-        out = []
-        for response in responses:
-            if model_type == "hf":
-                for t in response[0]['generated_text']:
-                    if t['role'] == 'assistant':
-                        out.append(t['content'].strip())
-            elif model_type == "vllm":
-                out.append(response.outputs[0].text.strip())
-        return out
-    except Exception as inst:
-        print(type(inst))    # the exception type
-
-        print(inst.args)     # arguments stored in .args
-
-        print(inst)
-        return pd.NA
+    print("Done One")
+    return out
 
 # batched iter on list:
 def batched_iter(lst, batch_size):
@@ -300,38 +285,44 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_si
     if not isExist:
         raise NotADirectoryError(
             errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
+    output_dir = output_filepath
     output_filepath = os.path.join(output_filepath, "output.csv")
     assert output_filepath.endswith(".csv"), "output_filepath must be a csv file, e.g. end with .csv"
     output_filepath = output_filepath.replace('.csv', f'_{seed}.csv')
-    try:
-        df = pd.read_csv(input_file)
-        generate_text = return_model(model_id, model_type=model_type, tp_size=tp_size, seed=seed)
-        df['new_question'] = df['new_question'].fillna(df['question'])
-        prompt_funcs = [
-            create_math_prompt, create_math_trick_prompt, create_example_prompt, create_example_trick_prompt, create_complex_example_trick_prompt
-        ]
-        prompt_funcs = {func.__name__.replace('create_', ""): func for func in prompt_funcs}
-        for col_name, prompt_func in prompt_funcs.items():
-            if model_type == "hf":
-                question_response = [
-                    query_model(x, generate_text, model_type, prompt_func)
-                    for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
-                question_response = [sample for batch in question_response for sample in batch]
-            elif model_type == "vllm":
-                question_response = query_model(df['question'].to_list(), generate_text, model_type, prompt_func)
-            df[col_name] = question_response
-            df.to_csv(output_filepath, index=False)
-            if model_type == "hf":
-                new_question_response = [
-                        query_model(x, generate_text, model_type, prompt_func)
-                        for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
-                new_question_response = [sample for batch in new_question_response for sample in batch]
-            elif model_type == "vllm":
-                new_question_response = query_model(df['new_question'].to_list(), generate_text, model_type, prompt_func)
-            df[f'new_question_{col_name}'] = new_question_response
-            df.to_csv(output_filepath, index=False)
-    except Exception as e:
-        print(e)
+
+    df = pd.read_csv(input_file)
+    generate_text = return_model(model_id, model_type=model_type, tp_size=tp_size, seed=seed)
+    if model_type == "vllm":
+        generate_text.save_params(output_dir)
+    df['new_question'] = df['new_question'].fillna(df['question'])
+    prompt_funcs = [
+        create_math_prompt, create_math_trick_prompt, create_example_prompt, create_example_trick_prompt, create_complex_example_trick_prompt
+    ]
+    prompt_funcs = {func.__name__.replace('create_', ""): func for func in prompt_funcs}
+    if model_type == "hf":
+        prompt_processor = Postprocessor(generate_text.tokenizer, model_id, model_type)
+    elif model_type == "vllm":
+        prompt_processor = Postprocessor(generate_text.llm.get_tokenizer(), model_id, model_type)
+    for col_name, prompt_func in prompt_funcs.items():
+        if model_type == "hf":
+            question_response = [
+                query_model(x, generate_text, model_type, prompt_func, prompt_processor)
+                for x in tqdm(batched_iter(df['question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
+            question_response = [sample for batch in question_response for sample in batch]
+        elif model_type == "vllm":
+            question_response = query_model(df['question'].to_list(), generate_text, model_type, prompt_func, prompt_processor)
+        df[col_name] = question_response
+        df.to_csv(output_filepath, index=False)
+        if model_type == "hf":
+            new_question_response = [
+                    query_model(x, generate_text, model_type, prompt_func, prompt_processor)
+                    for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
+            new_question_response = [sample for batch in new_question_response for sample in batch]
+        elif model_type == "vllm":
+            new_question_response = query_model(df['new_question'].to_list(), generate_text, model_type, prompt_func, prompt_processor)
+        df[f'new_question_{col_name}'] = new_question_response
+        df.to_csv(output_filepath, index=False)
+
 
 
 def load_args():
