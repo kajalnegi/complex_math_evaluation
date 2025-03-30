@@ -54,7 +54,6 @@ def generate_two_num_math_expression(d1, d2):
 
         return exp
 
-
 def generate_replacement(num, exp1, math_exp_key, math_func):
     if type(math_exp_key)==int:  
         
@@ -67,28 +66,55 @@ def generate_replacement(num, exp1, math_exp_key, math_func):
     if math_exp_key=='x':
         
         return math_func.replace('$', str(num),100)
-    
+
+
+def generate_n_replacement(num, exp1, math_exp_key, math_func, n):
+    if type(math_exp_key)==int: 
+        q = num%n
+        d = int(num/n)
+        r = num - d*n
+        full = ''
+        for n1 in range(n):
+            #math_exp_key = math_exp_key*rand_int
+            exp = generate_two_num_math_expression(d, 1)
+            #print(exp)
+            if n1 ==0:
+                full = exp
+            else:
+                full = full +'+'+ exp
+            #print(full)
+            math_func1 = math_func.replace('$', str(random.randint(1, 100)),100)
+            full = full.replace('key', math_func1)
+        if r!=0: 
+            full = full +'+'+ str(r)
+        return full
+    if math_exp_key=='x':
+        repl = math_func.replace('$', str(num),100)
+        for n1 in range(n):
+            repl = math_func.replace('$', repl)
+        return repl
+
 def make_question_string(q, num, replace_exp, extra_str, end):
     return q[:num[0]] +' '+ extra_str+replace_exp +' '+ end +' ' +q[num[1]:] 
 
-def generate_three_questions(q, int_num, num, extra_str, end):
+def generate_three_questions(q, int_num, num, extra_str, end, n):
     exp1 = generate_math_expression(int_num)
     
     bodmas_exp_key = random.choice(list(bodmas_exp.keys()))
     math_func = random.choice(bodmas_exp[bodmas_exp_key])
     
-    replace_exp = generate_replacement(int_num, exp1, bodmas_exp_key, math_func)
+    replace_exp = generate_n_replacement(int_num, exp1, bodmas_exp_key, math_func, n)
     print(replace_exp)
     bodmas_question = make_question_string(q, num, replace_exp, extra_str, end)
         
     elog_exp_key = random.choice(list(elog_exp.keys()))
     math_func = random.choice(elog_exp[elog_exp_key])
-    replace_exp = generate_replacement(int_num, exp1, elog_exp_key, math_func)
+    replace_exp = generate_n_replacement(int_num, exp1, elog_exp_key, math_func, n)
     elog_question = make_question_string(q, num, replace_exp, extra_str, end)
     print(replace_exp) 
     trig_exp_key = random.choice(list(trig_exp.keys()))
     math_func = random.choice(trig_exp[trig_exp_key])
-    replace_exp = generate_replacement(int_num, exp1, trig_exp_key, math_func)
+    replace_exp = generate_n_replacement(int_num, exp1, trig_exp_key, math_func, n)
     trigno_question = make_question_string(q, num, replace_exp, extra_str, end)
     print(replace_exp) 
     return bodmas_question, elog_question, trigno_question
@@ -106,7 +132,7 @@ def remove_punction(s):
     s = s.replace(',', '')
     return s, ''
 
-def create_alternate_question(data, header, n=1):
+def create_alternate_question(data, header, level, n=1):
     q = data[header]
     #print(q)
     try:
@@ -118,7 +144,7 @@ def create_alternate_question(data, header, n=1):
                 
                 int_num, end = remove_punction(q[num[0]:num[1]])
                 int_num = int(int_num)
-                bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '', end)
+                bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '', end, level)
                 
                 return bodmas_question, elog_question, trigno_question
         else:
@@ -128,18 +154,18 @@ def create_alternate_question(data, header, n=1):
                 nums = random.sample(ind, n)
                 for num in nums:
                     int_num = q[num[0]+2:num[1]]
-                    print(int_num)
+                    #print(int_num)
                     int_num, end = remove_punction(int_num)
                     #print(int_num, end)
                     int_num = int(int_num)
-                    bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '$', end)
+                    bodmas_question, elog_question, trigno_question = generate_three_questions(q, int_num, num, '$', end, level)
                     return bodmas_question, elog_question, trigno_question
         return np.nan, np.nan, np.nan
     except ValueError:
         #print()
         return np.nan, np.nan, np.nan
     
-def main(input_file, output_filepath, header):
+def main(input_file, output_filepath, header, level):
     isExist = os.path.exists(input_file)
     if not isExist:
         raise FileNotFoundError(
@@ -153,14 +179,21 @@ def main(input_file, output_filepath, header):
         filename = filename.split('.')[0]
     except:
         pass
-    output_filepath = os.path.join(output_filepath, filename+ ".csv")  
+    output_filepath = os.path.join(output_filepath, filename+ '_level_'+str(level)+".csv")  
     try: 
         with open(input_file, 'r') as f:
             df = pd.DataFrame([json.loads(l) for l in f.readlines()])
+        
+        text = df.loc[266, 'question'] 
+        text = text.replace('$400 000', '$400000')
+        text = text.replace('$250 000', '$250000')
+        df.loc[266, 'question'] = text
+        #print(text)
         print("Generating new questions \n")
-        df[['bodmas_question', 'elog_question', 'trigno_question']] = df.apply(create_alternate_question,axis=1, args=(header,), result_type="expand")
+        df[['bodmas_question', 'elog_question', 'trigno_question']] = df.apply(create_alternate_question,axis=1, args=(header,level), result_type="expand")
         print("Dumping the output file \n")
         df.to_csv(output_filepath, index=False)
+        return df, output_filepath
     except Exception as e:
         print(e)
         
@@ -170,8 +203,9 @@ def load_args():
                         help="input filepath with the question")
     parser.add_argument("--output_directory", required=True,
                         help="output directory for local output dump")
-    parser.add_argument("--header", required=True,
+    parser.add_argument("--header", required=False,
                         help="header of the field for input question", default="question")
+    parser.add_argument('--level', default=1, type=int)
     return vars(parser.parse_args())
 
 if __name__ == '__main__':
@@ -179,5 +213,6 @@ if __name__ == '__main__':
     main(
         args['input_filepath'],
         args['output_directory'],
-        args['header']
+        args['header'],
+        args['level']
     )
