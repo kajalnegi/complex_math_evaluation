@@ -2,7 +2,7 @@
 
 
 ### To create new questions from with the same result
-python create_samples.py --input_filepath <input_filepath> --output_directory <DIR> --header <header for question > --level <5>
+python create_samples.py --input_filepath <input_filepath> --output_directory <DIR> --header <header_for_question> --level <5>
 
 * level * changes the difficulty level of newly generated question. * level 2 * is more difficult than * level 1 *
 
