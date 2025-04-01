@@ -90,7 +90,7 @@ def generate_n_replacement(num, exp1, math_exp_key, math_func, n):
         return full
     if math_exp_key=='x':
         repl = math_func.replace('$', str(num),100)
-        for n1 in range(n):
+        for n1 in range(n-1):
             repl = math_func.replace('$', repl)
         return repl
 
