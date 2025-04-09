@@ -54,20 +54,6 @@ def generate_two_num_math_expression(d1, d2):
 
         return exp
 
-def generate_replacement(num, exp1, math_exp_key, math_func):
-    if type(math_exp_key)==int:  
-        
-        two_num_exp = generate_two_num_math_expression(num, math_exp_key)
-        
-        math_func = math_func.replace('$', str(random.randint(1, 100)),100)#for constant functions choose any random integer
-        two_num_exp = two_num_exp.replace('key', math_func)
-        
-        return two_num_exp
-    if math_exp_key=='x':
-        
-        return math_func.replace('$', str(num),100)
-
-
 def generate_n_replacement(num, exp1, math_exp_key, math_func, n):
     if type(math_exp_key)==int: 
         q = num%n
@@ -104,19 +90,19 @@ def generate_three_questions(q, int_num, num, extra_str, end, n):
     math_func = random.choice(bodmas_exp[bodmas_exp_key])
     
     replace_exp = generate_n_replacement(int_num, exp1, bodmas_exp_key, math_func, n)
-    print(replace_exp)
+    #print(replace_exp)
     bodmas_question = make_question_string(q, num, replace_exp, extra_str, end)
         
     elog_exp_key = random.choice(list(elog_exp.keys()))
     math_func = random.choice(elog_exp[elog_exp_key])
     replace_exp = generate_n_replacement(int_num, exp1, elog_exp_key, math_func, n)
     elog_question = make_question_string(q, num, replace_exp, extra_str, end)
-    print(replace_exp) 
+    #print(replace_exp) 
     trig_exp_key = random.choice(list(trig_exp.keys()))
     math_func = random.choice(trig_exp[trig_exp_key])
     replace_exp = generate_n_replacement(int_num, exp1, trig_exp_key, math_func, n)
     trigno_question = make_question_string(q, num, replace_exp, extra_str, end)
-    print(replace_exp) 
+    #print(replace_exp) 
     return bodmas_question, elog_question, trigno_question
 
 def remove_punction(s):
@@ -174,6 +160,7 @@ def main(input_file, output_filepath, header, level):
     if not isExist:    
         raise NotADirectoryError(
             errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
+    
     filename = input_file.split('/')[-1]
     try:
         filename = filename.split('.')[0]
@@ -183,7 +170,8 @@ def main(input_file, output_filepath, header, level):
     try: 
         with open(input_file, 'r') as f:
             df = pd.DataFrame([json.loads(l) for l in f.readlines()])
-        
+        if header not in df:
+            raise Exception(f"{input_file} does not have {header} column")
         text = df.loc[266, 'question'] 
         text = text.replace('$400 000', '$400000')
         text = text.replace('$250 000', '$250000')
@@ -211,8 +199,8 @@ def load_args():
 if __name__ == '__main__':
     args = load_args()
     main(
-        args['input_filepath'],
-        args['output_directory'],
-        args['header'],
-        args['level']
+        input_file=args['input_filepath'],
+        output_filepath=args['output_directory'],
+        header=args['header'],
+        level=args['level']
     )

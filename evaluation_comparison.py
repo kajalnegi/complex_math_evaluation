@@ -7,6 +7,7 @@ import argparse
 import transformers
 import torch
 import pandas as pd
+from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, GenerationConfig, set_seed
 
 from vllm import LLM, SamplingParams
@@ -15,9 +16,9 @@ import torch._dynamo
 torch._dynamo.config.suppress_errors = True
 class vllmPipeline:
     def __init__(self, model_id, tp_size, seed):
-        self.llm = LLM(model_id, #gpu_memory_utilization=0.9,
+        self.llm = LLM(model_id, gpu_memory_utilization=0.9,
          max_model_len=4096,
-         max_seq_len_to_capture=4096, #tensor_parallel_size=tp_size,
+         max_seq_len_to_capture=4096, tensor_parallel_size=tp_size,
          #tokenizer=model_id, tokenizer_mode="mistral"
          )
         print("llm done")
@@ -44,15 +45,13 @@ def return_model(model_id, model_type="hf", tp_size=1, seed=42):
 
             if tokenizer.pad_token is None:
                 tokenizer.pad_token = tokenizer.eos_token
-            generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="cuda:4")
+            generate_text = pipeline('text-generation', model=model_id, tokenizer=tokenizer, device_map="auto")
         elif model_type == "vllm":
             generate_text = vllmPipeline(model_id, tp_size=tp_size, seed=seed)
 
     except Exception as inst:
         print(type(inst))    # the exception type
-
         print(inst.args)     # arguments stored in .args
-
         raise Exception("Check model_id")
     return generate_text
 
@@ -262,33 +261,40 @@ def batched_iter(lst, batch_size):
     for i in range(0, len(lst), batch_size):
         yield lst[i:i + batch_size]
 
-def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_size=1, seed=42):
-    isExist = os.path.exists(input_file)
-    if not isExist:
-        raise FileNotFoundError(
-            errno.ENOENT, os.strerror(errno.ENOENT), input_file)
-    isExist = os.path.exists(output_filepath)
-    if not isExist:
-        raise NotADirectoryError(
-            errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
+def main(input_file, output_filepath, header, model_id, model_type, batch_size=32, tp_size=1, seed=42):
+    if type(input_file) == str:
+        isExist = os.path.exists(input_file)
+        if not isExist:
+            raise FileNotFoundError(
+                errno.ENOENT, os.strerror(errno.ENOENT), input_file)
+        isExist = os.path.exists(output_filepath)
+        if not isExist:
+            raise NotADirectoryError(
+                errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
     output_file_name = model_id.split('/')[-1]
-    output_filepath = os.path.join(output_filepath, f"{output_file_name}_output_test_5.csv")
-    #output_filepath = os.path.join(output_filepath, "output.csv")
+    output_filepath = os.path.join(output_filepath, f"{output_file_name}_output_{model_type}.csv")
     assert output_filepath.endswith(".csv"), "output_filepath must be a csv file, e.g. end with .csv"
-    
+        
     output_filepath = output_filepath.replace('.csv', f'_{seed}.csv')
+    print("output_filepath ",output_filepath, )
     try:
-        df = pd.read_csv(input_file)
+        if type(input_file) == str:
+            df = pd.read_csv(input_file)
+            if header not in df:
+                raise Exception(f"{input_filepath} does not have {header} column")
+        else:
+            df = input_file
+        
         generate_text = return_model(model_id, model_type=model_type, tp_size=tp_size, seed=seed)
         #torch.cuda.empty_cache()
         prompt_funcs = [
             create_math_prompt, create_math_trick_prompt, create_example_trick_prompt, create_complex_example_trick_prompt
         ]
         prompt_funcs = {func.__name__.replace('create_', ""): func for func in prompt_funcs}
-        question_columns = ['question']#, 'bodmas_question', 'elog_question', 'trigno_question']
+        question_columns = [header, 'bodmas_question', 'elog_question', 'trigno_question']
         for current_question_col in question_columns:
-            if current_question_col!='question':
-                df[current_question_col] = df[current_question_col].fillna(df['question'])
+            if current_question_col!=header:
+                df[current_question_col] = df[current_question_col].fillna(df[header])
             for col_name, prompt_func in prompt_funcs.items():
                 if model_type == "hf":
                     question_response = [
@@ -298,18 +304,9 @@ def main(input_file, output_filepath, model_id, model_type, batch_size=32, tp_si
                 elif model_type == "vllm":
                     question_response = query_model(df[current_question_col].to_list(), generate_text, model_type, prompt_func)
                 df[f'{current_question_col}_{col_name}'] = question_response
-                #df.to_csv(output_filepath, index=False)
-                """
-                if model_type == "hf":
-                    new_question_response = [
-                            query_model(x, generate_text, model_type, prompt_func)
-                            for x in tqdm(batched_iter(df['new_question'].to_list(), batch_size), total=df.shape[0] // batch_size)]
-                    new_question_response = [sample for batch in new_question_response for sample in batch]
-                elif model_type == "vllm":
-                    question_response = query_model(df['new_question'].to_list(), generate_text, model_type, prompt_func)
-                df[f'{current_question_col}_{col_name}'] = new_question_response
-                """
                 df.to_csv(output_filepath, index=False)
+                
+        return df, output_filepath
     except Exception as e:
         print(e)
 
@@ -326,16 +323,18 @@ def load_args():
     parser.add_argument("--batch_size", default=32, type=int)
     parser.add_argument('--tp_size', default=1, type=int)
     parser.add_argument('--seed', default=42, type=int)
-
+    parser.add_argument("--header", required=False,
+                        help="header of the field for input question", default="question")
     return vars(parser.parse_args())
 
 
 if __name__ == '__main__':
-    from tqdm import tqdm
+    
     args = load_args()
     main(
         input_file=args['input_filepath'],
         output_filepath=args['output_directory'],
+        header=args['header'],
         model_id=args['model_id'],
         model_type=args["model_type"],
         batch_size=args["batch_size"],
