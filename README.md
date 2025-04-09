@@ -1,5 +1,5 @@
 # GSM-Identity
-The code repository is for GSM-Identity.
+This code repository is for GSM-Identity.
 <br>
 For assesing a LLM model in a fresh math complex dataset, use below command for any input_filepath is in the format of 
 <br>
