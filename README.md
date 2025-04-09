@@ -6,9 +6,9 @@ For assesing a LLM model in a fresh math complex dataset, use below command for 
 https://github.com/openai/grade-school-math/tree/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data
 
 <br>
-CUDA_VISIBLE_DEVICES="<>" python math_llms.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "vllm" --tp_size <tp_size> --batch_size <batch_size> --answer <answer> --header <header>
+*CUDA_VISIBLE_DEVICES="<>" python math_llms.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "vllm" --tp_size <tp_size> --batch_size <batch_size> --answer <answer> --header <header>*
 <br>
-   tp_size is an integer for variable *tensor_parallel_size* in  *vllm.LLM*
+   *tp_size* is an integer for variable *tensor_parallel_size* in  *vllm.LLM*
  
  <br>
 
@@ -28,7 +28,7 @@ Output files create columns *'bodmas_question', 'elog_question', 'trigno_questio
 
 Using vLLM (for faster inference)
 <br>
-*CUDA_VISIBLE_DEVICES="<>" python evaluation_comparison.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "vllm" --tp_size 2 --batch_size 16* --header <header_for_question>
+*CUDA_VISIBLE_DEVICES="<>" python evaluation_comparison.py --input_filepath <input_filepath> --output_directory <DIR> --model_id <model_id> --model_type "vllm" --tp_size 2 --batch_size 16 --header <header_for_question>*
 <br>
 
 Using hugging face
