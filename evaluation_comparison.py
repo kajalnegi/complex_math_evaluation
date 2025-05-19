@@ -273,7 +273,6 @@ def main(input_file, output_filepath, header, model_id, model_type, batch_size=3
                 errno.ENOTDIR, os.strerror(errno.ENOTDIR), output_filepath)
     output_file_name = model_id.split('/')[-1]
     output_filepath = os.path.join(output_filepath, f"{output_file_name}_output_{model_type}.csv")
-    assert output_filepath.endswith(".csv"), "output_filepath must be a csv file, e.g. end with .csv"
         
     output_filepath = output_filepath.replace('.csv', f'_{seed}.csv')
     print("output_filepath ",output_filepath, )
