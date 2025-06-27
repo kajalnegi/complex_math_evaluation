@@ -1,7 +1,7 @@
 # GSM-Identity
 This code repository is for GSM-Identity. It is developed in python 3.12.8
 <br>
-For assesing a LLM model in a fresh math complex dataset, use below command for any input_filepath is in the format of 
+For assessing an LLM model on a new complex math dataset, use the command below with any input_filepath in the following format:
 <br>
 https://github.com/openai/grade-school-math/tree/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data
 
@@ -12,7 +12,7 @@ https://github.com/openai/grade-school-math/tree/3101c7d5072418e28b9008a6636bde8
  *tp_size* [default=1] is an integer for variable *tensor_parallel_size* in  *vllm.LLM*
  <br>
 
-To run the process in breaks use below commands.
+For a more step by step process, use below commands.
 
 ### To create new questions from with the same result
 *python create_samples.py --input_filepath <input_filepath> --output_directory <DIR> --header <header_for_question> --level <level>*
