@@ -1,0 +1,1201 @@
+cleaning_status,platinum_prompt,platinum_prompt_no_cot,platinum_target,original_target,platinum_parsing_strategy,input,output_program,output_answer,split,dataset,bodmas_question,elog_question,trigno_question
+consensus,"Solve the following math word problem.
+
+John can read 4 books a day. John reads every Monday and Tuesday. How many books would John read in 6 weeks?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+John can read 4 books a day. John reads every Monday and Tuesday. How many books would John read in 6 weeks?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['48'],['48'],math,John can read 4 books a day. John reads every Monday and Tuesday. How many books would John read in 6 weeks?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve((4+4)*6-x)
+print(answer)",48,test,singleq,John can read 4 books a day. John reads every Monday and Tuesday. How many books would John read in (7-(68/68))  weeks?,John can read 4 books a day. John reads every Monday and Tuesday. How many books would John read in EXPONENTIAL(LOG(6))  weeks?,John can read 4 books a day. John reads every Monday and Tuesday. How many books would John read in (6/(cosec^2(24) - cot^2(24)))  weeks?
+consensus,"Solve the following math word problem.
+
+Sam grew 4 watermelons, but the rabbits ate 3 watermelons. How many watermelons does Sam have left ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sam grew 4 watermelons, but the rabbits ate 3 watermelons. How many watermelons does Sam have left ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['1'],['1'],math,"Sam grew 4 watermelons, but the rabbits ate 3 watermelons. How many watermelons does Sam have left ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(4-3-x)
+print(answer)",1,test,singleq,"Sam grew (5-(95/95))  watermelons, but the rabbits ate 3 watermelons. How many watermelons does Sam have left ?","Sam grew EXPONENTIAL(LOG(4))  watermelons, but the rabbits ate 3 watermelons. How many watermelons does Sam have left ?","Sam grew (5-(sec^2(39)-tan^2(39)))  watermelons, but the rabbits ate 3 watermelons. How many watermelons does Sam have left ?"
+consensus,"Solve the following math word problem.
+
+To fill an order, the factory dyed 61,921 yards of silk green and 49,500 yards pink. How many yards of silk did it dye for that order?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+To fill an order, the factory dyed 61,921 yards of silk green and 49,500 yards pink. How many yards of silk did it dye for that order?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['111421'],['111421'],math,"To fill an order, the factory dyed 61,921 yards of silk green and 49,500 yards pink. How many yards of silk did it dye for that order?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(61921+49500-x)
+print(answer)",111421,test,singleq,"To fill an order, the factory dyed 61,921 yards of silk green and (49500.0*(0.5*2))  yards pink. How many yards of silk did it dye for that order?","To fill an order, the factory dyed 61,921 yards of silk green and LOG(EXPONENTIAL(49500))  yards pink. How many yards of silk did it dye for that order?","To fill an order, the factory dyed 61,921 yards of silk green and (49500/(sec^2(33)-tan^2(33)))  yards pink. How many yards of silk did it dye for that order?"
+consensus,"Solve the following math word problem.
+
+Maria needs 21 cartons of berries to make a berry cobbler. She already has 4 cartons of strawberries and 8 cartons of blueberries. How many more cartons of berries should Maria buy?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Maria needs 21 cartons of berries to make a berry cobbler. She already has 4 cartons of strawberries and 8 cartons of blueberries. How many more cartons of berries should Maria buy?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,Maria needs 21 cartons of berries to make a berry cobbler. She already has 4 cartons of strawberries and 8 cartons of blueberries. How many more cartons of berries should Maria buy?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(21-(4+8)-x)
+print(answer)",9,test,singleq,Maria needs 21 cartons of berries to make a berry cobbler. She already has 4 cartons of strawberries and (8/(0.5*2))  cartons of blueberries. How many more cartons of berries should Maria buy?,Maria needs 21 cartons of berries to make a berry cobbler. She already has 4 cartons of strawberries and EXPONENTIAL(LOG(8))  cartons of blueberries. How many more cartons of berries should Maria buy?,Maria needs 21 cartons of berries to make a berry cobbler. She already has 4 cartons of strawberries and (8/(cosec^2(1) - cot^2(1)))  cartons of blueberries. How many more cartons of berries should Maria buy?
+consensus,"Solve the following math word problem.
+
+Betty bought 88 pink flower stones and wanted to make 8 bracelets out of these stones. How many pink flower stones will each bracelet have if she used the same number of stones in each bracelet?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Betty bought 88 pink flower stones and wanted to make 8 bracelets out of these stones. How many pink flower stones will each bracelet have if she used the same number of stones in each bracelet?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['11'],['11'],math,Betty bought 88 pink flower stones and wanted to make 8 bracelets out of these stones. How many pink flower stones will each bracelet have if she used the same number of stones in each bracelet?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(88/8-x)
+print(answer)",11,test,singleq,Betty bought 88 pink flower stones and wanted to make (8.0*(72/72))  bracelets out of these stones. How many pink flower stones will each bracelet have if she used the same number of stones in each bracelet?,Betty bought 88 pink flower stones and wanted to make LOG(EXPONENTIAL(8))  bracelets out of these stones. How many pink flower stones will each bracelet have if she used the same number of stones in each bracelet?,Betty bought 88 pink flower stones and wanted to make (9-(cosec^2(39) - cot^2(39)))  bracelets out of these stones. How many pink flower stones will each bracelet have if she used the same number of stones in each bracelet?
+verified,"Solve the following math word problem.
+
+Christian and the junior ranger brought a bag of 140 nails as they visited every station assigned to the junior ranger. If they left exactly 7 nails in every station they visited, how many stations did Joline and the junior ranger visit?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Christian and the junior ranger brought a bag of 140 nails as they visited every station assigned to the junior ranger. If they left exactly 7 nails in every station they visited, how many stations did Joline and the junior ranger visit?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20'],['20'],math,"Christian and the junior ranger brought a bag of 140 nails as they visited every station assigned to the junior ranger. If they left exactly 7 nails in every station they visited, how many stations did Joline and the junior ranger visit?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(140/7-x)
+print(answer)",20,test,singleq,"Christian and the junior ranger brought a bag of (141-(0.5*2))  nails as they visited every station assigned to the junior ranger. If they left exactly 7 nails in every station they visited, how many stations did Joline and the junior ranger visit?","Christian and the junior ranger brought a bag of EXPONENTIAL(LOG(140))  nails as they visited every station assigned to the junior ranger. If they left exactly 7 nails in every station they visited, how many stations did Joline and the junior ranger visit?","Christian and the junior ranger brought a bag of (141-(cosec^2(31) - cot^2(31)))  nails as they visited every station assigned to the junior ranger. If they left exactly 7 nails in every station they visited, how many stations did Joline and the junior ranger visit?"
+consensus,"Solve the following math word problem.
+
+Sunday morning was spent for making wood carvings which can be sold as souvenir for tourists. They were placed in shelves that can contain 8 wood carvings at a time. If 56 wood carvings were displayed, how many shelves were filled with carvings?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sunday morning was spent for making wood carvings which can be sold as souvenir for tourists. They were placed in shelves that can contain 8 wood carvings at a time. If 56 wood carvings were displayed, how many shelves were filled with carvings?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math,"Sunday morning was spent for making wood carvings which can be sold as souvenir for tourists. They were placed in shelves that can contain 8 wood carvings at a time. If 56 wood carvings were displayed, how many shelves were filled with carvings?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(8*x-56)
+print(answer)",7,test,singleq,"Sunday morning was spent for making wood carvings which can be sold as souvenir for tourists. They were placed in shelves that can contain 8 wood carvings at a time. If (56/(0.5*2))  wood carvings were displayed, how many shelves were filled with carvings?","Sunday morning was spent for making wood carvings which can be sold as souvenir for tourists. They were placed in shelves that can contain 8 wood carvings at a time. If EXPONENTIAL(LOG(56))  wood carvings were displayed, how many shelves were filled with carvings?","Sunday morning was spent for making wood carvings which can be sold as souvenir for tourists. They were placed in shelves that can contain 8 wood carvings at a time. If (57-(cosec^2(82) - cot^2(82)))  wood carvings were displayed, how many shelves were filled with carvings?"
+consensus,"Solve the following math word problem.
+
+Joan has 9 blue balloons, Sally has 5 blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Joan has 9 blue balloons, Sally has 5 blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['16'],['16'],math,"Joan has 9 blue balloons, Sally has 5 blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(9+5+2-x)
+print(answer)",16,test,singleq,"Joan has 9 blue balloons, Sally has (4+(27/27))  blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?","Joan has 9 blue balloons, Sally has LOG(EXPONENTIAL(5))  blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?","Joan has 9 blue balloons, Sally has (5.0*(sec^2(21)-tan^2(21)))  blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?"
+consensus,"Solve the following math word problem.
+
+Joan had 5 dimes in her bank. She spent 2 of her dimes. How many dimes does she have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Joan had 5 dimes in her bank. She spent 2 of her dimes. How many dimes does she have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['3'],['3'],math,Joan had 5 dimes in her bank. She spent 2 of her dimes. How many dimes does she have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(5-2-x)
+print(answer)",3,test,singleq,Joan had (5.0*(0.5*2))  dimes in her bank. She spent 2 of her dimes. How many dimes does she have now ?,Joan had LOG(EXPONENTIAL(5))  dimes in her bank. She spent 2 of her dimes. How many dimes does she have now ?,Joan had (6-(cos^2(6) + sin^2(6)))  dimes in her bank. She spent 2 of her dimes. How many dimes does she have now ?
+consensus,"Solve the following math word problem.
+
+It has been tradition in Shiela’s home to hang a sock above the fireplace for each member of the family. This year, she placed a cinnamon ball every day in the socks for 5 of her family members. How long can she do this if she bought 50 cinnamon balls?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+It has been tradition in Shiela’s home to hang a sock above the fireplace for each member of the family. This year, she placed a cinnamon ball every day in the socks for 5 of her family members. How long can she do this if she bought 50 cinnamon balls?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['10'],['10'],math,"It has been tradition in Shiela’s home to hang a sock above the fireplace for each member of the family. This year, she placed a cinnamon ball every day in the socks for 5 of her family members. How long can she do this if she bought 50 cinnamon balls?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(5*x-50)
+print(answer)",10,test,singleq,"It has been tradition in Shiela’s home to hang a sock above the fireplace for each member of the family. This year, she placed a cinnamon ball every day in the socks for 5 of her family members. How long can she do this if she bought (50/(0.5*2))  cinnamon balls?","It has been tradition in Shiela’s home to hang a sock above the fireplace for each member of the family. This year, she placed a cinnamon ball every day in the socks for 5 of her family members. How long can she do this if she bought LOG(EXPONENTIAL(50))  cinnamon balls?","It has been tradition in Shiela’s home to hang a sock above the fireplace for each member of the family. This year, she placed a cinnamon ball every day in the socks for 5 of her family members. How long can she do this if she bought (51-(cos^2(45) + sin^2(45)))  cinnamon balls?"
+consensus,"Solve the following math word problem.
+
+Brenda’s mother made cookies for 5. If she prepared 35 cookies and each of them had the same number of cookies, how many did each of them have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Brenda’s mother made cookies for 5. If she prepared 35 cookies and each of them had the same number of cookies, how many did each of them have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math,"Brenda’s mother made cookies for 5. If she prepared 35 cookies and each of them had the same number of cookies, how many did each of them have?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(5*x-35)
+print(answer)",7,test,singleq,"Brenda’s mother made cookies for 5. If she prepared (35/(49/49))  cookies and each of them had the same number of cookies, how many did each of them have?","Brenda’s mother made cookies for 5. If she prepared EXPONENTIAL(LOG(35))  cookies and each of them had the same number of cookies, how many did each of them have?","Brenda’s mother made cookies for 5. If she prepared (36-(sec^2(40)-tan^2(40)))  cookies and each of them had the same number of cookies, how many did each of them have?"
+consensus,"Solve the following math word problem.
+
+Joan's cat had 8 kittens. She gave 2 to her friends.  How many kittens does she have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Joan's cat had 8 kittens. She gave 2 to her friends.  How many kittens does she have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,Joan's cat had 8 kittens. She gave 2 to her friends.  How many kittens does she have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(8-2-x)
+print(answer)",6,test,singleq,Joan's cat had (9-(0.5*2))  kittens. She gave 2 to her friends.  How many kittens does she have now ?,Joan's cat had EXPONENTIAL(LOG(8))  kittens. She gave 2 to her friends.  How many kittens does she have now ?,Joan's cat had (8/(sec^2(49)-tan^2(49)))  kittens. She gave 2 to her friends.  How many kittens does she have now ?
+consensus,"Solve the following math word problem.
+
+Joan has 8 orange balloons  but lost 2 of them. How many orange balloons does Joan have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Joan has 8 orange balloons  but lost 2 of them. How many orange balloons does Joan have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,Joan has 8 orange balloons  but lost 2 of them. How many orange balloons does Joan have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(8-2-x)
+print(answer)",6,test,singleq,Joan has (8.0*(0.5*2))  orange balloons  but lost 2 of them. How many orange balloons does Joan have now ?,Joan has EXPONENTIAL(LOG(8))  orange balloons  but lost 2 of them. How many orange balloons does Joan have now ?,Joan has (8.0*(sec^2(94)-tan^2(94)))  orange balloons  but lost 2 of them. How many orange balloons does Joan have now ?
+consensus,"Solve the following math word problem.
+
+Sally earns $12.50 an hour cleaning houses. If she works for 12 hours, how much money will she make ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sally earns $12.50 an hour cleaning houses. If she works for 12 hours, how much money will she make ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['150'],['150'],math,"Sally earns $12.50 an hour cleaning houses. If she works for 12 hours, how much money will she make ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(12.50*12-x)
+print(answer)",150,test,singleq,"Sally earns $12.50 an hour cleaning houses. If she works for (12/(42/42))  hours, how much money will she make ?","Sally earns $12.50 an hour cleaning houses. If she works for EXPONENTIAL(LOG(12))  hours, how much money will she make ?","Sally earns $12.50 an hour cleaning houses. If she works for (13-(cosec^2(38) - cot^2(38)))  hours, how much money will she make ?"
+consensus,"Solve the following math word problem.
+
+Jason had Pokemon cards. Jason gave 9 to his friends. Jason now has 4 Pokemon cards left. How many Pokemon cards did Jason have to start with ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jason had Pokemon cards. Jason gave 9 to his friends. Jason now has 4 Pokemon cards left. How many Pokemon cards did Jason have to start with ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['13'],['13'],math,Jason had Pokemon cards. Jason gave 9 to his friends. Jason now has 4 Pokemon cards left. How many Pokemon cards did Jason have to start with ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(x-9-4)
+print(answer)",13,test,singleq,Jason had Pokemon cards. Jason gave (10-(0.5*2))  to his friends. Jason now has 4 Pokemon cards left. How many Pokemon cards did Jason have to start with ?,Jason had Pokemon cards. Jason gave EXPONENTIAL(LOG(9))  to his friends. Jason now has 4 Pokemon cards left. How many Pokemon cards did Jason have to start with ?,Jason had Pokemon cards. Jason gave (10-(cos^2(70) + sin^2(70)))  to his friends. Jason now has 4 Pokemon cards left. How many Pokemon cards did Jason have to start with ?
+consensus,"Solve the following math word problem.
+
+Jack has a section filled with short story booklets. If each booklet has 9 pages and there are 49 booklets in the short story section, how many pages will Jack need to go through if he plans to read them all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jack has a section filled with short story booklets. If each booklet has 9 pages and there are 49 booklets in the short story section, how many pages will Jack need to go through if he plans to read them all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['441'],['441'],math,"Jack has a section filled with short story booklets. If each booklet has 9 pages and there are 49 booklets in the short story section, how many pages will Jack need to go through if he plans to read them all?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(9*49-x)
+print(answer)",441,test,singleq,"Jack has a section filled with short story booklets. If each booklet has 9 pages and there are (48+(8/8))  booklets in the short story section, how many pages will Jack need to go through if he plans to read them all?","Jack has a section filled with short story booklets. If each booklet has 9 pages and there are EXPONENTIAL(LOG(49))  booklets in the short story section, how many pages will Jack need to go through if he plans to read them all?","Jack has a section filled with short story booklets. If each booklet has 9 pages and there are (48+(sec^2(59)-tan^2(59)))  booklets in the short story section, how many pages will Jack need to go through if he plans to read them all?"
+consensus,"Solve the following math word problem.
+
+Justin needs 61 paper plates for a birthday party. He already has 26 blue plates and 7 red plates. How many more plates should Justin buy?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Justin needs 61 paper plates for a birthday party. He already has 26 blue plates and 7 red plates. How many more plates should Justin buy?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['28'],['28'],math,Justin needs 61 paper plates for a birthday party. He already has 26 blue plates and 7 red plates. How many more plates should Justin buy?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(61-(26+7)-x)
+print(answer)",28,test,singleq,Justin needs (62-(3/3))  paper plates for a birthday party. He already has 26 blue plates and 7 red plates. How many more plates should Justin buy?,Justin needs EXPONENTIAL(LOG(61))  paper plates for a birthday party. He already has 26 blue plates and 7 red plates. How many more plates should Justin buy?,Justin needs (60+(cosec^2(28) - cot^2(28)))  paper plates for a birthday party. He already has 26 blue plates and 7 red plates. How many more plates should Justin buy?
+consensus,"Solve the following math word problem.
+
+Fred has 110 blue marbles. Fred has 22 times more blue marbles than Tim. How many blue marbles does Tim have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Fred has 110 blue marbles. Fred has 22 times more blue marbles than Tim. How many blue marbles does Tim have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Fred has 110 blue marbles. Fred has 22 times more blue marbles than Tim. How many blue marbles does Tim have?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(110/22-x)
+print(answer)",5,test,singleq,Fred has (111-(0.5*2))  blue marbles. Fred has 22 times more blue marbles than Tim. How many blue marbles does Tim have?,Fred has EXPONENTIAL(LOG(110))  blue marbles. Fred has 22 times more blue marbles than Tim. How many blue marbles does Tim have?,Fred has (110.0*(cosec^2(37) - cot^2(37)))  blue marbles. Fred has 22 times more blue marbles than Tim. How many blue marbles does Tim have?
+consensus,"Solve the following math word problem.
+
+Dan found 56 seashells on the beach, he gave Jessica some of his seashells. He has 22 seashell left. How many seashells did he give to Jessica ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Dan found 56 seashells on the beach, he gave Jessica some of his seashells. He has 22 seashell left. How many seashells did he give to Jessica ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['34'],['34'],math,"Dan found 56 seashells on the beach, he gave Jessica some of his seashells. He has 22 seashell left. How many seashells did he give to Jessica ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(56-x-22)
+print(answer)",34,test,singleq,"Dan found (55+(0.5*2))  seashells on the beach, he gave Jessica some of his seashells. He has 22 seashell left. How many seashells did he give to Jessica ?","Dan found EXPONENTIAL(LOG(56))  seashells on the beach, he gave Jessica some of his seashells. He has 22 seashell left. How many seashells did he give to Jessica ?","Dan found (55+(sec^2(74)-tan^2(74)))  seashells on the beach, he gave Jessica some of his seashells. He has 22 seashell left. How many seashells did he give to Jessica ?"
+verified,"Solve the following math word problem.
+
+Carla has some marbles. Carla bought 489 marbles. Now Calra has 2778 marbles all together. How many did Carla start with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Carla has some marbles. Carla bought 489 marbles. Now Calra has 2778 marbles all together. How many did Carla start with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2289'],['2289'],math,Carla has some marbles. Carla bought 489 marbles. Now Calra has 2778 marbles all together. How many did Carla start with?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(489+x-2778)
+print(answer)",2289,test,singleq,Carla has some marbles. Carla bought (489.0*(49/49))  marbles. Now Calra has 2778 marbles all together. How many did Carla start with?,Carla has some marbles. Carla bought LOG(EXPONENTIAL(489))  marbles. Now Calra has 2778 marbles all together. How many did Carla start with?,Carla has some marbles. Carla bought (489/(cosec^2(73) - cot^2(73)))  marbles. Now Calra has 2778 marbles all together. How many did Carla start with?
+consensus,"Solve the following math word problem.
+
+Mary had 8 potatoes in the garden. The rabbits ate 3 of the potatoes. How many potatoes does Mary now have ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mary had 8 potatoes in the garden. The rabbits ate 3 of the potatoes. How many potatoes does Mary now have ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Mary had 8 potatoes in the garden. The rabbits ate 3 of the potatoes. How many potatoes does Mary now have ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(8-3-x)
+print(answer)",5,test,singleq,Mary had 8 potatoes in the garden. The rabbits ate (2+(0.5*2))  of the potatoes. How many potatoes does Mary now have ?,Mary had 8 potatoes in the garden. The rabbits ate LOG(EXPONENTIAL(3))  of the potatoes. How many potatoes does Mary now have ?,Mary had 8 potatoes in the garden. The rabbits ate (2+(cos^2(95) + sin^2(95)))  of the potatoes. How many potatoes does Mary now have ?
+consensus,"Solve the following math word problem.
+
+A group of science students went on a field trip. They took 6 vans and 8 buses. There were 6 people in each van and 18 people in each bus. How many people went on the field trip?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+A group of science students went on a field trip. They took 6 vans and 8 buses. There were 6 people in each van and 18 people in each bus. How many people went on the field trip?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['180'],['180'],math,A group of science students went on a field trip. They took 6 vans and 8 buses. There were 6 people in each van and 18 people in each bus. How many people went on the field trip?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve((6*6)+(8*18)-x)
+print(answer)",180,test,singleq,A group of science students went on a field trip. They took (6/(0.5*2))  vans and 8 buses. There were 6 people in each van and 18 people in each bus. How many people went on the field trip?,A group of science students went on a field trip. They took EXPONENTIAL(LOG(6))  vans and 8 buses. There were 6 people in each van and 18 people in each bus. How many people went on the field trip?,A group of science students went on a field trip. They took (6.0*(cos^2(18) + sin^2(18)))  vans and 8 buses. There were 6 people in each van and 18 people in each bus. How many people went on the field trip?
+consensus,"Solve the following math word problem.
+
+The value of a sport utility vehicle this year is 16,000 dollars , which is 0.8 of what its value was last year. How much is the value of the vehicle last year?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+The value of a sport utility vehicle this year is 16,000 dollars , which is 0.8 of what its value was last year. How much is the value of the vehicle last year?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20000'],['20000'],math,"The value of a sport utility vehicle this year is 16,000 dollars , which is 0.8 of what its value was last year. How much is the value of the vehicle last year?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(16000.0/0.8-x)
+print(answer)",20000,test,singleq,"The value of a sport utility vehicle this year is (16000.0*(0.5*2))  dollars , which is 0.8 of what its value was last year. How much is the value of the vehicle last year?","The value of a sport utility vehicle this year is LOG(EXPONENTIAL(16000))  dollars , which is 0.8 of what its value was last year. How much is the value of the vehicle last year?","The value of a sport utility vehicle this year is (16000.0*(cos^2(9) + sin^2(9)))  dollars , which is 0.8 of what its value was last year. How much is the value of the vehicle last year?"
+consensus,"Solve the following math word problem.
+
+There are 96 cupcakes for 8 children to share. How much will each person get if they share the cupcakes equally?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 96 cupcakes for 8 children to share. How much will each person get if they share the cupcakes equally?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math,There are 96 cupcakes for 8 children to share. How much will each person get if they share the cupcakes equally?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(96/8-x)
+print(answer)",12,test,singleq,There are 96 cupcakes for (7+(77/77))  children to share. How much will each person get if they share the cupcakes equally?,There are 96 cupcakes for EXPONENTIAL(LOG(8))  children to share. How much will each person get if they share the cupcakes equally?,There are 96 cupcakes for (8.0*(cosec^2(80) - cot^2(80)))  children to share. How much will each person get if they share the cupcakes equally?
+consensus,"Solve the following math word problem.
+
+Nancy has saved 4900 cents from selling lemonade.  How many dollars does Nancy have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Nancy has saved 4900 cents from selling lemonade.  How many dollars does Nancy have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['49'],['49'],math,Nancy has saved 4900 cents from selling lemonade.  How many dollars does Nancy have?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(4900/100-x)
+print(answer)",49,test,singleq,Nancy has saved (4900.0*(0.5*2))  cents from selling lemonade.  How many dollars does Nancy have?,Nancy has saved EXPONENTIAL(LOG(4900))  cents from selling lemonade.  How many dollars does Nancy have?,Nancy has saved (4899+(cosec^2(92) - cot^2(92)))  cents from selling lemonade.  How many dollars does Nancy have?
+consensus,"Solve the following math word problem.
+
+Nancy has 9 five dollars bills.  How much money does she have ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Nancy has 9 five dollars bills.  How much money does she have ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['45'],['45'],math,Nancy has 9 five dollars bills.  How much money does she have ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(9*5-x)
+print(answer)",45,test,singleq,Nancy has (10-(0.5*2))  five dollars bills.  How much money does she have ?,Nancy has EXPONENTIAL(LOG(9))  five dollars bills.  How much money does she have ?,Nancy has (9/(sec^2(76)-tan^2(76)))  five dollars bills.  How much money does she have ?
+consensus,"Solve the following math word problem.
+
+Sandy worked 45 hours in the last 5 days. Assuming that she worked the same amount of hours each day, how long did she work each day ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sandy worked 45 hours in the last 5 days. Assuming that she worked the same amount of hours each day, how long did she work each day ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,"Sandy worked 45 hours in the last 5 days. Assuming that she worked the same amount of hours each day, how long did she work each day ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(45/5-x)
+print(answer)",9,test,singleq,"Sandy worked 45 hours in the last (4+(0.5*2))  days. Assuming that she worked the same amount of hours each day, how long did she work each day ?","Sandy worked 45 hours in the last EXPONENTIAL(LOG(5))  days. Assuming that she worked the same amount of hours each day, how long did she work each day ?","Sandy worked 45 hours in the last (6-(sec^2(22)-tan^2(22)))  days. Assuming that she worked the same amount of hours each day, how long did she work each day ?"
+consensus,"Solve the following math word problem.
+
+Nancy grew 6 potatoes. Sandy grew 7 potatoes. How many potatoes did they grow in total ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Nancy grew 6 potatoes. Sandy grew 7 potatoes. How many potatoes did they grow in total ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['13'],['13'],math,Nancy grew 6 potatoes. Sandy grew 7 potatoes. How many potatoes did they grow in total ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(6+7-x)
+print(answer)",13,test,singleq,Nancy grew 6 potatoes. Sandy grew (6+(86/86))  potatoes. How many potatoes did they grow in total ?,Nancy grew 6 potatoes. Sandy grew LOG(EXPONENTIAL(7))  potatoes. How many potatoes did they grow in total ?,Nancy grew 6 potatoes. Sandy grew (6+(cosec^2(23) - cot^2(23)))  potatoes. How many potatoes did they grow in total ?
+consensus,"Solve the following math word problem.
+
+Dan bought 9 dozen eggs from the grocery store to bake some cakes.  How many eggs did Dan buy ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Dan bought 9 dozen eggs from the grocery store to bake some cakes.  How many eggs did Dan buy ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['108'],['108'],math,Dan bought 9 dozen eggs from the grocery store to bake some cakes.  How many eggs did Dan buy ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(9*12-x)
+print(answer)",108,test,singleq,Dan bought (8+(0.5*2))  dozen eggs from the grocery store to bake some cakes.  How many eggs did Dan buy ?,Dan bought LOG(EXPONENTIAL(9))  dozen eggs from the grocery store to bake some cakes.  How many eggs did Dan buy ?,Dan bought (9/(cosec^2(24) - cot^2(24)))  dozen eggs from the grocery store to bake some cakes.  How many eggs did Dan buy ?
+consensus,"Solve the following math word problem.
+
+Jason picked 46 pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jason picked 46 pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['105'],['105'],math,"Jason picked 46 pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(46+47+12-x)
+print(answer)",105,test,singleq,"Jason picked (46/(70/70))  pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?","Jason picked EXPONENTIAL(LOG(46))  pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?","Jason picked (45+(sec^2(26)-tan^2(26)))  pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?"
+consensus,"Solve the following math word problem.
+
+Christian’s father and the senior ranger gathered firewood as they walked towards the lake in the park and brought with them sacks. If every sack can contain around 20 pieces of wood, how many sacks were they able to fill if they gathered 80 pieces of wood?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Christian’s father and the senior ranger gathered firewood as they walked towards the lake in the park and brought with them sacks. If every sack can contain around 20 pieces of wood, how many sacks were they able to fill if they gathered 80 pieces of wood?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['4'],['4'],math,"Christian’s father and the senior ranger gathered firewood as they walked towards the lake in the park and brought with them sacks. If every sack can contain around 20 pieces of wood, how many sacks were they able to fill if they gathered 80 pieces of wood?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(20*x-80)
+print(answer)",4,test,singleq,"Christian’s father and the senior ranger gathered firewood as they walked towards the lake in the park and brought with them sacks. If every sack can contain around 20 pieces of wood, how many sacks were they able to fill if they gathered (79+(26/26))  pieces of wood?","Christian’s father and the senior ranger gathered firewood as they walked towards the lake in the park and brought with them sacks. If every sack can contain around 20 pieces of wood, how many sacks were they able to fill if they gathered EXPONENTIAL(LOG(80))  pieces of wood?","Christian’s father and the senior ranger gathered firewood as they walked towards the lake in the park and brought with them sacks. If every sack can contain around 20 pieces of wood, how many sacks were they able to fill if they gathered (81-(cosec^2(68) - cot^2(68)))  pieces of wood?"
+consensus,"Solve the following math word problem.
+
+Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of 27 dollars. How much did each candy bar cost ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of 27 dollars. How much did each candy bar cost ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of 27 dollars. How much did each candy bar cost ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(2+(5*x)-27)
+print(answer)",5,test,singleq,Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of (27.0*(29/29))  dollars. How much did each candy bar cost ?,Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of EXPONENTIAL(LOG(27))  dollars. How much did each candy bar cost ?,Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of (26+(sec^2(62)-tan^2(62)))  dollars. How much did each candy bar cost ?
+consensus,"Solve the following math word problem.
+
+Sara has saved 11 quarters from washing cars.  How many cents does Sara have ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sara has saved 11 quarters from washing cars.  How many cents does Sara have ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['275'],['275'],math,Sara has saved 11 quarters from washing cars.  How many cents does Sara have ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(11*25-x)
+print(answer)",275,test,singleq,Sara has saved (11/(91/91))  quarters from washing cars.  How many cents does Sara have ?,Sara has saved LOG(EXPONENTIAL(11))  quarters from washing cars.  How many cents does Sara have ?,Sara has saved (10+(cos^2(3) + sin^2(3)))  quarters from washing cars.  How many cents does Sara have ?
+consensus,"Solve the following math word problem.
+
+Seth bought 20 cartons of ice cream and 2 cartons of yogurt. Each carton of ice cream cost $6 and each carton of yogurt cost $1. How much more did Seth spend on ice cream than on yogurt?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Seth bought 20 cartons of ice cream and 2 cartons of yogurt. Each carton of ice cream cost $6 and each carton of yogurt cost $1. How much more did Seth spend on ice cream than on yogurt?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['118'],['118'],math,Seth bought 20 cartons of ice cream and 2 cartons of yogurt. Each carton of ice cream cost $6 and each carton of yogurt cost $1. How much more did Seth spend on ice cream than on yogurt?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve((20*6)-(2*1)-x)
+print(answer)",118,test,singleq,Seth bought (19+(60/60))  cartons of ice cream and 2 cartons of yogurt. Each carton of ice cream cost $6 and each carton of yogurt cost $1. How much more did Seth spend on ice cream than on yogurt?,Seth bought EXPONENTIAL(LOG(20))  cartons of ice cream and 2 cartons of yogurt. Each carton of ice cream cost $6 and each carton of yogurt cost $1. How much more did Seth spend on ice cream than on yogurt?,Seth bought (19+(sec^2(13)-tan^2(13)))  cartons of ice cream and 2 cartons of yogurt. Each carton of ice cream cost $6 and each carton of yogurt cost $1. How much more did Seth spend on ice cream than on yogurt?
+consensus,"Solve the following math word problem.
+
+Sally found 9 seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sally found 9 seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['21'],['21'],math,"Sally found 9 seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(9+7+5-x)
+print(answer)",21,test,singleq,"Sally found (8+(0.5*2))  seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?","Sally found LOG(EXPONENTIAL(9))  seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?","Sally found (10-(cosec^2(24) - cot^2(24)))  seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?"
+consensus,"Solve the following math word problem.
+
+Jason has 676 Pokemon cards. Alyssa bought 224 of Jason's  Pokemon cards. How many Pokemon cards does Jason have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jason has 676 Pokemon cards. Alyssa bought 224 of Jason's  Pokemon cards. How many Pokemon cards does Jason have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['452'],['452'],math,Jason has 676 Pokemon cards. Alyssa bought 224 of Jason's  Pokemon cards. How many Pokemon cards does Jason have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(676-224-x)
+print(answer)",452,test,singleq,Jason has (676.0*(0.5*2))  Pokemon cards. Alyssa bought 224 of Jason's  Pokemon cards. How many Pokemon cards does Jason have now ?,Jason has EXPONENTIAL(LOG(676))  Pokemon cards. Alyssa bought 224 of Jason's  Pokemon cards. How many Pokemon cards does Jason have now ?,Jason has (676.0*(sec^2(65)-tan^2(65)))  Pokemon cards. Alyssa bought 224 of Jason's  Pokemon cards. How many Pokemon cards does Jason have now ?
+consensus,"Solve the following math word problem.
+
+She counted her crayons and found out that she has 80 crayons which she will place in crayon boxes. Every box can contain 8 crayons. How many boxes does she need?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+She counted her crayons and found out that she has 80 crayons which she will place in crayon boxes. Every box can contain 8 crayons. How many boxes does she need?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['10'],['10'],math,She counted her crayons and found out that she has 80 crayons which she will place in crayon boxes. Every box can contain 8 crayons. How many boxes does she need?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(80/8-x)
+print(answer)",10,test,singleq,She counted her crayons and found out that she has (79+(23/23))  crayons which she will place in crayon boxes. Every box can contain 8 crayons. How many boxes does she need?,She counted her crayons and found out that she has EXPONENTIAL(LOG(80))  crayons which she will place in crayon boxes. Every box can contain 8 crayons. How many boxes does she need?,She counted her crayons and found out that she has (81-(sec^2(50)-tan^2(50)))  crayons which she will place in crayon boxes. Every box can contain 8 crayons. How many boxes does she need?
+consensus,"Solve the following math word problem.
+
+Alyssa has 37 blue balloons, Sandy has 28 blue balloons, and Sally  has 39 blue balloons. How many blue balloons do they have in all ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Alyssa has 37 blue balloons, Sandy has 28 blue balloons, and Sally  has 39 blue balloons. How many blue balloons do they have in all ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['104'],['104'],math,"Alyssa has 37 blue balloons, Sandy has 28 blue balloons, and Sally  has 39 blue balloons. How many blue balloons do they have in all ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(37+28+39-x)
+print(answer)",104,test,singleq,"Alyssa has 37 blue balloons, Sandy has 28 blue balloons, and Sally  has (39/(0.5*2))  blue balloons. How many blue balloons do they have in all ?","Alyssa has 37 blue balloons, Sandy has 28 blue balloons, and Sally  has EXPONENTIAL(LOG(39))  blue balloons. How many blue balloons do they have in all ?","Alyssa has 37 blue balloons, Sandy has 28 blue balloons, and Sally  has (39.0*(cosec^2(5) - cot^2(5)))  blue balloons. How many blue balloons do they have in all ?"
+consensus,"Solve the following math word problem.
+
+Jason had 49 quarters in his bank. His dad gave him 25 more quarters. How many quarters does he have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jason had 49 quarters in his bank. His dad gave him 25 more quarters. How many quarters does he have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['74'],['74'],math,Jason had 49 quarters in his bank. His dad gave him 25 more quarters. How many quarters does he have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(49+25-x)
+print(answer)",74,test,singleq,Jason had 49 quarters in his bank. His dad gave him (24+(0.5*2))  more quarters. How many quarters does he have now ?,Jason had 49 quarters in his bank. His dad gave him LOG(EXPONENTIAL(25))  more quarters. How many quarters does he have now ?,Jason had 49 quarters in his bank. His dad gave him (25.0*(cos^2(25) + sin^2(25)))  more quarters. How many quarters does he have now ?
+consensus,"Solve the following math word problem.
+
+Before the recent housing boom, there were 1,426 houses in Lawrence County. Now, there are 2,000 houses. How many houses did developers build during the housing boom?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Before the recent housing boom, there were 1,426 houses in Lawrence County. Now, there are 2,000 houses. How many houses did developers build during the housing boom?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['574'],['574'],math,"Before the recent housing boom, there were 1,426 houses in Lawrence County. Now, there are 2,000 houses. How many houses did developers build during the housing boom?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(1426+x-2000)
+print(answer)",574,test,singleq,"Before the recent housing boom, there were 1,426 houses in Lawrence County. Now, there are (2000.0*(23/23))  houses. How many houses did developers build during the housing boom?","Before the recent housing boom, there were 1,426 houses in Lawrence County. Now, there are EXPONENTIAL(LOG(2000))  houses. How many houses did developers build during the housing boom?","Before the recent housing boom, there were 1,426 houses in Lawrence County. Now, there are (2000/(sec^2(17)-tan^2(17)))  houses. How many houses did developers build during the housing boom?"
+consensus,"Solve the following math word problem.
+
+6 students were sitting at each table in the lunchroom. There are 34 tables. How many students were sitting in the lunchroom?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+6 students were sitting at each table in the lunchroom. There are 34 tables. How many students were sitting in the lunchroom?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['204'],['204'],math,6 students were sitting at each table in the lunchroom. There are 34 tables. How many students were sitting in the lunchroom?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(6*34-x)
+print(answer)",204,test,singleq,6 students were sitting at each table in the lunchroom. There are (33+(85/85))  tables. How many students were sitting in the lunchroom?,6 students were sitting at each table in the lunchroom. There are EXPONENTIAL(LOG(34))  tables. How many students were sitting in the lunchroom?,6 students were sitting at each table in the lunchroom. There are (34/(cosec^2(74) - cot^2(74)))  tables. How many students were sitting in the lunchroom?
+consensus,"Solve the following math word problem.
+
+Tim has saved 2000 cents from selling lemonade.  How many dollars does Tim have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Tim has saved 2000 cents from selling lemonade.  How many dollars does Tim have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20'],['20'],math,Tim has saved 2000 cents from selling lemonade.  How many dollars does Tim have?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(2000/100-x)
+print(answer)",20,test,singleq,Tim has saved (2001-(0.5*2))  cents from selling lemonade.  How many dollars does Tim have?,Tim has saved EXPONENTIAL(LOG(2000))  cents from selling lemonade.  How many dollars does Tim have?,Tim has saved (2001-(cosec^2(9) - cot^2(9)))  cents from selling lemonade.  How many dollars does Tim have?
+consensus,"Solve the following math word problem.
+
+There are 46 rulers in the drawer. Tim took 25  rulers from the drawer. How many rulers are now in the drawer ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 46 rulers in the drawer. Tim took 25  rulers from the drawer. How many rulers are now in the drawer ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['21'],['21'],math,There are 46 rulers in the drawer. Tim took 25  rulers from the drawer. How many rulers are now in the drawer ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(46-25-x)
+print(answer)",21,test,singleq,There are (47-(0.5*2))  rulers in the drawer. Tim took 25  rulers from the drawer. How many rulers are now in the drawer ?,There are EXPONENTIAL(LOG(46))  rulers in the drawer. Tim took 25  rulers from the drawer. How many rulers are now in the drawer ?,There are (47-(sec^2(97)-tan^2(97)))  rulers in the drawer. Tim took 25  rulers from the drawer. How many rulers are now in the drawer ?
+consensus,"Solve the following math word problem.
+
+Benny bought 7 dozen eggs from the grocery store to bake some cakes.  How many eggs did Benny buy ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Benny bought 7 dozen eggs from the grocery store to bake some cakes.  How many eggs did Benny buy ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['84'],['84'],math,Benny bought 7 dozen eggs from the grocery store to bake some cakes.  How many eggs did Benny buy ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(7*12-x)
+print(answer)",84,test,singleq,Benny bought (7/(96/96))  dozen eggs from the grocery store to bake some cakes.  How many eggs did Benny buy ?,Benny bought EXPONENTIAL(LOG(7))  dozen eggs from the grocery store to bake some cakes.  How many eggs did Benny buy ?,Benny bought (7/(cos^2(37) + sin^2(37)))  dozen eggs from the grocery store to bake some cakes.  How many eggs did Benny buy ?
+consensus,"Solve the following math word problem.
+
+Mrs. Hilt needs to share $3.75 equally among 3 total people. How much money will each person get?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mrs. Hilt needs to share $3.75 equally among 3 total people. How much money will each person get?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['1.25'],['1.25'],math,Mrs. Hilt needs to share $3.75 equally among 3 total people. How much money will each person get?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(3.75/3-x)
+print(answer)",1.25,test,singleq,Mrs. Hilt needs to share $3.75 equally among (2+(95/95))  total people. How much money will each person get?,Mrs. Hilt needs to share $3.75 equally among LOG(EXPONENTIAL(3))  total people. How much money will each person get?,Mrs. Hilt needs to share $3.75 equally among (3.0*(cos^2(90) + sin^2(90)))  total people. How much money will each person get?
+consensus,"Solve the following math word problem.
+
+Mrs. Hilt baked pies last weekend for a holiday dinner. She baked 16 pecan pies and 14 apples pies. If she wants to arrange all of the pies in rows of 5 pies each, how many rows will she have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mrs. Hilt baked pies last weekend for a holiday dinner. She baked 16 pecan pies and 14 apples pies. If she wants to arrange all of the pies in rows of 5 pies each, how many rows will she have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,"Mrs. Hilt baked pies last weekend for a holiday dinner. She baked 16 pecan pies and 14 apples pies. If she wants to arrange all of the pies in rows of 5 pies each, how many rows will she have?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve((16+14)/5-x)
+print(answer)",6,test,singleq,"Mrs. Hilt baked pies last weekend for a holiday dinner. She baked 16 pecan pies and 14 apples pies. If she wants to arrange all of the pies in rows of (4+(0.5*2))  pies each, how many rows will she have?","Mrs. Hilt baked pies last weekend for a holiday dinner. She baked 16 pecan pies and 14 apples pies. If she wants to arrange all of the pies in rows of EXPONENTIAL(LOG(5))  pies each, how many rows will she have?","Mrs. Hilt baked pies last weekend for a holiday dinner. She baked 16 pecan pies and 14 apples pies. If she wants to arrange all of the pies in rows of (5/(sec^2(89)-tan^2(89)))  pies each, how many rows will she have?"
+consensus,"Solve the following math word problem.
+
+Jessica had 8 quarters in her bank. Her sister borrowed 3 of her quarters. How many quarters does Jessica have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jessica had 8 quarters in her bank. Her sister borrowed 3 of her quarters. How many quarters does Jessica have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Jessica had 8 quarters in her bank. Her sister borrowed 3 of her quarters. How many quarters does Jessica have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(8-3-x)
+print(answer)",5,test,singleq,Jessica had (8/(0.5*2))  quarters in her bank. Her sister borrowed 3 of her quarters. How many quarters does Jessica have now ?,Jessica had EXPONENTIAL(LOG(8))  quarters in her bank. Her sister borrowed 3 of her quarters. How many quarters does Jessica have now ?,Jessica had (8.0*(cosec^2(73) - cot^2(73)))  quarters in her bank. Her sister borrowed 3 of her quarters. How many quarters does Jessica have now ?
+consensus,"Solve the following math word problem.
+
+Mrs. Hilt saw a rollercoaster. 7 students rode the rollercoaster every 5 minutes. How many students rode the rollercoaster in 15 minutes?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mrs. Hilt saw a rollercoaster. 7 students rode the rollercoaster every 5 minutes. How many students rode the rollercoaster in 15 minutes?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['21'],['21'],math,Mrs. Hilt saw a rollercoaster. 7 students rode the rollercoaster every 5 minutes. How many students rode the rollercoaster in 15 minutes?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(7*(15/5)-x)
+print(answer)",21,test,singleq,Mrs. Hilt saw a rollercoaster. 7 students rode the rollercoaster every (5/(34/34))  minutes. How many students rode the rollercoaster in 15 minutes?,Mrs. Hilt saw a rollercoaster. 7 students rode the rollercoaster every LOG(EXPONENTIAL(5))  minutes. How many students rode the rollercoaster in 15 minutes?,Mrs. Hilt saw a rollercoaster. 7 students rode the rollercoaster every (6-(cosec^2(11) - cot^2(11)))  minutes. How many students rode the rollercoaster in 15 minutes?
+consensus,"Solve the following math word problem.
+
+Last week Tom had 74 dollars. He washed cars over the weekend and now has 86 dollars. How much money did he make washing cars ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Last week Tom had 74 dollars. He washed cars over the weekend and now has 86 dollars. How much money did he make washing cars ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math,Last week Tom had 74 dollars. He washed cars over the weekend and now has 86 dollars. How much money did he make washing cars ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(74+x-86)
+print(answer)",12,test,singleq,Last week Tom had (74.0*(10/10))  dollars. He washed cars over the weekend and now has 86 dollars. How much money did he make washing cars ?,Last week Tom had EXPONENTIAL(LOG(74))  dollars. He washed cars over the weekend and now has 86 dollars. How much money did he make washing cars ?,Last week Tom had (74.0*(sec^2(23)-tan^2(23)))  dollars. He washed cars over the weekend and now has 86 dollars. How much money did he make washing cars ?
+consensus,"Solve the following math word problem.
+
+Sara grew 4 onions, Sally grew 5 onions, and Fred grew  9 onions. How many onions did they grow in all ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sara grew 4 onions, Sally grew 5 onions, and Fred grew  9 onions. How many onions did they grow in all ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['18'],['18'],math,"Sara grew 4 onions, Sally grew 5 onions, and Fred grew  9 onions. How many onions did they grow in all ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(4+5+9-x)
+print(answer)",18,test,singleq,"Sara grew 4 onions, Sally grew 5 onions, and Fred grew  (10-(50/50))  onions. How many onions did they grow in all ?","Sara grew 4 onions, Sally grew 5 onions, and Fred grew  LOG(EXPONENTIAL(9))  onions. How many onions did they grow in all ?","Sara grew 4 onions, Sally grew 5 onions, and Fred grew  (8+(cos^2(54) + sin^2(54)))  onions. How many onions did they grow in all ?"
+consensus,"Solve the following math word problem.
+
+They entered the circus tent and saw that there are 4 sections for the audience. If each section can accommodate 246 people, how many people can the tent accommodate in total?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+They entered the circus tent and saw that there are 4 sections for the audience. If each section can accommodate 246 people, how many people can the tent accommodate in total?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['984'],['984'],math,"They entered the circus tent and saw that there are 4 sections for the audience. If each section can accommodate 246 people, how many people can the tent accommodate in total?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(4*246-x)
+print(answer)",984,test,singleq,"They entered the circus tent and saw that there are (3+(0.5*2))  sections for the audience. If each section can accommodate 246 people, how many people can the tent accommodate in total?","They entered the circus tent and saw that there are LOG(EXPONENTIAL(4))  sections for the audience. If each section can accommodate 246 people, how many people can the tent accommodate in total?","They entered the circus tent and saw that there are (3+(cosec^2(93) - cot^2(93)))  sections for the audience. If each section can accommodate 246 people, how many people can the tent accommodate in total?"
+consensus,"Solve the following math word problem.
+
+Sara goes fishing with Melanie. Sara catches 5 trout. Melanie catches 2 times as many trout as Sara. How many trout did Melanie catch ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sara goes fishing with Melanie. Sara catches 5 trout. Melanie catches 2 times as many trout as Sara. How many trout did Melanie catch ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['10'],['10'],math,Sara goes fishing with Melanie. Sara catches 5 trout. Melanie catches 2 times as many trout as Sara. How many trout did Melanie catch ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(5*2-x)
+print(answer)",10,test,singleq,Sara goes fishing with Melanie. Sara catches (5/(0.5*2))  trout. Melanie catches 2 times as many trout as Sara. How many trout did Melanie catch ?,Sara goes fishing with Melanie. Sara catches EXPONENTIAL(LOG(5))  trout. Melanie catches 2 times as many trout as Sara. How many trout did Melanie catch ?,Sara goes fishing with Melanie. Sara catches (4+(sec^2(52)-tan^2(52)))  trout. Melanie catches 2 times as many trout as Sara. How many trout did Melanie catch ?
+consensus,"Solve the following math word problem.
+
+Joan has 10 books. Tom has 38 books.  How many books do they have together ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Joan has 10 books. Tom has 38 books.  How many books do they have together ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['48'],['48'],math,Joan has 10 books. Tom has 38 books.  How many books do they have together ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(10+38-x)
+print(answer)",48,test,singleq,Joan has 10 books. Tom has (39-(0.5*2))  books.  How many books do they have together ?,Joan has 10 books. Tom has LOG(EXPONENTIAL(38))  books.  How many books do they have together ?,Joan has 10 books. Tom has (38.0*(sec^2(51)-tan^2(51)))  books.  How many books do they have together ?
+consensus,"Solve the following math word problem.
+
+A farmer estimates that he will harvest 48,097 bushels of wheat. The weather is perfect during the growing season, so he harvests 684 more bushels of wheat than expected. How many bushels of wheat does the farmer harvest?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+A farmer estimates that he will harvest 48,097 bushels of wheat. The weather is perfect during the growing season, so he harvests 684 more bushels of wheat than expected. How many bushels of wheat does the farmer harvest?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['48781'],['48781'],math,"A farmer estimates that he will harvest 48,097 bushels of wheat. The weather is perfect during the growing season, so he harvests 684 more bushels of wheat than expected. How many bushels of wheat does the farmer harvest?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(48097+684-x)
+print(answer)",48781,test,singleq,"A farmer estimates that he will harvest (48098-(0.5*2))  bushels of wheat. The weather is perfect during the growing season, so he harvests 684 more bushels of wheat than expected. How many bushels of wheat does the farmer harvest?","A farmer estimates that he will harvest EXPONENTIAL(LOG(48097))  bushels of wheat. The weather is perfect during the growing season, so he harvests 684 more bushels of wheat than expected. How many bushels of wheat does the farmer harvest?","A farmer estimates that he will harvest (48097.0*(sec^2(66)-tan^2(66)))  bushels of wheat. The weather is perfect during the growing season, so he harvests 684 more bushels of wheat than expected. How many bushels of wheat does the farmer harvest?"
+consensus,"Solve the following math word problem.
+
+There are 25 popular trees currently in the park. Park workers will plant  73 more popular trees today. How many popular trees will the park have when the workers are finished ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 25 popular trees currently in the park. Park workers will plant  73 more popular trees today. How many popular trees will the park have when the workers are finished ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['98'],['98'],math,There are 25 popular trees currently in the park. Park workers will plant  73 more popular trees today. How many popular trees will the park have when the workers are finished ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(25+73-x)
+print(answer)",98,test,singleq,There are 25 popular trees currently in the park. Park workers will plant  (74-(31/31))  more popular trees today. How many popular trees will the park have when the workers are finished ?,There are 25 popular trees currently in the park. Park workers will plant  EXPONENTIAL(LOG(73))  more popular trees today. How many popular trees will the park have when the workers are finished ?,There are 25 popular trees currently in the park. Park workers will plant  (72+(sec^2(25)-tan^2(25)))  more popular trees today. How many popular trees will the park have when the workers are finished ?
+consensus,"Solve the following math word problem.
+
+Connie had some marbles. Connie gave 183 to Juan. Now Connie has 593 marbles left. How many did Connie have to start with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Connie had some marbles. Connie gave 183 to Juan. Now Connie has 593 marbles left. How many did Connie have to start with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['776'],['776'],math,Connie had some marbles. Connie gave 183 to Juan. Now Connie has 593 marbles left. How many did Connie have to start with?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(x-183-593)
+print(answer)",776,test,singleq,Connie had some marbles. Connie gave (183.0*(75/75))  to Juan. Now Connie has 593 marbles left. How many did Connie have to start with?,Connie had some marbles. Connie gave EXPONENTIAL(LOG(183))  to Juan. Now Connie has 593 marbles left. How many did Connie have to start with?,Connie had some marbles. Connie gave (183.0*(sec^2(49)-tan^2(49)))  to Juan. Now Connie has 593 marbles left. How many did Connie have to start with?
+consensus,"Solve the following math word problem.
+
+Benny goes to lunch with Sally and Sandy. The total bill came to 15 dollars. They decided to equally split up the bill, how much will each person have to pay ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Benny goes to lunch with Sally and Sandy. The total bill came to 15 dollars. They decided to equally split up the bill, how much will each person have to pay ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,"Benny goes to lunch with Sally and Sandy. The total bill came to 15 dollars. They decided to equally split up the bill, how much will each person have to pay ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(15/3-x)
+print(answer)",5,test,singleq,"Benny goes to lunch with Sally and Sandy. The total bill came to (14+(0.5*2))  dollars. They decided to equally split up the bill, how much will each person have to pay ?","Benny goes to lunch with Sally and Sandy. The total bill came to EXPONENTIAL(LOG(15))  dollars. They decided to equally split up the bill, how much will each person have to pay ?","Benny goes to lunch with Sally and Sandy. The total bill came to (14+(cosec^2(72) - cot^2(72)))  dollars. They decided to equally split up the bill, how much will each person have to pay ?"
+consensus,"Solve the following math word problem.
+
+Sam had 98 pennies in his bank. He spent 93 of his pennies. How many pennies does he have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sam had 98 pennies in his bank. He spent 93 of his pennies. How many pennies does he have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Sam had 98 pennies in his bank. He spent 93 of his pennies. How many pennies does he have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(98-93-x)
+print(answer)",5,test,singleq,Sam had 98 pennies in his bank. He spent (92+(0.5*2))  of his pennies. How many pennies does he have now ?,Sam had 98 pennies in his bank. He spent LOG(EXPONENTIAL(93))  of his pennies. How many pennies does he have now ?,Sam had 98 pennies in his bank. He spent (93/(cos^2(72) + sin^2(72)))  of his pennies. How many pennies does he have now ?
+consensus,"Solve the following math word problem.
+
+Priya needs 54 cupcakes for a birthday party. She already has 15 chocolate cupcakes and 25 vanilla cupcakes. How many more cupcakes should Priya buy?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Priya needs 54 cupcakes for a birthday party. She already has 15 chocolate cupcakes and 25 vanilla cupcakes. How many more cupcakes should Priya buy?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['14'],['14'],math,Priya needs 54 cupcakes for a birthday party. She already has 15 chocolate cupcakes and 25 vanilla cupcakes. How many more cupcakes should Priya buy?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(54-(15+25)-x)
+print(answer)",14,test,singleq,Priya needs 54 cupcakes for a birthday party. She already has (14+(72/72))  chocolate cupcakes and 25 vanilla cupcakes. How many more cupcakes should Priya buy?,Priya needs 54 cupcakes for a birthday party. She already has EXPONENTIAL(LOG(15))  chocolate cupcakes and 25 vanilla cupcakes. How many more cupcakes should Priya buy?,Priya needs 54 cupcakes for a birthday party. She already has (15/(cosec^2(52) - cot^2(52)))  chocolate cupcakes and 25 vanilla cupcakes. How many more cupcakes should Priya buy?
+consensus,"Solve the following math word problem.
+
+Connie has 323 marbles. Juan has 175 more marbles than Connie. How many marbles does Juan have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Connie has 323 marbles. Juan has 175 more marbles than Connie. How many marbles does Juan have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['498'],['498'],math,Connie has 323 marbles. Juan has 175 more marbles than Connie. How many marbles does Juan have?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(323+175-x)
+print(answer)",498,test,singleq,Connie has 323 marbles. Juan has (175/(0.5*2))  more marbles than Connie. How many marbles does Juan have?,Connie has 323 marbles. Juan has EXPONENTIAL(LOG(175))  more marbles than Connie. How many marbles does Juan have?,Connie has 323 marbles. Juan has (175.0*(cosec^2(42) - cot^2(42)))  more marbles than Connie. How many marbles does Juan have?
+consensus,"Solve the following math word problem.
+
+How many cookies would you have if you had 37 bags of cookies with 19 cookies in each bag?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+How many cookies would you have if you had 37 bags of cookies with 19 cookies in each bag?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['703'],['703'],math,How many cookies would you have if you had 37 bags of cookies with 19 cookies in each bag?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(37*19-x)
+print(answer)",703,test,singleq,How many cookies would you have if you had (37.0*(0.5*2))  bags of cookies with 19 cookies in each bag?,How many cookies would you have if you had EXPONENTIAL(LOG(37))  bags of cookies with 19 cookies in each bag?,How many cookies would you have if you had (37/(sec^2(7)-tan^2(7)))  bags of cookies with 19 cookies in each bag?
+consensus,"Solve the following math word problem.
+
+There are 27 pencils in the drawer. Nancy placed 45 more  pencils in the drawer. How many pencils are now there in total ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 27 pencils in the drawer. Nancy placed 45 more  pencils in the drawer. How many pencils are now there in total ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['72'],['72'],math,There are 27 pencils in the drawer. Nancy placed 45 more  pencils in the drawer. How many pencils are now there in total ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(27+45-x)
+print(answer)",72,test,singleq,There are 27 pencils in the drawer. Nancy placed (44+(0.5*2))  more  pencils in the drawer. How many pencils are now there in total ?,There are 27 pencils in the drawer. Nancy placed EXPONENTIAL(LOG(45))  more  pencils in the drawer. How many pencils are now there in total ?,There are 27 pencils in the drawer. Nancy placed (45.0*(cos^2(62) + sin^2(62)))  more  pencils in the drawer. How many pencils are now there in total ?
+verified,"Solve the following math word problem.
+
+Fred has 709 green balloons, he gave Sandy 221 of the balloons. How many green balloons does he now have ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Fred has 709 green balloons, he gave Sandy 221 of the balloons. How many green balloons does he now have ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['488'],['488'],math,"Fred has 709 green balloons, he gave Sandy 221 of the balloons. How many green balloons does he now have ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(709-221-x)
+print(answer)",488,test,singleq,"Fred has 709 green balloons, he gave Sandy (221/(5/5))  of the balloons. How many green balloons does he now have ?","Fred has 709 green balloons, he gave Sandy EXPONENTIAL(LOG(221))  of the balloons. How many green balloons does he now have ?","Fred has 709 green balloons, he gave Sandy (222-(cos^2(79) + sin^2(79)))  of the balloons. How many green balloons does he now have ?"
+verified,"Solve the following math word problem.
+
+Sandy has 10 books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sandy has 10 books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['67'],['67'],math,"Sandy has 10 books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(10+24+33-x)
+print(answer)",67,test,singleq,"Sandy has (11-(98/98))  books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?","Sandy has LOG(EXPONENTIAL(10))  books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?","Sandy has (11-(cos^2(56) + sin^2(56)))  books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?"
+verified,"Solve the following math word problem.
+
+There are 37 baskets. There are 17 apples in each basket. How many apples are there in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 37 baskets. There are 17 apples in each basket. How many apples are there in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['629'],['629'],math,There are 37 baskets. There are 17 apples in each basket. How many apples are there in all?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(37*17-x)
+print(answer)",629,test,singleq,There are 37 baskets. There are (17.0*(11/11))  apples in each basket. How many apples are there in all?,There are 37 baskets. There are EXPONENTIAL(LOG(17))  apples in each basket. How many apples are there in all?,There are 37 baskets. There are (16+(sec^2(55)-tan^2(55)))  apples in each basket. How many apples are there in all?
+verified,"Solve the following math word problem.
+
+Abe's family moved from the Bahamas to Japan, so they had convert their money into Japanese yen. Their checking account now has 6,359 yen and their savings account now has 3,485 yen. How many yen do they have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Abe's family moved from the Bahamas to Japan, so they had convert their money into Japanese yen. Their checking account now has 6,359 yen and their savings account now has 3,485 yen. How many yen do they have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9844'],['9844'],math,"Abe's family moved from the Bahamas to Japan, so they had convert their money into Japanese yen. Their checking account now has 6,359 yen and their savings account now has 3,485 yen. How many yen do they have?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(6359+3485-x)
+print(answer)",9844,test,singleq,"Abe's family moved from the Bahamas to Japan, so they had convert their money into Japanese yen. Their checking account now has (6359.0*(50/50))  yen and their savings account now has 3,485 yen. How many yen do they have?","Abe's family moved from the Bahamas to Japan, so they had convert their money into Japanese yen. Their checking account now has LOG(EXPONENTIAL(6359))  yen and their savings account now has 3,485 yen. How many yen do they have?","Abe's family moved from the Bahamas to Japan, so they had convert their money into Japanese yen. Their checking account now has (6358+(sec^2(24)-tan^2(24)))  yen and their savings account now has 3,485 yen. How many yen do they have?"
+verified,"Solve the following math word problem.
+
+There were a total of 27 soccer games during the 3 month season.  If the games are equally divided, how many soccer games are played a month ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There were a total of 27 soccer games during the 3 month season.  If the games are equally divided, how many soccer games are played a month ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,"There were a total of 27 soccer games during the 3 month season.  If the games are equally divided, how many soccer games are played a month ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(27/3-x)
+print(answer)",9,test,singleq,"There were a total of 27 soccer games during the (4-(55/55))  month season.  If the games are equally divided, how many soccer games are played a month ?","There were a total of 27 soccer games during the EXPONENTIAL(LOG(3))  month season.  If the games are equally divided, how many soccer games are played a month ?","There were a total of 27 soccer games during the (2+(cos^2(7) + sin^2(7)))  month season.  If the games are equally divided, how many soccer games are played a month ?"
+verified,"Solve the following math word problem.
+
+Shannon, Brenda’s neighbor, joined Brenda in making bracelets. She brought 48 heart-shaped stones and wanted to have 8 of this type of stone in each of the bracelet she makes. How many bracelets with heart-shaped stones can Shannon make?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Shannon, Brenda’s neighbor, joined Brenda in making bracelets. She brought 48 heart-shaped stones and wanted to have 8 of this type of stone in each of the bracelet she makes. How many bracelets with heart-shaped stones can Shannon make?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,"Shannon, Brenda’s neighbor, joined Brenda in making bracelets. She brought 48 heart-shaped stones and wanted to have 8 of this type of stone in each of the bracelet she makes. How many bracelets with heart-shaped stones can Shannon make?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(48/8-x)
+print(answer)",6,test,singleq,"Shannon, Brenda’s neighbor, joined Brenda in making bracelets. She brought 48 heart-shaped stones and wanted to have (9-(0.5*2))  of this type of stone in each of the bracelet she makes. How many bracelets with heart-shaped stones can Shannon make?","Shannon, Brenda’s neighbor, joined Brenda in making bracelets. She brought 48 heart-shaped stones and wanted to have EXPONENTIAL(LOG(8))  of this type of stone in each of the bracelet she makes. How many bracelets with heart-shaped stones can Shannon make?","Shannon, Brenda’s neighbor, joined Brenda in making bracelets. She brought 48 heart-shaped stones and wanted to have (7+(cos^2(6) + sin^2(6)))  of this type of stone in each of the bracelet she makes. How many bracelets with heart-shaped stones can Shannon make?"
+verified,"Solve the following math word problem.
+
+Fred earns $12.50 an hour cleaning houses. If he works for 8 hours, how much money will he make ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Fred earns $12.50 an hour cleaning houses. If he works for 8 hours, how much money will he make ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['100'],['100'],math,"Fred earns $12.50 an hour cleaning houses. If he works for 8 hours, how much money will he make ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(12.50*8-x)
+print(answer)",100,test,singleq,"Fred earns $12.50 an hour cleaning houses. If he works for (7+(0.5*2))  hours, how much money will he make ?","Fred earns $12.50 an hour cleaning houses. If he works for LOG(EXPONENTIAL(8))  hours, how much money will he make ?","Fred earns $12.50 an hour cleaning houses. If he works for (9-(sec^2(85)-tan^2(85)))  hours, how much money will he make ?"
+verified,"Solve the following math word problem.
+
+A ship full of grain crashes into a coral reef. By the time the ship is fixed, 49,952 tons of grain have spilled into the water. Only 918 tons of grain remain onboard. How many tons of grain did the ship originally contain?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+A ship full of grain crashes into a coral reef. By the time the ship is fixed, 49,952 tons of grain have spilled into the water. Only 918 tons of grain remain onboard. How many tons of grain did the ship originally contain?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['50870'],['50870'],math,"A ship full of grain crashes into a coral reef. By the time the ship is fixed, 49,952 tons of grain have spilled into the water. Only 918 tons of grain remain onboard. How many tons of grain did the ship originally contain?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(49952+918-x)
+print(answer)",50870,test,singleq,"A ship full of grain crashes into a coral reef. By the time the ship is fixed, 49,952 tons of grain have spilled into the water. Only (917+(88/88))  tons of grain remain onboard. How many tons of grain did the ship originally contain?","A ship full of grain crashes into a coral reef. By the time the ship is fixed, 49,952 tons of grain have spilled into the water. Only EXPONENTIAL(LOG(918))  tons of grain remain onboard. How many tons of grain did the ship originally contain?","A ship full of grain crashes into a coral reef. By the time the ship is fixed, 49,952 tons of grain have spilled into the water. Only (918.0*(cosec^2(73) - cot^2(73)))  tons of grain remain onboard. How many tons of grain did the ship originally contain?"
+verified,"Solve the following math word problem.
+
+There are 4 children in the classroom, each student will get 2 pencils. How many pencils will the teacher have to give out ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 4 children in the classroom, each student will get 2 pencils. How many pencils will the teacher have to give out ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['8'],['8'],math,"There are 4 children in the classroom, each student will get 2 pencils. How many pencils will the teacher have to give out ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(4*2-x)
+print(answer)",8,test,singleq,"There are (3+(75/75))  children in the classroom, each student will get 2 pencils. How many pencils will the teacher have to give out ?","There are LOG(EXPONENTIAL(4))  children in the classroom, each student will get 2 pencils. How many pencils will the teacher have to give out ?","There are (4/(cosec^2(58) - cot^2(58)))  children in the classroom, each student will get 2 pencils. How many pencils will the teacher have to give out ?"
+verified,"Solve the following math word problem.
+
+Benny goes out to lunch with Sara and Tom. Each person orders the $8 lunch special. Benny agrees to pay the bill. How much will he have to pay ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Benny goes out to lunch with Sara and Tom. Each person orders the $8 lunch special. Benny agrees to pay the bill. How much will he have to pay ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['24'],['24'],math,Benny goes out to lunch with Sara and Tom. Each person orders the $8 lunch special. Benny agrees to pay the bill. How much will he have to pay ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(3*8-x)
+print(answer)",24,test,singleq,Benny goes out to lunch with Sara and Tom. Each person orders the $(7+(0.5*2))  lunch special. Benny agrees to pay the bill. How much will he have to pay ?,Benny goes out to lunch with Sara and Tom. Each person orders the $EXPONENTIAL(LOG(8))  lunch special. Benny agrees to pay the bill. How much will he have to pay ?,Benny goes out to lunch with Sara and Tom. Each person orders the $(7+(cos^2(67) + sin^2(67)))  lunch special. Benny agrees to pay the bill. How much will he have to pay ?
+verified,"Solve the following math word problem.
+
+Lewis then went to see the oranges being harvested. Lewis found out that they harvest 83 sacks per day. How many sacks of oranges will they have after 6 days of harvest?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Lewis then went to see the oranges being harvested. Lewis found out that they harvest 83 sacks per day. How many sacks of oranges will they have after 6 days of harvest?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['498'],['498'],math,Lewis then went to see the oranges being harvested. Lewis found out that they harvest 83 sacks per day. How many sacks of oranges will they have after 6 days of harvest?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(83*6-x)
+print(answer)",498,test,singleq,Lewis then went to see the oranges being harvested. Lewis found out that they harvest 83 sacks per day. How many sacks of oranges will they have after (5+(0.5*2))  days of harvest?,Lewis then went to see the oranges being harvested. Lewis found out that they harvest 83 sacks per day. How many sacks of oranges will they have after LOG(EXPONENTIAL(6))  days of harvest?,Lewis then went to see the oranges being harvested. Lewis found out that they harvest 83 sacks per day. How many sacks of oranges will they have after (6.0*(cos^2(96) + sin^2(96)))  days of harvest?
+consensus,"Solve the following math word problem.
+
+Sara picked 6 pears and Tim picked 5 pears from the pear tree. How many pears were picked in total ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sara picked 6 pears and Tim picked 5 pears from the pear tree. How many pears were picked in total ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['11'],['11'],math,Sara picked 6 pears and Tim picked 5 pears from the pear tree. How many pears were picked in total ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(6+5-x)
+print(answer)",11,test,singleq,Sara picked 6 pears and Tim picked (5.0*(0.5*2))  pears from the pear tree. How many pears were picked in total ?,Sara picked 6 pears and Tim picked EXPONENTIAL(LOG(5))  pears from the pear tree. How many pears were picked in total ?,Sara picked 6 pears and Tim picked (5/(sec^2(83)-tan^2(83)))  pears from the pear tree. How many pears were picked in total ?
+consensus,"Solve the following math word problem.
+
+The junior ranger asked Christian to help him place 420 seedlings in packets. If every packet needs to contain 7 seeds, how many packets do they need?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+The junior ranger asked Christian to help him place 420 seedlings in packets. If every packet needs to contain 7 seeds, how many packets do they need?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['60'],['60'],math,"The junior ranger asked Christian to help him place 420 seedlings in packets. If every packet needs to contain 7 seeds, how many packets do they need?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(420/7-x)
+print(answer)",60,test,singleq,"The junior ranger asked Christian to help him place (420.0*(61/61))  seedlings in packets. If every packet needs to contain 7 seeds, how many packets do they need?","The junior ranger asked Christian to help him place EXPONENTIAL(LOG(420))  seedlings in packets. If every packet needs to contain 7 seeds, how many packets do they need?","The junior ranger asked Christian to help him place (421-(sec^2(35)-tan^2(35)))  seedlings in packets. If every packet needs to contain 7 seeds, how many packets do they need?"
+consensus,"Solve the following math word problem.
+
+Ellen had 380 legos, but Ellen lost 57 of them. How many legos does Ellen have now?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Ellen had 380 legos, but Ellen lost 57 of them. How many legos does Ellen have now?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['323'],['323'],math,"Ellen had 380 legos, but Ellen lost 57 of them. How many legos does Ellen have now?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(380-57-x)
+print(answer)",323,test,singleq,"Ellen had 380 legos, but Ellen lost (57/(12/12))  of them. How many legos does Ellen have now?","Ellen had 380 legos, but Ellen lost EXPONENTIAL(LOG(57))  of them. How many legos does Ellen have now?","Ellen had 380 legos, but Ellen lost (57/(cos^2(48) + sin^2(48)))  of them. How many legos does Ellen have now?"
+consensus,"Solve the following math word problem.
+
+A ship is filled with 5,973 tons of cargo. It stops in the Bahamas, where sailors load 8,723 more tons of cargo onboard. How many tons of cargo does the ship hold now?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+A ship is filled with 5,973 tons of cargo. It stops in the Bahamas, where sailors load 8,723 more tons of cargo onboard. How many tons of cargo does the ship hold now?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['14696'],['14696'],math,"A ship is filled with 5,973 tons of cargo. It stops in the Bahamas, where sailors load 8,723 more tons of cargo onboard. How many tons of cargo does the ship hold now?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(5973+8723-x)
+print(answer)",14696,test,singleq,"A ship is filled with 5,973 tons of cargo. It stops in the Bahamas, where sailors load (8723/(0.5*2))  more tons of cargo onboard. How many tons of cargo does the ship hold now?","A ship is filled with 5,973 tons of cargo. It stops in the Bahamas, where sailors load LOG(EXPONENTIAL(8723))  more tons of cargo onboard. How many tons of cargo does the ship hold now?","A ship is filled with 5,973 tons of cargo. It stops in the Bahamas, where sailors load (8723.0*(sec^2(81)-tan^2(81)))  more tons of cargo onboard. How many tons of cargo does the ship hold now?"
+consensus,"Solve the following math word problem.
+
+Fred has 40 baseball cards. Keith bought 22 of Fred's  baseball cards. How many baseball cards does Fred have now ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Fred has 40 baseball cards. Keith bought 22 of Fred's  baseball cards. How many baseball cards does Fred have now ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['18'],['18'],math,Fred has 40 baseball cards. Keith bought 22 of Fred's  baseball cards. How many baseball cards does Fred have now ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(40-22-x)
+print(answer)",18,test,singleq,Fred has 40 baseball cards. Keith bought (23-(0.5*2))  of Fred's  baseball cards. How many baseball cards does Fred have now ?,Fred has 40 baseball cards. Keith bought EXPONENTIAL(LOG(22))  of Fred's  baseball cards. How many baseball cards does Fred have now ?,Fred has 40 baseball cards. Keith bought (21+(cosec^2(66) - cot^2(66)))  of Fred's  baseball cards. How many baseball cards does Fred have now ?
+consensus,"Solve the following math word problem.
+
+Mary picked 122 oranges and Jason picked 105 oranges from the orange tree. How many oranges were picked in total ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mary picked 122 oranges and Jason picked 105 oranges from the orange tree. How many oranges were picked in total ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['227'],['227'],math,Mary picked 122 oranges and Jason picked 105 oranges from the orange tree. How many oranges were picked in total ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(122+105-x)
+print(answer)",227,test,singleq,Mary picked (121+(0.5*2))  oranges and Jason picked 105 oranges from the orange tree. How many oranges were picked in total ?,Mary picked EXPONENTIAL(LOG(122))  oranges and Jason picked 105 oranges from the orange tree. How many oranges were picked in total ?,Mary picked (123-(cosec^2(79) - cot^2(79)))  oranges and Jason picked 105 oranges from the orange tree. How many oranges were picked in total ?
+consensus,"Solve the following math word problem.
+
+Tyler had 15 dogs. Each dog had 5 puppies. How many puppies does Tyler now have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Tyler had 15 dogs. Each dog had 5 puppies. How many puppies does Tyler now have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['75'],['75'],math,Tyler had 15 dogs. Each dog had 5 puppies. How many puppies does Tyler now have?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(15*5-x)
+print(answer)",75,test,singleq,Tyler had 15 dogs. Each dog had (6-(67/67))  puppies. How many puppies does Tyler now have?,Tyler had 15 dogs. Each dog had EXPONENTIAL(LOG(5))  puppies. How many puppies does Tyler now have?,Tyler had 15 dogs. Each dog had (6-(sec^2(1)-tan^2(1)))  puppies. How many puppies does Tyler now have?
+consensus,"Solve the following math word problem.
+
+The Sumata family took a 5 day vacation by car. Each day they drove 250 miles. How many total miles did they drive?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+The Sumata family took a 5 day vacation by car. Each day they drove 250 miles. How many total miles did they drive?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['1250'],['1250'],math,The Sumata family took a 5 day vacation by car. Each day they drove 250 miles. How many total miles did they drive?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(5*250-x)
+print(answer)",1250,test,singleq,The Sumata family took a 5 day vacation by car. Each day they drove (249+(43/43))  miles. How many total miles did they drive?,The Sumata family took a 5 day vacation by car. Each day they drove EXPONENTIAL(LOG(250))  miles. How many total miles did they drive?,The Sumata family took a 5 day vacation by car. Each day they drove (251-(cosec^2(80) - cot^2(80)))  miles. How many total miles did they drive?
+consensus,"Solve the following math word problem.
+
+There are 53 maple trees currently in the park. Park workers will plant more maple trees today. When the workers are finished there will be 64 maple trees in the park. How many maple trees did the workers plant today ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 53 maple trees currently in the park. Park workers will plant more maple trees today. When the workers are finished there will be 64 maple trees in the park. How many maple trees did the workers plant today ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['11'],['11'],math,There are 53 maple trees currently in the park. Park workers will plant more maple trees today. When the workers are finished there will be 64 maple trees in the park. How many maple trees did the workers plant today ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(53+x-64)
+print(answer)",11,test,singleq,There are 53 maple trees currently in the park. Park workers will plant more maple trees today. When the workers are finished there will be (63+(0.5*2))  maple trees in the park. How many maple trees did the workers plant today ?,There are 53 maple trees currently in the park. Park workers will plant more maple trees today. When the workers are finished there will be EXPONENTIAL(LOG(64))  maple trees in the park. How many maple trees did the workers plant today ?,There are 53 maple trees currently in the park. Park workers will plant more maple trees today. When the workers are finished there will be (64.0*(cos^2(31) + sin^2(31)))  maple trees in the park. How many maple trees did the workers plant today ?
+consensus,"Solve the following math word problem.
+
+Fred found 47 seashells on the beach, he gave Jessica 25 of the seashells. How many seashells does he now have ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Fred found 47 seashells on the beach, he gave Jessica 25 of the seashells. How many seashells does he now have ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['22'],['22'],math,"Fred found 47 seashells on the beach, he gave Jessica 25 of the seashells. How many seashells does he now have ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(47-25-x)
+print(answer)",22,test,singleq,"Fred found 47 seashells on the beach, he gave Jessica (25/(0.5*2))  of the seashells. How many seashells does he now have ?","Fred found 47 seashells on the beach, he gave Jessica LOG(EXPONENTIAL(25))  of the seashells. How many seashells does he now have ?","Fred found 47 seashells on the beach, he gave Jessica (26-(cosec^2(12) - cot^2(12)))  of the seashells. How many seashells does he now have ?"
+consensus,"Solve the following math word problem.
+
+Each bag contains 23 pounds of oranges. How many pounds of oranges are in 45 bags?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Each bag contains 23 pounds of oranges. How many pounds of oranges are in 45 bags?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['1035'],['1035'],math,Each bag contains 23 pounds of oranges. How many pounds of oranges are in 45 bags?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(23*45-x)
+print(answer)",1035,test,singleq,Each bag contains 23 pounds of oranges. How many pounds of oranges are in (45/(0.5*2))  bags?,Each bag contains 23 pounds of oranges. How many pounds of oranges are in LOG(EXPONENTIAL(45))  bags?,Each bag contains 23 pounds of oranges. How many pounds of oranges are in (45.0*(cos^2(43) + sin^2(43)))  bags?
+consensus,"Solve the following math word problem.
+
+Melanie, Benny, Sandy, and Jessica each have 9 dozen Pokemon cards.  How many Pokemon cards do they have in all ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Melanie, Benny, Sandy, and Jessica each have 9 dozen Pokemon cards.  How many Pokemon cards do they have in all ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['432'],['432'],math,"Melanie, Benny, Sandy, and Jessica each have 9 dozen Pokemon cards.  How many Pokemon cards do they have in all ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(4*(9*12)-x)
+print(answer)",432,test,singleq,"Melanie, Benny, Sandy, and Jessica each have (10-(0.5*2))  dozen Pokemon cards.  How many Pokemon cards do they have in all ?","Melanie, Benny, Sandy, and Jessica each have LOG(EXPONENTIAL(9))  dozen Pokemon cards.  How many Pokemon cards do they have in all ?","Melanie, Benny, Sandy, and Jessica each have (10-(cosec^2(6) - cot^2(6)))  dozen Pokemon cards.  How many Pokemon cards do they have in all ?"
+consensus,"Solve the following math word problem.
+
+Sally saw 1 dozen birds in a tree. How many birds did Sally see ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sally saw 1 dozen birds in a tree. How many birds did Sally see ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math,Sally saw 1 dozen birds in a tree. How many birds did Sally see ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(1*12-x)
+print(answer)",12,test,singleq,Sally saw (0+(0.5*2))  dozen birds in a tree. How many birds did Sally see ?,Sally saw LOG(EXPONENTIAL(1))  dozen birds in a tree. How many birds did Sally see ?,Sally saw (2-(sec^2(87)-tan^2(87)))  dozen birds in a tree. How many birds did Sally see ?
+consensus,"Solve the following math word problem.
+
+There are 3 calories in a candy bar. How many calories are there in 5 candy bars ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 3 calories in a candy bar. How many calories are there in 5 candy bars ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['15'],['15'],math,There are 3 calories in a candy bar. How many calories are there in 5 candy bars ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(3*5-x)
+print(answer)",15,test,singleq,There are 3 calories in a candy bar. How many calories are there in (5/(28/28))  candy bars ?,There are 3 calories in a candy bar. How many calories are there in LOG(EXPONENTIAL(5))  candy bars ?,There are 3 calories in a candy bar. How many calories are there in (4+(sec^2(70)-tan^2(70)))  candy bars ?
+consensus,"Solve the following math word problem.
+
+Lizette has 813 stamps. Lizette has 125 more stamps than Minerva. How many stamps does Minerva have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Lizette has 813 stamps. Lizette has 125 more stamps than Minerva. How many stamps does Minerva have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['688'],['688'],math,Lizette has 813 stamps. Lizette has 125 more stamps than Minerva. How many stamps does Minerva have?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(813-125-x)
+print(answer)",688,test,singleq,Lizette has (813.0*(0.5*2))  stamps. Lizette has 125 more stamps than Minerva. How many stamps does Minerva have?,Lizette has EXPONENTIAL(LOG(813))  stamps. Lizette has 125 more stamps than Minerva. How many stamps does Minerva have?,Lizette has (814-(sec^2(49)-tan^2(49)))  stamps. Lizette has 125 more stamps than Minerva. How many stamps does Minerva have?
+consensus,"Solve the following math word problem.
+
+Marcia spent 300 minutes working on her science project. How many hours did Marcia spend on her science project?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Marcia spent 300 minutes working on her science project. How many hours did Marcia spend on her science project?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Marcia spent 300 minutes working on her science project. How many hours did Marcia spend on her science project?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(300/60-x)
+print(answer)",5,test,singleq,Marcia spent (300.0*(29/29))  minutes working on her science project. How many hours did Marcia spend on her science project?,Marcia spent EXPONENTIAL(LOG(300))  minutes working on her science project. How many hours did Marcia spend on her science project?,Marcia spent (300/(cosec^2(46) - cot^2(46)))  minutes working on her science project. How many hours did Marcia spend on her science project?
+consensus,"Solve the following math word problem.
+
+There are 4 walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 4 walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['10'],['10'],math,There are 4 walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(4+6-x)
+print(answer)",10,test,singleq,There are (4.0*(6/6))  walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?,There are LOG(EXPONENTIAL(4))  walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?,There are (4/(cosec^2(42) - cot^2(42)))  walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?
+consensus,"Solve the following math word problem.
+
+Mike has 8 orange marbles, he gave Sam 4 of the marbles. How many orange marbles does he now have ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mike has 8 orange marbles, he gave Sam 4 of the marbles. How many orange marbles does he now have ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['4'],['4'],math,"Mike has 8 orange marbles, he gave Sam 4 of the marbles. How many orange marbles does he now have ?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(8-4-x)
+print(answer)",4,test,singleq,"Mike has 8 orange marbles, he gave Sam (3+(17/17))  of the marbles. How many orange marbles does he now have ?","Mike has 8 orange marbles, he gave Sam LOG(EXPONENTIAL(4))  of the marbles. How many orange marbles does he now have ?","Mike has 8 orange marbles, he gave Sam (3+(sec^2(7)-tan^2(7)))  of the marbles. How many orange marbles does he now have ?"
+consensus,"Solve the following math word problem.
+
+The Ferris wheel in Paradise Park has 14 seats. Each seat can hold 6 people. How many people can ride the Ferris wheel at the same time?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+The Ferris wheel in Paradise Park has 14 seats. Each seat can hold 6 people. How many people can ride the Ferris wheel at the same time?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['84'],['84'],math,The Ferris wheel in Paradise Park has 14 seats. Each seat can hold 6 people. How many people can ride the Ferris wheel at the same time?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(14*6-x)
+print(answer)",84,test,singleq,The Ferris wheel in Paradise Park has 14 seats. Each seat can hold (5+(46/46))  people. How many people can ride the Ferris wheel at the same time?,The Ferris wheel in Paradise Park has 14 seats. Each seat can hold EXPONENTIAL(LOG(6))  people. How many people can ride the Ferris wheel at the same time?,The Ferris wheel in Paradise Park has 14 seats. Each seat can hold (6.0*(cos^2(100) + sin^2(100)))  people. How many people can ride the Ferris wheel at the same time?
+consensus,"Solve the following math word problem.
+
+There was a stack of 700 sheets of used paper. Lexie wants to place it in boxes for recycling. If every box can contain 100 sheets, how many boxes does Lexie need?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There was a stack of 700 sheets of used paper. Lexie wants to place it in boxes for recycling. If every box can contain 100 sheets, how many boxes does Lexie need?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math,"There was a stack of 700 sheets of used paper. Lexie wants to place it in boxes for recycling. If every box can contain 100 sheets, how many boxes does Lexie need?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(700/7-x)
+print(answer)",7,test,singleq,"There was a stack of (701-(70/70))  sheets of used paper. Lexie wants to place it in boxes for recycling. If every box can contain 100 sheets, how many boxes does Lexie need?","There was a stack of EXPONENTIAL(LOG(700))  sheets of used paper. Lexie wants to place it in boxes for recycling. If every box can contain 100 sheets, how many boxes does Lexie need?","There was a stack of (699+(sec^2(49)-tan^2(49)))  sheets of used paper. Lexie wants to place it in boxes for recycling. If every box can contain 100 sheets, how many boxes does Lexie need?"
+consensus,"Solve the following math word problem.
+
+There are 33 oak trees currently in the park. Park workers had to cut down  18 oak trees that were damaged. How many oak trees will be in the park when the workers are finished ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 33 oak trees currently in the park. Park workers had to cut down  18 oak trees that were damaged. How many oak trees will be in the park when the workers are finished ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['15'],['15'],math,There are 33 oak trees currently in the park. Park workers had to cut down  18 oak trees that were damaged. How many oak trees will be in the park when the workers are finished ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(33-18-x)
+print(answer)",15,test,singleq,There are 33 oak trees currently in the park. Park workers had to cut down  (17+(0.5*2))  oak trees that were damaged. How many oak trees will be in the park when the workers are finished ?,There are 33 oak trees currently in the park. Park workers had to cut down  EXPONENTIAL(LOG(18))  oak trees that were damaged. How many oak trees will be in the park when the workers are finished ?,There are 33 oak trees currently in the park. Park workers had to cut down  (19-(sec^2(16)-tan^2(16)))  oak trees that were damaged. How many oak trees will be in the park when the workers are finished ?
+consensus,"Solve the following math word problem.
+
+There are 107 walnut trees currently in the park. Park workers will plant  104 more walnut trees today. How many walnut trees will the park have when the workers are finished ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 107 walnut trees currently in the park. Park workers will plant  104 more walnut trees today. How many walnut trees will the park have when the workers are finished ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['211'],['211'],math,There are 107 walnut trees currently in the park. Park workers will plant  104 more walnut trees today. How many walnut trees will the park have when the workers are finished ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(107+104-x)
+print(answer)",211,test,singleq,There are (107/(58/58))  walnut trees currently in the park. Park workers will plant  104 more walnut trees today. How many walnut trees will the park have when the workers are finished ?,There are EXPONENTIAL(LOG(107))  walnut trees currently in the park. Park workers will plant  104 more walnut trees today. How many walnut trees will the park have when the workers are finished ?,There are (107.0*(sec^2(19)-tan^2(19)))  walnut trees currently in the park. Park workers will plant  104 more walnut trees today. How many walnut trees will the park have when the workers are finished ?
+consensus,"Solve the following math word problem.
+
+58 children are taking a bus to the zoo. They sit 2 children in every seat. How many seats will the children need in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+58 children are taking a bus to the zoo. They sit 2 children in every seat. How many seats will the children need in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['29'],['29'],math,58 children are taking a bus to the zoo. They sit 2 children in every seat. How many seats will the children need in all?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(58/2-x)
+print(answer)",29,test,singleq,58 children are taking a bus to the zoo. They sit (2/(30/30))  children in every seat. How many seats will the children need in all?,58 children are taking a bus to the zoo. They sit EXPONENTIAL(LOG(2))  children in every seat. How many seats will the children need in all?,58 children are taking a bus to the zoo. They sit (2.0*(cosec^2(5) - cot^2(5)))  children in every seat. How many seats will the children need in all?
+consensus,"Solve the following math word problem.
+
+Dana earns $13 per hour. She worked 9 hours on Friday, 10 hours on Saturday, and 3 hours on Sunday. How much money did Dana earn in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Dana earns $13 per hour. She worked 9 hours on Friday, 10 hours on Saturday, and 3 hours on Sunday. How much money did Dana earn in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['286'],['286'],math,"Dana earns $13 per hour. She worked 9 hours on Friday, 10 hours on Saturday, and 3 hours on Sunday. How much money did Dana earn in all?","from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(13*((9+10)+3)-x)
+print(answer)",286,test,singleq,"Dana earns $13 per hour. She worked (8+(50/50))  hours on Friday, 10 hours on Saturday, and 3 hours on Sunday. How much money did Dana earn in all?","Dana earns $13 per hour. She worked EXPONENTIAL(LOG(9))  hours on Friday, 10 hours on Saturday, and 3 hours on Sunday. How much money did Dana earn in all?","Dana earns $13 per hour. She worked (8+(sec^2(28)-tan^2(28)))  hours on Friday, 10 hours on Saturday, and 3 hours on Sunday. How much money did Dana earn in all?"
+consensus,"Solve the following math word problem.
+
+Mrs. Hilt bought a notebook for $1.30. She paid with nickels. How many nickels did she use to buy the notebook?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mrs. Hilt bought a notebook for $1.30. She paid with nickels. How many nickels did she use to buy the notebook?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['26'],['26'],math,Mrs. Hilt bought a notebook for $1.30. She paid with nickels. How many nickels did she use to buy the notebook?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(1.30/5-x)
+print(answer)",26,test,singleq,,,
+consensus,"Solve the following math word problem.
+
+Sally picked 7 lemons and Mary picked 9 lemons from the lemon tree. How many lemons were picked in total ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Sally picked 7 lemons and Mary picked 9 lemons from the lemon tree. How many lemons were picked in total ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['16'],['16'],math,Sally picked 7 lemons and Mary picked 9 lemons from the lemon tree. How many lemons were picked in total ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(7+9-x)
+print(answer)",16,test,singleq,Sally picked 7 lemons and Mary picked (9.0*(48/48))  lemons from the lemon tree. How many lemons were picked in total ?,Sally picked 7 lemons and Mary picked LOG(EXPONENTIAL(9))  lemons from the lemon tree. How many lemons were picked in total ?,Sally picked 7 lemons and Mary picked (8+(cos^2(72) + sin^2(72)))  lemons from the lemon tree. How many lemons were picked in total ?
+consensus,"Solve the following math word problem.
+
+There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and 2 more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and 2 more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math,There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and 2 more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?,"from sympy import symbols, solve
+x = symbols(""x"")
+answer = solve(7+3+2-x)
+print(answer)",12,test,singleq,There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and (1+(0.5*2))  more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?,There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and EXPONENTIAL(LOG(2))  more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?,There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and (2.0*(cosec^2(58) - cot^2(58)))  more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?

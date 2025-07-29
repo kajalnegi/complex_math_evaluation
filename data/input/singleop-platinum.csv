@@ -1,0 +1,1501 @@
+cleaning_status,platinum_prompt,platinum_prompt_no_cot,platinum_target,original_target,platinum_parsing_strategy,input,output_program,output_answer,split,dataset,bodmas_question,elog_question,trigno_question
+consensus,"Solve the following math word problem.
+
+ Misha has 34 dollars. How many more dollars does she have to earn to have 47 dollars?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Misha has 34 dollars. How many more dollars does she have to earn to have 47 dollars?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['13'],['13'],math, Misha has 34 dollars. How many more dollars does she have to earn to have 47 dollars?,"answer=(47.0-34.0)
+print(answer)",13,test,singleop, Misha has (34/(43/43))  dollars. How many more dollars does she have to earn to have 47 dollars?, Misha has EXPONENTIAL(LOG(34))  dollars. How many more dollars does she have to earn to have 47 dollars?, Misha has (35-(cos^2(81) + sin^2(81)))  dollars. How many more dollars does she have to earn to have 47 dollars?
+consensus,"Solve the following math word problem.
+
+It took Amanda 5 hours to stroll to Kimberly's house at 2 miles per hour. How far is it between Amanda's house and Kimberly's house?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+It took Amanda 5 hours to stroll to Kimberly's house at 2 miles per hour. How far is it between Amanda's house and Kimberly's house?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['10'],['10'],math,It took Amanda 5 hours to stroll to Kimberly's house at 2 miles per hour. How far is it between Amanda's house and Kimberly's house?,"answer=(5.0*2.0)
+print(answer)",10,test,singleop,It took Amanda 5 hours to stroll to Kimberly's house at (1+(53/53))  miles per hour. How far is it between Amanda's house and Kimberly's house?,It took Amanda 5 hours to stroll to Kimberly's house at LOG(EXPONENTIAL(2))  miles per hour. How far is it between Amanda's house and Kimberly's house?,It took Amanda 5 hours to stroll to Kimberly's house at (2.0*(cosec^2(51) - cot^2(51)))  miles per hour. How far is it between Amanda's house and Kimberly's house?
+consensus,"Solve the following math word problem.
+
+Angela has 11 tickets. Annie gives Angela 4 more. How many tickets does Angela have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Angela has 11 tickets. Annie gives Angela 4 more. How many tickets does Angela have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['15'],['15'],math,Angela has 11 tickets. Annie gives Angela 4 more. How many tickets does Angela have in all?,"answer=(11.0+4.0)
+print(answer)",15,test,singleop,Angela has (11/(55/55))  tickets. Annie gives Angela 4 more. How many tickets does Angela have in all?,Angela has LOG(EXPONENTIAL(11))  tickets. Annie gives Angela 4 more. How many tickets does Angela have in all?,Angela has (11/(cos^2(28) + sin^2(28)))  tickets. Annie gives Angela 4 more. How many tickets does Angela have in all?
+consensus,"Solve the following math word problem.
+
+Henry wants to split a collection of crayons into groups of 6. Henry has 42 crayons. How many groups will be created?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Henry wants to split a collection of crayons into groups of 6. Henry has 42 crayons. How many groups will be created?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math,Henry wants to split a collection of crayons into groups of 6. Henry has 42 crayons. How many groups will be created?,"answer=(42.0/6.0)
+print(answer)",7,test,singleop,Henry wants to split a collection of crayons into groups of 6. Henry has (42/(0.5*2))  crayons. How many groups will be created?,Henry wants to split a collection of crayons into groups of 6. Henry has LOG(EXPONENTIAL(42))  crayons. How many groups will be created?,Henry wants to split a collection of crayons into groups of 6. Henry has (43-(sec^2(7)-tan^2(7)))  crayons. How many groups will be created?
+consensus,"Solve the following math word problem.
+
+ Iesha has 344 books. 136 are about school and the rest are about sports. How many books about sports does Iesha have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Iesha has 344 books. 136 are about school and the rest are about sports. How many books about sports does Iesha have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['208'],['208'],math, Iesha has 344 books. 136 are about school and the rest are about sports. How many books about sports does Iesha have?,"answer=(344.0-136.0)
+print(answer)",208,test,singleop, Iesha has 344 books. (136.0*(0.5*2))  are about school and the rest are about sports. How many books about sports does Iesha have?, Iesha has 344 books. LOG(EXPONENTIAL(136))  are about school and the rest are about sports. How many books about sports does Iesha have?, Iesha has 344 books. (137-(sec^2(37)-tan^2(37)))  are about school and the rest are about sports. How many books about sports does Iesha have?
+consensus,"Solve the following math word problem.
+
+David has 8 bananas. He gets 50 more from Christopher. Later, David buys 9 cards at the store. How many bananas does David have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+David has 8 bananas. He gets 50 more from Christopher. Later, David buys 9 cards at the store. How many bananas does David have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['58'],['58'],math,"David has 8 bananas. He gets 50 more from Christopher. Later, David buys 9 cards at the store. How many bananas does David have in all?","answer=(8.0+50.0)
+print(answer)",58,test,singleop,"David has (9-(40/40))  bananas. He gets 50 more from Christopher. Later, David buys 9 cards at the store. How many bananas does David have in all?","David has EXPONENTIAL(LOG(8))  bananas. He gets 50 more from Christopher. Later, David buys 9 cards at the store. How many bananas does David have in all?","David has (9-(cos^2(29) + sin^2(29)))  bananas. He gets 50 more from Christopher. Later, David buys 9 cards at the store. How many bananas does David have in all?"
+consensus,"Solve the following math word problem.
+
+Pamela starts with 30 bottle caps. Jean takes 26 away. How many bottle caps does Pamela end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Pamela starts with 30 bottle caps. Jean takes 26 away. How many bottle caps does Pamela end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['4'],['4'],math,Pamela starts with 30 bottle caps. Jean takes 26 away. How many bottle caps does Pamela end with?,"answer=(30.0-26.0)
+print(answer)",4,test,singleop,Pamela starts with 30 bottle caps. Jean takes (25+(22/22))  away. How many bottle caps does Pamela end with?,Pamela starts with 30 bottle caps. Jean takes LOG(EXPONENTIAL(26))  away. How many bottle caps does Pamela end with?,Pamela starts with 30 bottle caps. Jean takes (26/(cosec^2(3) - cot^2(3)))  away. How many bottle caps does Pamela end with?
+consensus,"Solve the following math word problem.
+
+ Lucy has an aquarium with 212 fish. She wants to buy 68 more fish. How many fish would Lucy have then?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Lucy has an aquarium with 212 fish. She wants to buy 68 more fish. How many fish would Lucy have then?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['280'],['280'],math, Lucy has an aquarium with 212 fish. She wants to buy 68 more fish. How many fish would Lucy have then?,"answer=(212.0+68.0)
+print(answer)",280,test,singleop, Lucy has an aquarium with (211+(62/62))  fish. She wants to buy 68 more fish. How many fish would Lucy have then?, Lucy has an aquarium with LOG(EXPONENTIAL(212))  fish. She wants to buy 68 more fish. How many fish would Lucy have then?, Lucy has an aquarium with (211+(cos^2(89) + sin^2(89)))  fish. She wants to buy 68 more fish. How many fish would Lucy have then?
+consensus,"Solve the following math word problem.
+
+There are 22 oranges in a box. Paula takes 7 oranges. How many are left?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 22 oranges in a box. Paula takes 7 oranges. How many are left?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['15'],['15'],math,There are 22 oranges in a box. Paula takes 7 oranges. How many are left?,"answer=(22.0-7.0)
+print(answer)",15,test,singleop,There are 22 oranges in a box. Paula takes (6+(0.5*2))  oranges. How many are left?,There are 22 oranges in a box. Paula takes LOG(EXPONENTIAL(7))  oranges. How many are left?,There are 22 oranges in a box. Paula takes (8-(sec^2(68)-tan^2(68)))  oranges. How many are left?
+consensus,"Solve the following math word problem.
+
+If Madison sold 24 boxes of Tagalongs, how many cases of 12 boxes does Madison pickup from the cookie mom?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Madison sold 24 boxes of Tagalongs, how many cases of 12 boxes does Madison pickup from the cookie mom?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2'],['2'],math,"If Madison sold 24 boxes of Tagalongs, how many cases of 12 boxes does Madison pickup from the cookie mom?","answer=(24.0/12.0)
+print(answer)",2,test,singleop,"If Madison sold (24/(58/58))  boxes of Tagalongs, how many cases of 12 boxes does Madison pickup from the cookie mom?","If Madison sold EXPONENTIAL(LOG(24))  boxes of Tagalongs, how many cases of 12 boxes does Madison pickup from the cookie mom?","If Madison sold (23+(cosec^2(89) - cot^2(89)))  boxes of Tagalongs, how many cases of 12 boxes does Madison pickup from the cookie mom?"
+consensus,"Solve the following math word problem.
+
+Harold has 53 marbles. He gets 16 more from Steve. How many marbles does Harold have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Harold has 53 marbles. He gets 16 more from Steve. How many marbles does Harold have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['69'],['69'],math,Harold has 53 marbles. He gets 16 more from Steve. How many marbles does Harold have in all?,"answer=(53.0+16.0)
+print(answer)",69,test,singleop,Harold has (53.0*(48/48))  marbles. He gets 16 more from Steve. How many marbles does Harold have in all?,Harold has LOG(EXPONENTIAL(53))  marbles. He gets 16 more from Steve. How many marbles does Harold have in all?,Harold has (53/(cos^2(65) + sin^2(65)))  marbles. He gets 16 more from Steve. How many marbles does Harold have in all?
+consensus,"Solve the following math word problem.
+
+ Kate has 223 pennies. John has 388 pennies. How many more pennies does John have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Kate has 223 pennies. John has 388 pennies. How many more pennies does John have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['165'],['165'],math, Kate has 223 pennies. John has 388 pennies. How many more pennies does John have?,"answer=(388.0-223.0)
+print(answer)",165,test,singleop, Kate has (224-(0.5*2))  pennies. John has 388 pennies. How many more pennies does John have?, Kate has EXPONENTIAL(LOG(223))  pennies. John has 388 pennies. How many more pennies does John have?, Kate has (223/(cosec^2(17) - cot^2(17)))  pennies. John has 388 pennies. How many more pennies does John have?
+consensus,"Solve the following math word problem.
+
+Roger has 92 blocks. 2 are eaten by a hippopotamus. How many blocks will Roger have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Roger has 92 blocks. 2 are eaten by a hippopotamus. How many blocks will Roger have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['90'],['90'],math,Roger has 92 blocks. 2 are eaten by a hippopotamus. How many blocks will Roger have?,"answer=(92.0-2.0)
+print(answer)",90,test,singleop,Roger has (92/(54/54))  blocks. 2 are eaten by a hippopotamus. How many blocks will Roger have?,Roger has EXPONENTIAL(LOG(92))  blocks. 2 are eaten by a hippopotamus. How many blocks will Roger have?,Roger has (92/(cos^2(9) + sin^2(9)))  blocks. 2 are eaten by a hippopotamus. How many blocks will Roger have?
+consensus,"Solve the following math word problem.
+
+ Sean has 223 whistles. He has 95 more whistles that Charles. How many whistles does Charles have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Sean has 223 whistles. He has 95 more whistles that Charles. How many whistles does Charles have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['128'],['128'],math, Sean has 223 whistles. He has 95 more whistles that Charles. How many whistles does Charles have?,"answer=(223.0-95.0)
+print(answer)",128,test,singleop, Sean has (223/(0.5*2))  whistles. He has 95 more whistles that Charles. How many whistles does Charles have?, Sean has LOG(EXPONENTIAL(223))  whistles. He has 95 more whistles that Charles. How many whistles does Charles have?, Sean has (223.0*(cos^2(52) + sin^2(52)))  whistles. He has 95 more whistles that Charles. How many whistles does Charles have?
+consensus,"Solve the following math word problem.
+
+There are 7 students in the class and 42 apples. If the apples are divided equally among the students, how many does each student get?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 7 students in the class and 42 apples. If the apples are divided equally among the students, how many does each student get?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,"There are 7 students in the class and 42 apples. If the apples are divided equally among the students, how many does each student get?","answer=(42.0/7.0)
+print(answer)",6,test,singleop,"There are (6+(0.5*2))  students in the class and 42 apples. If the apples are divided equally among the students, how many does each student get?","There are LOG(EXPONENTIAL(7))  students in the class and 42 apples. If the apples are divided equally among the students, how many does each student get?","There are (6+(cos^2(86) + sin^2(86)))  students in the class and 42 apples. If the apples are divided equally among the students, how many does each student get?"
+consensus,"Solve the following math word problem.
+
+ There are 124 students making 3 stars each for the school wall. How many stars will they make all together?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ There are 124 students making 3 stars each for the school wall. How many stars will they make all together?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['372'],['372'],math, There are 124 students making 3 stars each for the school wall. How many stars will they make all together?,"answer=(124.0*3.0)
+print(answer)",372,test,singleop, There are (124/(0.5*2))  students making 3 stars each for the school wall. How many stars will they make all together?, There are LOG(EXPONENTIAL(124))  students making 3 stars each for the school wall. How many stars will they make all together?, There are (123+(cos^2(86) + sin^2(86)))  students making 3 stars each for the school wall. How many stars will they make all together?
+consensus,"Solve the following math word problem.
+
+ Darius drove 679 miles to visit his grandmother. Julia drove 998 miles to visit her grandmother. What is the total number of miles Darius and Julia  drove?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Darius drove 679 miles to visit his grandmother. Julia drove 998 miles to visit her grandmother. What is the total number of miles Darius and Julia  drove?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['1677'],['1677'],math, Darius drove 679 miles to visit his grandmother. Julia drove 998 miles to visit her grandmother. What is the total number of miles Darius and Julia  drove?,"answer=(679.0+998.0)
+print(answer)",1677,test,singleop, Darius drove 679 miles to visit his grandmother. Julia drove (999-(44/44))  miles to visit her grandmother. What is the total number of miles Darius and Julia  drove?, Darius drove 679 miles to visit his grandmother. Julia drove EXPONENTIAL(LOG(998))  miles to visit her grandmother. What is the total number of miles Darius and Julia  drove?, Darius drove 679 miles to visit his grandmother. Julia drove (997+(cosec^2(7) - cot^2(7)))  miles to visit her grandmother. What is the total number of miles Darius and Julia  drove?
+consensus,"Solve the following math word problem.
+
+There are 4 cards. 3 cards more are added. How many are there total?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 4 cards. 3 cards more are added. How many are there total?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math,There are 4 cards. 3 cards more are added. How many are there total?,"answer=(4.0+3.0)
+print(answer)",7,test,singleop,There are 4 cards. (4-(0.5*2))  cards more are added. How many are there total?,There are 4 cards. EXPONENTIAL(LOG(3))  cards more are added. How many are there total?,There are 4 cards. (2+(cosec^2(78) - cot^2(78)))  cards more are added. How many are there total?
+consensus,"Solve the following math word problem.
+
+ Mary’s mom is getting ready for Mary’s birthday party. She blew up 6 balloons this morning and 5 balloons this afternoon. How many balloons  did she blow up in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mary’s mom is getting ready for Mary’s birthday party. She blew up 6 balloons this morning and 5 balloons this afternoon. How many balloons  did she blow up in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['11'],['11'],math, Mary’s mom is getting ready for Mary’s birthday party. She blew up 6 balloons this morning and 5 balloons this afternoon. How many balloons  did she blow up in all?,"answer=(6.0+5.0)
+print(answer)",11,test,singleop, Mary’s mom is getting ready for Mary’s birthday party. She blew up (7-(48/48))  balloons this morning and 5 balloons this afternoon. How many balloons  did she blow up in all?, Mary’s mom is getting ready for Mary’s birthday party. She blew up EXPONENTIAL(LOG(6))  balloons this morning and 5 balloons this afternoon. How many balloons  did she blow up in all?, Mary’s mom is getting ready for Mary’s birthday party. She blew up (6/(cos^2(24) + sin^2(24)))  balloons this morning and 5 balloons this afternoon. How many balloons  did she blow up in all?
+verified,"Solve the following math word problem.
+
+Shirley sold 20 boxes of Do-Si-Dos. How many cases of 4 boxes, plus extra boxes does Shirley need to deliver?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Shirley sold 20 boxes of Do-Si-Dos. How many cases of 4 boxes, plus extra boxes does Shirley need to deliver?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,"Shirley sold 20 boxes of Do-Si-Dos. How many cases of 4 boxes, plus extra boxes does Shirley need to deliver?","answer=(20.0/4.0)
+print(answer)",5,test,singleop,"Shirley sold 20 boxes of Do-Si-Dos. How many cases of (3+(0.5*2))  boxes, plus extra boxes does Shirley need to deliver?","Shirley sold 20 boxes of Do-Si-Dos. How many cases of EXPONENTIAL(LOG(4))  boxes, plus extra boxes does Shirley need to deliver?","Shirley sold 20 boxes of Do-Si-Dos. How many cases of (5-(cosec^2(57) - cot^2(57)))  boxes, plus extra boxes does Shirley need to deliver?"
+verified,"Solve the following math word problem.
+
+There are 8 oranges. 8 oranges more are added. How many are there total?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 8 oranges. 8 oranges more are added. How many are there total?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['16'],['16'],math,There are 8 oranges. 8 oranges more are added. How many are there total?,"answer=(8.0+8.0)
+print(answer)",16,test,singleop,There are (8.0*(20/20))  oranges. 8 oranges more are added. How many are there total?,There are LOG(EXPONENTIAL(8))  oranges. 8 oranges more are added. How many are there total?,There are (8.0*(sec^2(12)-tan^2(12)))  oranges. 8 oranges more are added. How many are there total?
+verified,"Solve the following math word problem.
+
+Anna collects 6 blocks. Anna's father gives Anna 8 more. How many blocks does Anna have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Anna collects 6 blocks. Anna's father gives Anna 8 more. How many blocks does Anna have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['14'],['14'],math,Anna collects 6 blocks. Anna's father gives Anna 8 more. How many blocks does Anna have?,"answer=(6.0+8.0)
+print(answer)",14,test,singleop,Anna collects 6 blocks. Anna's father gives Anna (7+(37/37))  more. How many blocks does Anna have?,Anna collects 6 blocks. Anna's father gives Anna LOG(EXPONENTIAL(8))  more. How many blocks does Anna have?,Anna collects 6 blocks. Anna's father gives Anna (8/(sec^2(93)-tan^2(93)))  more. How many blocks does Anna have?
+verified,"Solve the following math word problem.
+
+ 63 people are going to the zoo. There are 3 cars to take people to the zoo. How many will go in each car if the same number go in each car?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ 63 people are going to the zoo. There are 3 cars to take people to the zoo. How many will go in each car if the same number go in each car?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['21'],['21'],math, 63 people are going to the zoo. There are 3 cars to take people to the zoo. How many will go in each car if the same number go in each car?,"answer=(63.0/3.0)
+print(answer)",21,test,singleop, 63 people are going to the zoo. There are (2+(0.5*2))  cars to take people to the zoo. How many will go in each car if the same number go in each car?, 63 people are going to the zoo. There are LOG(EXPONENTIAL(3))  cars to take people to the zoo. How many will go in each car if the same number go in each car?, 63 people are going to the zoo. There are (3.0*(sec^2(4)-tan^2(4)))  cars to take people to the zoo. How many will go in each car if the same number go in each car?
+verified,"Solve the following math word problem.
+
+Debra removes 22 apples from a jar. There were originally 57 apples in the jar. How many apples are left in the jar?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Debra removes 22 apples from a jar. There were originally 57 apples in the jar. How many apples are left in the jar?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['35'],['35'],math,Debra removes 22 apples from a jar. There were originally 57 apples in the jar. How many apples are left in the jar?,"answer=(57.0-22.0)
+print(answer)",35,test,singleop,Debra removes (22/(81/81))  apples from a jar. There were originally 57 apples in the jar. How many apples are left in the jar?,Debra removes LOG(EXPONENTIAL(22))  apples from a jar. There were originally 57 apples in the jar. How many apples are left in the jar?,Debra removes (21+(sec^2(61)-tan^2(61)))  apples from a jar. There were originally 57 apples in the jar. How many apples are left in the jar?
+consensus,"Solve the following math word problem.
+
+ Connie has 41 red markers and 64 blue markers. How many markers does she have altogether?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Connie has 41 red markers and 64 blue markers. How many markers does she have altogether?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['105'],['105'],math, Connie has 41 red markers and 64 blue markers. How many markers does she have altogether?,"answer=(41.0+64.0)
+print(answer)",105,test,singleop, Connie has 41 red markers and (64.0*(6/6))  blue markers. How many markers does she have altogether?, Connie has 41 red markers and LOG(EXPONENTIAL(64))  blue markers. How many markers does she have altogether?, Connie has 41 red markers and (65-(sec^2(56)-tan^2(56)))  blue markers. How many markers does she have altogether?
+consensus,"Solve the following math word problem.
+
+Tina has 82 bananas. She gets 3 more from Joyce. How many bananas does Tina have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Tina has 82 bananas. She gets 3 more from Joyce. How many bananas does Tina have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['85'],['85'],math,Tina has 82 bananas. She gets 3 more from Joyce. How many bananas does Tina have in all?,"answer=(82.0+3.0)
+print(answer)",85,test,singleop,Tina has 82 bananas. She gets (2+(0.5*2))  more from Joyce. How many bananas does Tina have in all?,Tina has 82 bananas. She gets EXPONENTIAL(LOG(3))  more from Joyce. How many bananas does Tina have in all?,Tina has 82 bananas. She gets (3.0*(cos^2(16) + sin^2(16)))  more from Joyce. How many bananas does Tina have in all?
+consensus,"Solve the following math word problem.
+
+Kenneth has 3 marbles. He buys 6 more. Later, Kenneth buys 15 apples at the store. How many marbles does Kenneth have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Kenneth has 3 marbles. He buys 6 more. Later, Kenneth buys 15 apples at the store. How many marbles does Kenneth have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,"Kenneth has 3 marbles. He buys 6 more. Later, Kenneth buys 15 apples at the store. How many marbles does Kenneth have in all?","answer=(3.0+6.0)
+print(answer)",9,test,singleop,"Kenneth has 3 marbles. He buys (7-(0.5*2))  more. Later, Kenneth buys 15 apples at the store. How many marbles does Kenneth have in all?","Kenneth has 3 marbles. He buys LOG(EXPONENTIAL(6))  more. Later, Kenneth buys 15 apples at the store. How many marbles does Kenneth have in all?","Kenneth has 3 marbles. He buys (7-(sec^2(28)-tan^2(28)))  more. Later, Kenneth buys 15 apples at the store. How many marbles does Kenneth have in all?"
+consensus,"Solve the following math word problem.
+
+ Your class had a pizza party. 0.375 of a pizza was left over, and 0.5 of another pizza was left over. You put them both into one box. How much  pizza do you have altogether?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Your class had a pizza party. 0.375 of a pizza was left over, and 0.5 of another pizza was left over. You put them both into one box. How much  pizza do you have altogether?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['0.875'],['0.875'],math," Your class had a pizza party. 0.375 of a pizza was left over, and 0.5 of another pizza was left over. You put them both into one box. How much  pizza do you have altogether?","answer=(0.375+0.5)
+print(answer)",0.875,test,singleop,,,
+consensus,"Solve the following math word problem.
+
+Donald has 4 oranges. He finds another 5. How many oranges does Donald have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Donald has 4 oranges. He finds another 5. How many oranges does Donald have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,Donald has 4 oranges. He finds another 5. How many oranges does Donald have in all?,"answer=(4.0+5.0)
+print(answer)",9,test,singleop,Donald has (4/(4/4))  oranges. He finds another 5. How many oranges does Donald have in all?,Donald has EXPONENTIAL(LOG(4))  oranges. He finds another 5. How many oranges does Donald have in all?,Donald has (4/(cosec^2(76) - cot^2(76)))  oranges. He finds another 5. How many oranges does Donald have in all?
+consensus,"Solve the following math word problem.
+
+If Benjamin skated 80 kilometers at 10 kilometers per hour, how long was Benjamin skating?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Benjamin skated 80 kilometers at 10 kilometers per hour, how long was Benjamin skating?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['8'],['8'],math,"If Benjamin skated 80 kilometers at 10 kilometers per hour, how long was Benjamin skating?","answer=(80.0/10.0)
+print(answer)",8,test,singleop,"If Benjamin skated (80.0*(0.5*2))  kilometers at 10 kilometers per hour, how long was Benjamin skating?","If Benjamin skated LOG(EXPONENTIAL(80))  kilometers at 10 kilometers per hour, how long was Benjamin skating?","If Benjamin skated (81-(sec^2(89)-tan^2(89)))  kilometers at 10 kilometers per hour, how long was Benjamin skating?"
+consensus,"Solve the following math word problem.
+
+Each child has 2 candies. If there are 9 children, how many candies are there in total?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Each child has 2 candies. If there are 9 children, how many candies are there in total?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['18'],['18'],math,"Each child has 2 candies. If there are 9 children, how many candies are there in total?","answer=(2.0*9.0)
+print(answer)",18,test,singleop,"Each child has 2 candies. If there are (10-(0.5*2))  children, how many candies are there in total?","Each child has 2 candies. If there are EXPONENTIAL(LOG(9))  children, how many candies are there in total?","Each child has 2 candies. If there are (9/(cosec^2(14) - cot^2(14)))  children, how many candies are there in total?"
+consensus,"Solve the following math word problem.
+
+ On the first day of the week Pat had 39 stickers. Pat earned 22 more during the week. How many stickers did Pat have at the end of the  week?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ On the first day of the week Pat had 39 stickers. Pat earned 22 more during the week. How many stickers did Pat have at the end of the  week?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['61'],['61'],math, On the first day of the week Pat had 39 stickers. Pat earned 22 more during the week. How many stickers did Pat have at the end of the  week?,"answer=(39.0+22.0)
+print(answer)",61,test,singleop, On the first day of the week Pat had (40-(40/40))  stickers. Pat earned 22 more during the week. How many stickers did Pat have at the end of the  week?, On the first day of the week Pat had EXPONENTIAL(LOG(39))  stickers. Pat earned 22 more during the week. How many stickers did Pat have at the end of the  week?, On the first day of the week Pat had (38+(cos^2(1) + sin^2(1)))  stickers. Pat earned 22 more during the week. How many stickers did Pat have at the end of the  week?
+consensus,"Solve the following math word problem.
+
+Martha has 2 peanuts. Joyce has 26 peanuts. If Joyce gives all of her peanuts to Martha, how many peanuts will Martha have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Martha has 2 peanuts. Joyce has 26 peanuts. If Joyce gives all of her peanuts to Martha, how many peanuts will Martha have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['28'],['28'],math,"Martha has 2 peanuts. Joyce has 26 peanuts. If Joyce gives all of her peanuts to Martha, how many peanuts will Martha have?","answer=(2.0+26.0)
+print(answer)",28,test,singleop,"Martha has (3-(92/92))  peanuts. Joyce has 26 peanuts. If Joyce gives all of her peanuts to Martha, how many peanuts will Martha have?","Martha has LOG(EXPONENTIAL(2))  peanuts. Joyce has 26 peanuts. If Joyce gives all of her peanuts to Martha, how many peanuts will Martha have?","Martha has (3-(cos^2(24) + sin^2(24)))  peanuts. Joyce has 26 peanuts. If Joyce gives all of her peanuts to Martha, how many peanuts will Martha have?"
+consensus,"Solve the following math word problem.
+
+Lisa starts with 91 bananas. Maria gives Lisa 8 more. How many bananas does Lisa end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Lisa starts with 91 bananas. Maria gives Lisa 8 more. How many bananas does Lisa end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['99'],['99'],math,Lisa starts with 91 bananas. Maria gives Lisa 8 more. How many bananas does Lisa end with?,"answer=(91.0+8.0)
+print(answer)",99,test,singleop,Lisa starts with (90+(0.5*2))  bananas. Maria gives Lisa 8 more. How many bananas does Lisa end with?,Lisa starts with EXPONENTIAL(LOG(91))  bananas. Maria gives Lisa 8 more. How many bananas does Lisa end with?,Lisa starts with (91/(cos^2(68) + sin^2(68)))  bananas. Maria gives Lisa 8 more. How many bananas does Lisa end with?
+consensus,"Solve the following math word problem.
+
+ Arthur baked 35 muffins. How many more muffins does Arthur have to bake to have 83 muffins?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Arthur baked 35 muffins. How many more muffins does Arthur have to bake to have 83 muffins?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['48'],['48'],math, Arthur baked 35 muffins. How many more muffins does Arthur have to bake to have 83 muffins?,"answer=(83.0-35.0)
+print(answer)",48,test,singleop, Arthur baked 35 muffins. How many more muffins does Arthur have to bake to have (83/(0.5*2))  muffins?, Arthur baked 35 muffins. How many more muffins does Arthur have to bake to have EXPONENTIAL(LOG(83))  muffins?, Arthur baked 35 muffins. How many more muffins does Arthur have to bake to have (83.0*(cos^2(51) + sin^2(51)))  muffins?
+consensus,"Solve the following math word problem.
+
+ I walk 1 mile every 15 minutes. I walked 3 miles. How many minutes did it take me ?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ I walk 1 mile every 15 minutes. I walked 3 miles. How many minutes did it take me ?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['45'],['45'],math, I walk 1 mile every 15 minutes. I walked 3 miles. How many minutes did it take me ?,"answer=(15.0*3.0)
+print(answer)",45,test,singleop, I walk 1 mile every 15 minutes. I walked (2+(0.5*2))  miles. How many minutes did it take me ?, I walk 1 mile every 15 minutes. I walked EXPONENTIAL(LOG(3))  miles. How many minutes did it take me ?, I walk 1 mile every 15 minutes. I walked (4-(cos^2(8) + sin^2(8)))  miles. How many minutes did it take me ?
+consensus,"Solve the following math word problem.
+
+ You go out for a long walk. You walk 0.75 mile and then sit down to take a rest. Then you walk 0.25 of a mile. How far did you walk altogether?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ You go out for a long walk. You walk 0.75 mile and then sit down to take a rest. Then you walk 0.25 of a mile. How far did you walk altogether?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['1'],['1'],math, You go out for a long walk. You walk 0.75 mile and then sit down to take a rest. Then you walk 0.25 of a mile. How far did you walk altogether?,"answer=(0.75+0.25)
+print(answer)",1,test,singleop,,,
+consensus,"Solve the following math word problem.
+
+ Mrs. Sheridan has 11 cats. Mrs. Garrett has 24 cats. How many more cats does Mrs. Garrett have than Mrs. Sheridan?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Sheridan has 11 cats. Mrs. Garrett has 24 cats. How many more cats does Mrs. Garrett have than Mrs. Sheridan?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['13'],['13'],math, Mrs. Sheridan has 11 cats. Mrs. Garrett has 24 cats. How many more cats does Mrs. Garrett have than Mrs. Sheridan?,"answer=(24.0-11.0)
+print(answer)",13,test,singleop, Mrs. Sheridan has 11 cats. Mrs. Garrett has (25-(0.5*2))  cats. How many more cats does Mrs. Garrett have than Mrs. Sheridan?, Mrs. Sheridan has 11 cats. Mrs. Garrett has EXPONENTIAL(LOG(24))  cats. How many more cats does Mrs. Garrett have than Mrs. Sheridan?, Mrs. Sheridan has 11 cats. Mrs. Garrett has (25-(sec^2(7)-tan^2(7)))  cats. How many more cats does Mrs. Garrett have than Mrs. Sheridan?
+consensus,"Solve the following math word problem.
+
+ Cody is 14 years old. His grandmother is 6 times as old as he is. How old is Cody’s grandmother?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Cody is 14 years old. His grandmother is 6 times as old as he is. How old is Cody’s grandmother?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['84'],['84'],math, Cody is 14 years old. His grandmother is 6 times as old as he is. How old is Cody’s grandmother?,"answer=(14.0*6.0)
+print(answer)",84,test,singleop, Cody is 14 years old. His grandmother is (5+(51/51))  times as old as he is. How old is Cody’s grandmother?, Cody is 14 years old. His grandmother is EXPONENTIAL(LOG(6))  times as old as he is. How old is Cody’s grandmother?, Cody is 14 years old. His grandmother is (6.0*(sec^2(67)-tan^2(67)))  times as old as he is. How old is Cody’s grandmother?
+consensus,"Solve the following math word problem.
+
+ Hayley had 25 meatballs on her plate. Kirsten stole some of her meatballs. Now she has 11 meatballs on her plate. How many meatballs  did Kirsten steal?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Hayley had 25 meatballs on her plate. Kirsten stole some of her meatballs. Now she has 11 meatballs on her plate. How many meatballs  did Kirsten steal?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['14'],['14'],math, Hayley had 25 meatballs on her plate. Kirsten stole some of her meatballs. Now she has 11 meatballs on her plate. How many meatballs  did Kirsten steal?,"answer=(25.0-11.0)
+print(answer)",14,test,singleop, Hayley had (24+(76/76))  meatballs on her plate. Kirsten stole some of her meatballs. Now she has 11 meatballs on her plate. How many meatballs  did Kirsten steal?, Hayley had LOG(EXPONENTIAL(25))  meatballs on her plate. Kirsten stole some of her meatballs. Now she has 11 meatballs on her plate. How many meatballs  did Kirsten steal?, Hayley had (24+(cosec^2(17) - cot^2(17)))  meatballs on her plate. Kirsten stole some of her meatballs. Now she has 11 meatballs on her plate. How many meatballs  did Kirsten steal?
+consensus,"Solve the following math word problem.
+
+Amy starts with 7 peanuts. Gerald gives Amy 55 more. How many peanuts does Amy end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Amy starts with 7 peanuts. Gerald gives Amy 55 more. How many peanuts does Amy end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['62'],['62'],math,Amy starts with 7 peanuts. Gerald gives Amy 55 more. How many peanuts does Amy end with?,"answer=(7.0+55.0)
+print(answer)",62,test,singleop,Amy starts with (8-(0.5*2))  peanuts. Gerald gives Amy 55 more. How many peanuts does Amy end with?,Amy starts with EXPONENTIAL(LOG(7))  peanuts. Gerald gives Amy 55 more. How many peanuts does Amy end with?,Amy starts with (7.0*(cosec^2(58) - cot^2(58)))  peanuts. Gerald gives Amy 55 more. How many peanuts does Amy end with?
+consensus,"Solve the following math word problem.
+
+Ernest has 45 bananas that must be put away in boxes. Julie comes to help and brings 3 cookies to share with Ernest. If there are 5 boxes, how many bananas must go in each box?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Ernest has 45 bananas that must be put away in boxes. Julie comes to help and brings 3 cookies to share with Ernest. If there are 5 boxes, how many bananas must go in each box?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,"Ernest has 45 bananas that must be put away in boxes. Julie comes to help and brings 3 cookies to share with Ernest. If there are 5 boxes, how many bananas must go in each box?","answer=(45.0/5.0)
+print(answer)",9,test,singleop,"Ernest has (46-(0.5*2))  bananas that must be put away in boxes. Julie comes to help and brings 3 cookies to share with Ernest. If there are 5 boxes, how many bananas must go in each box?","Ernest has LOG(EXPONENTIAL(45))  bananas that must be put away in boxes. Julie comes to help and brings 3 cookies to share with Ernest. If there are 5 boxes, how many bananas must go in each box?","Ernest has (45/(cos^2(9) + sin^2(9)))  bananas that must be put away in boxes. Julie comes to help and brings 3 cookies to share with Ernest. If there are 5 boxes, how many bananas must go in each box?"
+consensus,"Solve the following math word problem.
+
+ There are 397 butterflies. Each butterfly has 12 black dots and 17 yellow dots. How many black dots are there in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ There are 397 butterflies. Each butterfly has 12 black dots and 17 yellow dots. How many black dots are there in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['4764'],['4764'],math, There are 397 butterflies. Each butterfly has 12 black dots and 17 yellow dots. How many black dots are there in all?,"answer=(397.0*12.0)
+print(answer)",4764,test,singleop, There are 397 butterflies. Each butterfly has (12/(0.5*2))  black dots and 17 yellow dots. How many black dots are there in all?, There are 397 butterflies. Each butterfly has EXPONENTIAL(LOG(12))  black dots and 17 yellow dots. How many black dots are there in all?, There are 397 butterflies. Each butterfly has (12.0*(cos^2(99) + sin^2(99)))  black dots and 17 yellow dots. How many black dots are there in all?
+consensus,"Solve the following math word problem.
+
+Brenda has 34 apples. She gets 37 more from Willie. How many apples does Brenda have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Brenda has 34 apples. She gets 37 more from Willie. How many apples does Brenda have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['71'],['71'],math,Brenda has 34 apples. She gets 37 more from Willie. How many apples does Brenda have in all?,"answer=(34.0+37.0)
+print(answer)",71,test,singleop,Brenda has (34.0*(0.5*2))  apples. She gets 37 more from Willie. How many apples does Brenda have in all?,Brenda has EXPONENTIAL(LOG(34))  apples. She gets 37 more from Willie. How many apples does Brenda have in all?,Brenda has (35-(sec^2(77)-tan^2(77)))  apples. She gets 37 more from Willie. How many apples does Brenda have in all?
+consensus,"Solve the following math word problem.
+
+If Joan bicycled 25 miles at 5 miles per hour, how long was Joan travelling?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Joan bicycled 25 miles at 5 miles per hour, how long was Joan travelling?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,"If Joan bicycled 25 miles at 5 miles per hour, how long was Joan travelling?","answer=(25.0/5.0)
+print(answer)",5,test,singleop,"If Joan bicycled (26-(0.5*2))  miles at 5 miles per hour, how long was Joan travelling?","If Joan bicycled EXPONENTIAL(LOG(25))  miles at 5 miles per hour, how long was Joan travelling?","If Joan bicycled (25.0*(cosec^2(85) - cot^2(85)))  miles at 5 miles per hour, how long was Joan travelling?"
+consensus,"Solve the following math word problem.
+
+ Ethan has 31 presents. Alissa has 22 more than Ethan. How many presents does Alissa have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Ethan has 31 presents. Alissa has 22 more than Ethan. How many presents does Alissa have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['53'],['53'],math, Ethan has 31 presents. Alissa has 22 more than Ethan. How many presents does Alissa have?,"answer=(31.0+22.0)
+print(answer)",53,test,singleop, Ethan has (30+(0.5*2))  presents. Alissa has 22 more than Ethan. How many presents does Alissa have?, Ethan has EXPONENTIAL(LOG(31))  presents. Alissa has 22 more than Ethan. How many presents does Alissa have?, Ethan has (32-(sec^2(100)-tan^2(100)))  presents. Alissa has 22 more than Ethan. How many presents does Alissa have?
+consensus,"Solve the following math word problem.
+
+Brenda starts with 7 Skittles. She buys 8 more. How many Skittles does Brenda end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Brenda starts with 7 Skittles. She buys 8 more. How many Skittles does Brenda end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['15'],['15'],math,Brenda starts with 7 Skittles. She buys 8 more. How many Skittles does Brenda end with?,"answer=(7.0+8.0)
+print(answer)",15,test,singleop,Brenda starts with 7 Skittles. She buys (8/(0.5*2))  more. How many Skittles does Brenda end with?,Brenda starts with 7 Skittles. She buys EXPONENTIAL(LOG(8))  more. How many Skittles does Brenda end with?,Brenda starts with 7 Skittles. She buys (7+(sec^2(74)-tan^2(74)))  more. How many Skittles does Brenda end with?
+consensus,"Solve the following math word problem.
+
+Ronald went to the store 2 times last month. He buys 10 bananas each time he goes to the store. How many bananas did Ronald buy last month?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Ronald went to the store 2 times last month. He buys 10 bananas each time he goes to the store. How many bananas did Ronald buy last month?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20'],['20'],math,Ronald went to the store 2 times last month. He buys 10 bananas each time he goes to the store. How many bananas did Ronald buy last month?,"answer=(2.0*10.0)
+print(answer)",20,test,singleop,Ronald went to the store (1+(0.5*2))  times last month. He buys 10 bananas each time he goes to the store. How many bananas did Ronald buy last month?,Ronald went to the store LOG(EXPONENTIAL(2))  times last month. He buys 10 bananas each time he goes to the store. How many bananas did Ronald buy last month?,Ronald went to the store (2/(sec^2(30)-tan^2(30)))  times last month. He buys 10 bananas each time he goes to the store. How many bananas did Ronald buy last month?
+consensus,"Solve the following math word problem.
+
+ Each bag contains 23 pounds of oranges. How many pounds of oranges are in 45 bags?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Each bag contains 23 pounds of oranges. How many pounds of oranges are in 45 bags?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['1035'],['1035'],math, Each bag contains 23 pounds of oranges. How many pounds of oranges are in 45 bags?,"answer=(23.0*45.0)
+print(answer)",1035,test,singleop, Each bag contains (24-(68/68))  pounds of oranges. How many pounds of oranges are in 45 bags?, Each bag contains EXPONENTIAL(LOG(23))  pounds of oranges. How many pounds of oranges are in 45 bags?, Each bag contains (23.0*(cos^2(32) + sin^2(32)))  pounds of oranges. How many pounds of oranges are in 45 bags?
+consensus,"Solve the following math word problem.
+
+ I read 21 pages of my English book yesterday. Today, I read 17 pages. What is the total number of pages did I read?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ I read 21 pages of my English book yesterday. Today, I read 17 pages. What is the total number of pages did I read?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['38'],['38'],math," I read 21 pages of my English book yesterday. Today, I read 17 pages. What is the total number of pages did I read?","answer=(21.0+17.0)
+print(answer)",38,test,singleop," I read (21/(43/43))  pages of my English book yesterday. Today, I read 17 pages. What is the total number of pages did I read?"," I read EXPONENTIAL(LOG(21))  pages of my English book yesterday. Today, I read 17 pages. What is the total number of pages did I read?"," I read (22-(cosec^2(90) - cot^2(90)))  pages of my English book yesterday. Today, I read 17 pages. What is the total number of pages did I read?"
+consensus,"Solve the following math word problem.
+
+Mildred collects 77 oranges. Mildred's father gives Mildred 2 more. How many oranges does Mildred have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Mildred collects 77 oranges. Mildred's father gives Mildred 2 more. How many oranges does Mildred have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['79'],['79'],math,Mildred collects 77 oranges. Mildred's father gives Mildred 2 more. How many oranges does Mildred have?,"answer=(77.0+2.0)
+print(answer)",79,test,singleop,Mildred collects (77.0*(0.5*2))  oranges. Mildred's father gives Mildred 2 more. How many oranges does Mildred have?,Mildred collects EXPONENTIAL(LOG(77))  oranges. Mildred's father gives Mildred 2 more. How many oranges does Mildred have?,Mildred collects (76+(cosec^2(72) - cot^2(72)))  oranges. Mildred's father gives Mildred 2 more. How many oranges does Mildred have?
+consensus,"Solve the following math word problem.
+
+Virginia has 16 eggs and 8 Skittles. If she shares the eggs among 4 friends, how many eggs does each friend get?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Virginia has 16 eggs and 8 Skittles. If she shares the eggs among 4 friends, how many eggs does each friend get?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['4'],['4'],math,"Virginia has 16 eggs and 8 Skittles. If she shares the eggs among 4 friends, how many eggs does each friend get?","answer=(16.0/4.0)
+print(answer)",4,test,singleop,"Virginia has 16 eggs and 8 Skittles. If she shares the eggs among (5-(59/59))  friends, how many eggs does each friend get?","Virginia has 16 eggs and 8 Skittles. If she shares the eggs among EXPONENTIAL(LOG(4))  friends, how many eggs does each friend get?","Virginia has 16 eggs and 8 Skittles. If she shares the eggs among (5-(cosec^2(72) - cot^2(72)))  friends, how many eggs does each friend get?"
+consensus,"Solve the following math word problem.
+
+ Jazmin had 1209 dolls and Geraldine had 2186 dolls. If they put their dolls together, how many would they have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Jazmin had 1209 dolls and Geraldine had 2186 dolls. If they put their dolls together, how many would they have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['3395'],['3395'],math," Jazmin had 1209 dolls and Geraldine had 2186 dolls. If they put their dolls together, how many would they have?","answer=(1209.0+2186.0)
+print(answer)",3395,test,singleop," Jazmin had 1209 dolls and Geraldine had (2187-(0.5*2))  dolls. If they put their dolls together, how many would they have?"," Jazmin had 1209 dolls and Geraldine had LOG(EXPONENTIAL(2186))  dolls. If they put their dolls together, how many would they have?"," Jazmin had 1209 dolls and Geraldine had (2185+(cos^2(71) + sin^2(71)))  dolls. If they put their dolls together, how many would they have?"
+consensus,"Solve the following math word problem.
+
+ There were 10 students riding on the school bus. At the first stop, 3 students got off of the bus. How many students are left on the bus?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ There were 10 students riding on the school bus. At the first stop, 3 students got off of the bus. How many students are left on the bus?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math," There were 10 students riding on the school bus. At the first stop, 3 students got off of the bus. How many students are left on the bus?","answer=(10.0-3.0)
+print(answer)",7,test,singleop," There were (11-(0.5*2))  students riding on the school bus. At the first stop, 3 students got off of the bus. How many students are left on the bus?"," There were LOG(EXPONENTIAL(10))  students riding on the school bus. At the first stop, 3 students got off of the bus. How many students are left on the bus?"," There were (10/(cosec^2(50) - cot^2(50)))  students riding on the school bus. At the first stop, 3 students got off of the bus. How many students are left on the bus?"
+consensus,"Solve the following math word problem.
+
+There are 9 students in the class and 81 tickets. If the tickets are divided equally among the students, how many does each student get?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 9 students in the class and 81 tickets. If the tickets are divided equally among the students, how many does each student get?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,"There are 9 students in the class and 81 tickets. If the tickets are divided equally among the students, how many does each student get?","answer=(81.0/9.0)
+print(answer)",9,test,singleop,"There are (8+(13/13))  students in the class and 81 tickets. If the tickets are divided equally among the students, how many does each student get?","There are EXPONENTIAL(LOG(9))  students in the class and 81 tickets. If the tickets are divided equally among the students, how many does each student get?","There are (9.0*(cos^2(28) + sin^2(28)))  students in the class and 81 tickets. If the tickets are divided equally among the students, how many does each student get?"
+consensus,"Solve the following math word problem.
+
+ Ellen went to a garage sale to buy chairs. Each chair cost 15 dollars.  How much money did Ellen spend for the 12 chairs she bought?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Ellen went to a garage sale to buy chairs. Each chair cost 15 dollars.  How much money did Ellen spend for the 12 chairs she bought?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['180'],['180'],math, Ellen went to a garage sale to buy chairs. Each chair cost 15 dollars.  How much money did Ellen spend for the 12 chairs she bought?,"answer=(15.0*12.0)
+print(answer)",180,test,singleop, Ellen went to a garage sale to buy chairs. Each chair cost (16-(0.5*2))  dollars.  How much money did Ellen spend for the 12 chairs she bought?, Ellen went to a garage sale to buy chairs. Each chair cost EXPONENTIAL(LOG(15))  dollars.  How much money did Ellen spend for the 12 chairs she bought?, Ellen went to a garage sale to buy chairs. Each chair cost (14+(cos^2(65) + sin^2(65)))  dollars.  How much money did Ellen spend for the 12 chairs she bought?
+consensus,"Solve the following math word problem.
+
+Paula has 6 boxes of peanuts. Each box holds 4 peanuts. How many peanuts does Paula have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Paula has 6 boxes of peanuts. Each box holds 4 peanuts. How many peanuts does Paula have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['24'],['24'],math,Paula has 6 boxes of peanuts. Each box holds 4 peanuts. How many peanuts does Paula have?,"answer=(6.0*4.0)
+print(answer)",24,test,singleop,Paula has (7-(0.5*2))  boxes of peanuts. Each box holds 4 peanuts. How many peanuts does Paula have?,Paula has EXPONENTIAL(LOG(6))  boxes of peanuts. Each box holds 4 peanuts. How many peanuts does Paula have?,Paula has (5+(sec^2(53)-tan^2(53)))  boxes of peanuts. Each box holds 4 peanuts. How many peanuts does Paula have?
+consensus,"Solve the following math word problem.
+
+Donna weighs 69 pounds. Willie weighs 51 pounds. How much heavier is Donna than Willie?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Donna weighs 69 pounds. Willie weighs 51 pounds. How much heavier is Donna than Willie?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['18'],['18'],math,Donna weighs 69 pounds. Willie weighs 51 pounds. How much heavier is Donna than Willie?,"answer=(69.0-51.0)
+print(answer)",18,test,singleop,Donna weighs (69/(90/90))  pounds. Willie weighs 51 pounds. How much heavier is Donna than Willie?,Donna weighs LOG(EXPONENTIAL(69))  pounds. Willie weighs 51 pounds. How much heavier is Donna than Willie?,Donna weighs (69/(cos^2(62) + sin^2(62)))  pounds. Willie weighs 51 pounds. How much heavier is Donna than Willie?
+consensus,"Solve the following math word problem.
+
+Dorothy has 72 cards. She gives 5 to Harold. How many cards will Dorothy have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Dorothy has 72 cards. She gives 5 to Harold. How many cards will Dorothy have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['67'],['67'],math,Dorothy has 72 cards. She gives 5 to Harold. How many cards will Dorothy have?,"answer=(72.0-5.0)
+print(answer)",67,test,singleop,Dorothy has 72 cards. She gives (5/(22/22))  to Harold. How many cards will Dorothy have?,Dorothy has 72 cards. She gives EXPONENTIAL(LOG(5))  to Harold. How many cards will Dorothy have?,Dorothy has 72 cards. She gives (4+(sec^2(71)-tan^2(71)))  to Harold. How many cards will Dorothy have?
+consensus,"Solve the following math word problem.
+
+ Our watermelons have 100 seeds each. If we have 4 watermelons, how many seeds should there be when all seeds are taken out of the  watermelons?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Our watermelons have 100 seeds each. If we have 4 watermelons, how many seeds should there be when all seeds are taken out of the  watermelons?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['400'],['400'],math," Our watermelons have 100 seeds each. If we have 4 watermelons, how many seeds should there be when all seeds are taken out of the  watermelons?","answer=(100.0*4.0)
+print(answer)",400,test,singleop," Our watermelons have (99+(42/42))  seeds each. If we have 4 watermelons, how many seeds should there be when all seeds are taken out of the  watermelons?"," Our watermelons have EXPONENTIAL(LOG(100))  seeds each. If we have 4 watermelons, how many seeds should there be when all seeds are taken out of the  watermelons?"," Our watermelons have (100/(cosec^2(7) - cot^2(7)))  seeds each. If we have 4 watermelons, how many seeds should there be when all seeds are taken out of the  watermelons?"
+consensus,"Solve the following math word problem.
+
+It took Katherine 3 hours to run to Louis's house at 8 miles per hour. How far is it between Katherine's house and Louis's house?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+It took Katherine 3 hours to run to Louis's house at 8 miles per hour. How far is it between Katherine's house and Louis's house?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['24'],['24'],math,It took Katherine 3 hours to run to Louis's house at 8 miles per hour. How far is it between Katherine's house and Louis's house?,"answer=(3.0*8.0)
+print(answer)",24,test,singleop,It took Katherine 3 hours to run to Louis's house at (8/(25/25))  miles per hour. How far is it between Katherine's house and Louis's house?,It took Katherine 3 hours to run to Louis's house at LOG(EXPONENTIAL(8))  miles per hour. How far is it between Katherine's house and Louis's house?,It took Katherine 3 hours to run to Louis's house at (8/(sec^2(9)-tan^2(9)))  miles per hour. How far is it between Katherine's house and Louis's house?
+consensus,"Solve the following math word problem.
+
+ Mrs. Franklin had 58 Valentines. Mrs. Franklin gave some to her students. Now she has 16. How many Valentines did Mrs. Franklin give  to her students?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Franklin had 58 Valentines. Mrs. Franklin gave some to her students. Now she has 16. How many Valentines did Mrs. Franklin give  to her students?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['42'],['42'],math, Mrs. Franklin had 58 Valentines. Mrs. Franklin gave some to her students. Now she has 16. How many Valentines did Mrs. Franklin give  to her students?,"answer=(58.0-16.0)
+print(answer)",42,test,singleop, Mrs. Franklin had (58/(81/81))  Valentines. Mrs. Franklin gave some to her students. Now she has 16. How many Valentines did Mrs. Franklin give  to her students?, Mrs. Franklin had EXPONENTIAL(LOG(58))  Valentines. Mrs. Franklin gave some to her students. Now she has 16. How many Valentines did Mrs. Franklin give  to her students?, Mrs. Franklin had (58/(cos^2(48) + sin^2(48)))  Valentines. Mrs. Franklin gave some to her students. Now she has 16. How many Valentines did Mrs. Franklin give  to her students?
+consensus,"Solve the following math word problem.
+
+If Benjamin strolled 14 miles at 2 miles per hour, how long was Benjamin travelling?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Benjamin strolled 14 miles at 2 miles per hour, how long was Benjamin travelling?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math,"If Benjamin strolled 14 miles at 2 miles per hour, how long was Benjamin travelling?","answer=(14.0/2.0)
+print(answer)",7,test,singleop,"If Benjamin strolled 14 miles at (3-(0.5*2))  miles per hour, how long was Benjamin travelling?","If Benjamin strolled 14 miles at EXPONENTIAL(LOG(2))  miles per hour, how long was Benjamin travelling?","If Benjamin strolled 14 miles at (2/(sec^2(72)-tan^2(72)))  miles per hour, how long was Benjamin travelling?"
+consensus,"Solve the following math word problem.
+
+Each bottle cap costs $2.00. How much do 6 bottle caps cost?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Each bottle cap costs $2.00. How much do 6 bottle caps cost?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math,Each bottle cap costs $2.00. How much do 6 bottle caps cost?,"answer=(2.0*6.0)
+print(answer)",12,test,singleop,Each bottle cap costs $2.00. How much do (5+(89/89))  bottle caps cost?,Each bottle cap costs $2.00. How much do LOG(EXPONENTIAL(6))  bottle caps cost?,Each bottle cap costs $2.00. How much do (6/(sec^2(77)-tan^2(77)))  bottle caps cost?
+consensus,"Solve the following math word problem.
+
+ Josh had 142 pencils. He gave 31 pencils to Dorothy. How many pencils does Josh have left?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Josh had 142 pencils. He gave 31 pencils to Dorothy. How many pencils does Josh have left?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['111'],['111'],math, Josh had 142 pencils. He gave 31 pencils to Dorothy. How many pencils does Josh have left?,"answer=(142.0-31.0)
+print(answer)",111,test,singleop, Josh had (142.0*(13/13))  pencils. He gave 31 pencils to Dorothy. How many pencils does Josh have left?, Josh had EXPONENTIAL(LOG(142))  pencils. He gave 31 pencils to Dorothy. How many pencils does Josh have left?, Josh had (142.0*(sec^2(68)-tan^2(68)))  pencils. He gave 31 pencils to Dorothy. How many pencils does Josh have left?
+consensus,"Solve the following math word problem.
+
+Each ticket costs $9.00. How much do 4 tickets cost?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Each ticket costs $9.00. How much do 4 tickets cost?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['36'],['36'],math,Each ticket costs $9.00. How much do 4 tickets cost?,"answer=(9.0*4.0)
+print(answer)",36,test,singleop,Each ticket costs $9.00. How much do (3+(0.5*2))  tickets cost?,Each ticket costs $9.00. How much do LOG(EXPONENTIAL(4))  tickets cost?,Each ticket costs $9.00. How much do (4/(cosec^2(76) - cot^2(76)))  tickets cost?
+consensus,"Solve the following math word problem.
+
+ Omar and Karen made egg rolls to share at the school potluck. Omar rolled 219 egg rolls. Karen rolled 229 egg rolls. What is the total number  of egg rolls Omar and Karen rolled?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Omar and Karen made egg rolls to share at the school potluck. Omar rolled 219 egg rolls. Karen rolled 229 egg rolls. What is the total number  of egg rolls Omar and Karen rolled?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['448'],['448'],math, Omar and Karen made egg rolls to share at the school potluck. Omar rolled 219 egg rolls. Karen rolled 229 egg rolls. What is the total number  of egg rolls Omar and Karen rolled?,"answer=(219.0+229.0)
+print(answer)",448,test,singleop, Omar and Karen made egg rolls to share at the school potluck. Omar rolled 219 egg rolls. Karen rolled (230-(0.5*2))  egg rolls. What is the total number  of egg rolls Omar and Karen rolled?, Omar and Karen made egg rolls to share at the school potluck. Omar rolled 219 egg rolls. Karen rolled LOG(EXPONENTIAL(229))  egg rolls. What is the total number  of egg rolls Omar and Karen rolled?, Omar and Karen made egg rolls to share at the school potluck. Omar rolled 219 egg rolls. Karen rolled (229.0*(sec^2(81)-tan^2(81)))  egg rolls. What is the total number  of egg rolls Omar and Karen rolled?
+consensus,"Solve the following math word problem.
+
+ Each CD rack holds 8 CDs. A shelf can hold 4 racks. How many total CDs can fit on the shelf?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Each CD rack holds 8 CDs. A shelf can hold 4 racks. How many total CDs can fit on the shelf?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['32'],['32'],math, Each CD rack holds 8 CDs. A shelf can hold 4 racks. How many total CDs can fit on the shelf?,"answer=(8.0*4.0)
+print(answer)",32,test,singleop, Each CD rack holds (7+(0.5*2))  CDs. A shelf can hold 4 racks. How many total CDs can fit on the shelf?, Each CD rack holds LOG(EXPONENTIAL(8))  CDs. A shelf can hold 4 racks. How many total CDs can fit on the shelf?, Each CD rack holds (9-(sec^2(80)-tan^2(80)))  CDs. A shelf can hold 4 racks. How many total CDs can fit on the shelf?
+consensus,"Solve the following math word problem.
+
+Pamela has 50 skittles. She gives 7 to Karen. How many skittles will Pamela have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Pamela has 50 skittles. She gives 7 to Karen. How many skittles will Pamela have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['43'],['43'],math,Pamela has 50 skittles. She gives 7 to Karen. How many skittles will Pamela have?,"answer=(50.0-7.0)
+print(answer)",43,test,singleop,Pamela has 50 skittles. She gives (6+(24/24))  to Karen. How many skittles will Pamela have?,Pamela has 50 skittles. She gives LOG(EXPONENTIAL(7))  to Karen. How many skittles will Pamela have?,Pamela has 50 skittles. She gives (8-(cos^2(39) + sin^2(39)))  to Karen. How many skittles will Pamela have?
+consensus,"Solve the following math word problem.
+
+Charles has 4 apples. Jessica gives Charles 39 more. How many apples does Charles have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Charles has 4 apples. Jessica gives Charles 39 more. How many apples does Charles have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['43'],['43'],math,Charles has 4 apples. Jessica gives Charles 39 more. How many apples does Charles have in all?,"answer=(4.0+39.0)
+print(answer)",43,test,singleop,Charles has 4 apples. Jessica gives Charles (39/(99/99))  more. How many apples does Charles have in all?,Charles has 4 apples. Jessica gives Charles EXPONENTIAL(LOG(39))  more. How many apples does Charles have in all?,Charles has 4 apples. Jessica gives Charles (38+(sec^2(38)-tan^2(38)))  more. How many apples does Charles have in all?
+consensus,"Solve the following math word problem.
+
+Jessica weighs 49 pounds. Thomas weighs 44 pounds. How much heavier is Jessica than Thomas?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jessica weighs 49 pounds. Thomas weighs 44 pounds. How much heavier is Jessica than Thomas?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Jessica weighs 49 pounds. Thomas weighs 44 pounds. How much heavier is Jessica than Thomas?,"answer=(49.0-44.0)
+print(answer)",5,test,singleop,Jessica weighs 49 pounds. Thomas weighs (44.0*(13/13))  pounds. How much heavier is Jessica than Thomas?,Jessica weighs 49 pounds. Thomas weighs EXPONENTIAL(LOG(44))  pounds. How much heavier is Jessica than Thomas?,Jessica weighs 49 pounds. Thomas weighs (44.0*(cosec^2(42) - cot^2(42)))  pounds. How much heavier is Jessica than Thomas?
+consensus,"Solve the following math word problem.
+
+Shawn has 13 blocks. Mildred has with 2 blocks. Mildred finds another 84. How many blocks does Mildred end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Shawn has 13 blocks. Mildred has with 2 blocks. Mildred finds another 84. How many blocks does Mildred end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['86'],['86'],math,Shawn has 13 blocks. Mildred has with 2 blocks. Mildred finds another 84. How many blocks does Mildred end with?,"answer=(2.0+84.0)
+print(answer)",86,test,singleop,Shawn has 13 blocks. Mildred has with (2.0*(0.5*2))  blocks. Mildred finds another 84. How many blocks does Mildred end with?,Shawn has 13 blocks. Mildred has with LOG(EXPONENTIAL(2))  blocks. Mildred finds another 84. How many blocks does Mildred end with?,Shawn has 13 blocks. Mildred has with (3-(cos^2(83) + sin^2(83)))  blocks. Mildred finds another 84. How many blocks does Mildred end with?
+consensus,"Solve the following math word problem.
+
+ 30 dogs are barking. 10 more dogs start to bark. How many dogs are barking?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ 30 dogs are barking. 10 more dogs start to bark. How many dogs are barking?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['40'],['40'],math, 30 dogs are barking. 10 more dogs start to bark. How many dogs are barking?,"answer=(30.0+10.0)
+print(answer)",40,test,singleop, 30 dogs are barking. (10.0*(0.5*2))  more dogs start to bark. How many dogs are barking?, 30 dogs are barking. EXPONENTIAL(LOG(10))  more dogs start to bark. How many dogs are barking?, 30 dogs are barking. (10.0*(cosec^2(19) - cot^2(19)))  more dogs start to bark. How many dogs are barking?
+consensus,"Solve the following math word problem.
+
+It took Amanda 3 hours to stroll to Kimberly's house at 2 miles per hour. How far is it between Amanda's house and Kimberly's house?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+It took Amanda 3 hours to stroll to Kimberly's house at 2 miles per hour. How far is it between Amanda's house and Kimberly's house?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,It took Amanda 3 hours to stroll to Kimberly's house at 2 miles per hour. How far is it between Amanda's house and Kimberly's house?,"answer=(3.0*2.0)
+print(answer)",6,test,singleop,It took Amanda 3 hours to stroll to Kimberly's house at (3-(85/85))  miles per hour. How far is it between Amanda's house and Kimberly's house?,It took Amanda 3 hours to stroll to Kimberly's house at EXPONENTIAL(LOG(2))  miles per hour. How far is it between Amanda's house and Kimberly's house?,It took Amanda 3 hours to stroll to Kimberly's house at (2.0*(sec^2(48)-tan^2(48)))  miles per hour. How far is it between Amanda's house and Kimberly's house?
+consensus,"Solve the following math word problem.
+
+There are 3 eggs in each box. How many eggs are in 2 boxes?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 3 eggs in each box. How many eggs are in 2 boxes?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,There are 3 eggs in each box. How many eggs are in 2 boxes?,"answer=(3.0*2.0)
+print(answer)",6,test,singleop,There are (4-(99/99))  eggs in each box. How many eggs are in 2 boxes?,There are LOG(EXPONENTIAL(3))  eggs in each box. How many eggs are in 2 boxes?,There are (4-(cosec^2(14) - cot^2(14)))  eggs in each box. How many eggs are in 2 boxes?
+consensus,"Solve the following math word problem.
+
+If Norma wandered for 5 hours at 3 miles per hour. How far did Norma go?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Norma wandered for 5 hours at 3 miles per hour. How far did Norma go?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['15'],['15'],math,If Norma wandered for 5 hours at 3 miles per hour. How far did Norma go?,"answer=(5.0*3.0)
+print(answer)",15,test,singleop,If Norma wandered for (5.0*(0.5*2))  hours at 3 miles per hour. How far did Norma go?,If Norma wandered for LOG(EXPONENTIAL(5))  hours at 3 miles per hour. How far did Norma go?,If Norma wandered for (6-(cosec^2(12) - cot^2(12)))  hours at 3 miles per hour. How far did Norma go?
+consensus,"Solve the following math word problem.
+
+Joseph has 67 candies. Kathy gives Joseph 38 more. How many candies does Joseph have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Joseph has 67 candies. Kathy gives Joseph 38 more. How many candies does Joseph have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['105'],['105'],math,Joseph has 67 candies. Kathy gives Joseph 38 more. How many candies does Joseph have in all?,"answer=(67.0+38.0)
+print(answer)",105,test,singleop,Joseph has (68-(0.5*2))  candies. Kathy gives Joseph 38 more. How many candies does Joseph have in all?,Joseph has LOG(EXPONENTIAL(67))  candies. Kathy gives Joseph 38 more. How many candies does Joseph have in all?,Joseph has (67/(sec^2(63)-tan^2(63)))  candies. Kathy gives Joseph 38 more. How many candies does Joseph have in all?
+consensus,"Solve the following math word problem.
+
+ Isha’s pencil is 12 cubes long. If she gets another pencil that is 12 cubes long, how many cubes long are both pencils?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Isha’s pencil is 12 cubes long. If she gets another pencil that is 12 cubes long, how many cubes long are both pencils?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['24'],['24'],math," Isha’s pencil is 12 cubes long. If she gets another pencil that is 12 cubes long, how many cubes long are both pencils?","answer=(12.0+12.0)
+print(answer)",24,test,singleop," Isha’s pencil is (13-(30/30))  cubes long. If she gets another pencil that is 12 cubes long, how many cubes long are both pencils?"," Isha’s pencil is EXPONENTIAL(LOG(12))  cubes long. If she gets another pencil that is 12 cubes long, how many cubes long are both pencils?"," Isha’s pencil is (13-(sec^2(87)-tan^2(87)))  cubes long. If she gets another pencil that is 12 cubes long, how many cubes long are both pencils?"
+consensus,"Solve the following math word problem.
+
+ Megan had 49 markers. Robert gave her 39 more markers. How many markers does Megan have altogether?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Megan had 49 markers. Robert gave her 39 more markers. How many markers does Megan have altogether?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['88'],['88'],math, Megan had 49 markers. Robert gave her 39 more markers. How many markers does Megan have altogether?,"answer=(49.0+39.0)
+print(answer)",88,test,singleop, Megan had 49 markers. Robert gave her (39.0*(0.5*2))  more markers. How many markers does Megan have altogether?, Megan had 49 markers. Robert gave her EXPONENTIAL(LOG(39))  more markers. How many markers does Megan have altogether?, Megan had 49 markers. Robert gave her (40-(cosec^2(2) - cot^2(2)))  more markers. How many markers does Megan have altogether?
+verified,"Solve the following math word problem.
+
+Diane has 37 crayons. She gets 5 more from Frances. Later, Diane buys 16 cards at the store. How many crayons does Diane have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Diane has 37 crayons. She gets 5 more from Frances. Later, Diane buys 16 cards at the store. How many crayons does Diane have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['42'],['42'],math,"Diane has 37 crayons. She gets 5 more from Frances. Later, Diane buys 16 cards at the store. How many crayons does Diane have in all?","answer=(37.0+5.0)
+print(answer)",42,test,singleop,"Diane has 37 crayons. She gets 5 more from Frances. Later, Diane buys (15+(0.5*2))  cards at the store. How many crayons does Diane have in all?","Diane has 37 crayons. She gets 5 more from Frances. Later, Diane buys EXPONENTIAL(LOG(16))  cards at the store. How many crayons does Diane have in all?","Diane has 37 crayons. She gets 5 more from Frances. Later, Diane buys (16/(cosec^2(26) - cot^2(26)))  cards at the store. How many crayons does Diane have in all?"
+consensus,"Solve the following math word problem.
+
+Larry starts with 91 cards. 17 are eaten by a hippopotamus. How many cards does Larry end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Larry starts with 91 cards. 17 are eaten by a hippopotamus. How many cards does Larry end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['74'],['74'],math,Larry starts with 91 cards. 17 are eaten by a hippopotamus. How many cards does Larry end with?,"answer=(91.0-17.0)
+print(answer)",74,test,singleop,Larry starts with (92-(48/48))  cards. 17 are eaten by a hippopotamus. How many cards does Larry end with?,Larry starts with EXPONENTIAL(LOG(91))  cards. 17 are eaten by a hippopotamus. How many cards does Larry end with?,Larry starts with (90+(cosec^2(87) - cot^2(87)))  cards. 17 are eaten by a hippopotamus. How many cards does Larry end with?
+consensus,"Solve the following math word problem.
+
+ 256 students are going to the zoo. They have to be divided into groups so that each teacher has one group. There are 8 teachers. How many  students will be in each group?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ 256 students are going to the zoo. They have to be divided into groups so that each teacher has one group. There are 8 teachers. How many  students will be in each group?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['32'],['32'],math, 256 students are going to the zoo. They have to be divided into groups so that each teacher has one group. There are 8 teachers. How many  students will be in each group?,"answer=(256.0/8.0)
+print(answer)",32,test,singleop, 256 students are going to the zoo. They have to be divided into groups so that each teacher has one group. There are (7+(64/64))  teachers. How many  students will be in each group?, 256 students are going to the zoo. They have to be divided into groups so that each teacher has one group. There are LOG(EXPONENTIAL(8))  teachers. How many  students will be in each group?, 256 students are going to the zoo. They have to be divided into groups so that each teacher has one group. There are (7+(cosec^2(54) - cot^2(54)))  teachers. How many  students will be in each group?
+consensus,"Solve the following math word problem.
+
+ Paul had 28 strawberries in his basket. He picked 35 more strawberries. How many strawberries did he have then?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Paul had 28 strawberries in his basket. He picked 35 more strawberries. How many strawberries did he have then?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['63'],['63'],math, Paul had 28 strawberries in his basket. He picked 35 more strawberries. How many strawberries did he have then?,"answer=(28.0+35.0)
+print(answer)",63,test,singleop, Paul had (28/(100/100))  strawberries in his basket. He picked 35 more strawberries. How many strawberries did he have then?, Paul had LOG(EXPONENTIAL(28))  strawberries in his basket. He picked 35 more strawberries. How many strawberries did he have then?, Paul had (27+(sec^2(79)-tan^2(79)))  strawberries in his basket. He picked 35 more strawberries. How many strawberries did he have then?
+consensus,"Solve the following math word problem.
+
+There are 77 apples in a box. Louise has 9 apples in a bag. Scott takes 75 apples out of the box. How many apples are left in the box?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 77 apples in a box. Louise has 9 apples in a bag. Scott takes 75 apples out of the box. How many apples are left in the box?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2'],['2'],math,There are 77 apples in a box. Louise has 9 apples in a bag. Scott takes 75 apples out of the box. How many apples are left in the box?,"answer=(77.0-75.0)
+print(answer)",2,test,singleop,There are (77/(0.5*2))  apples in a box. Louise has 9 apples in a bag. Scott takes 75 apples out of the box. How many apples are left in the box?,There are LOG(EXPONENTIAL(77))  apples in a box. Louise has 9 apples in a bag. Scott takes 75 apples out of the box. How many apples are left in the box?,There are (76+(cosec^2(20) - cot^2(20)))  apples in a box. Louise has 9 apples in a bag. Scott takes 75 apples out of the box. How many apples are left in the box?
+consensus,"Solve the following math word problem.
+
+ There are 84 leaves. There are 139 ladybugs on each leaf. How many ladybugs are there in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ There are 84 leaves. There are 139 ladybugs on each leaf. How many ladybugs are there in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['11676'],['11676'],math, There are 84 leaves. There are 139 ladybugs on each leaf. How many ladybugs are there in all?,"answer=(84.0*139.0)
+print(answer)",11676,test,singleop, There are (84/(56/56))  leaves. There are 139 ladybugs on each leaf. How many ladybugs are there in all?, There are EXPONENTIAL(LOG(84))  leaves. There are 139 ladybugs on each leaf. How many ladybugs are there in all?, There are (84/(cos^2(2) + sin^2(2)))  leaves. There are 139 ladybugs on each leaf. How many ladybugs are there in all?
+consensus,"Solve the following math word problem.
+
+If there are 76 erasers in a box and Patrick puts 9 more erasers inside, how many erasers are in the box?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If there are 76 erasers in a box and Patrick puts 9 more erasers inside, how many erasers are in the box?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['85'],['85'],math,"If there are 76 erasers in a box and Patrick puts 9 more erasers inside, how many erasers are in the box?","answer=(76.0+9.0)
+print(answer)",85,test,singleop,"If there are 76 erasers in a box and Patrick puts (8+(64/64))  more erasers inside, how many erasers are in the box?","If there are 76 erasers in a box and Patrick puts EXPONENTIAL(LOG(9))  more erasers inside, how many erasers are in the box?","If there are 76 erasers in a box and Patrick puts (9/(sec^2(24)-tan^2(24)))  more erasers inside, how many erasers are in the box?"
+consensus,"Solve the following math word problem.
+
+William starts with 15 tickets. He buys 3 more. How many tickets does William end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+William starts with 15 tickets. He buys 3 more. How many tickets does William end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['18'],['18'],math,William starts with 15 tickets. He buys 3 more. How many tickets does William end with?,"answer=(15.0+3.0)
+print(answer)",18,test,singleop,William starts with (14+(0.5*2))  tickets. He buys 3 more. How many tickets does William end with?,William starts with LOG(EXPONENTIAL(15))  tickets. He buys 3 more. How many tickets does William end with?,William starts with (15.0*(cosec^2(38) - cot^2(38)))  tickets. He buys 3 more. How many tickets does William end with?
+consensus,"Solve the following math word problem.
+
+Janet has 57 apples. She finds another 95. How many apples does Janet have in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Janet has 57 apples. She finds another 95. How many apples does Janet have in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['152'],['152'],math,Janet has 57 apples. She finds another 95. How many apples does Janet have in all?,"answer=(57.0+95.0)
+print(answer)",152,test,singleop,Janet has (57.0*(67/67))  apples. She finds another 95. How many apples does Janet have in all?,Janet has EXPONENTIAL(LOG(57))  apples. She finds another 95. How many apples does Janet have in all?,Janet has (57/(cos^2(83) + sin^2(83)))  apples. She finds another 95. How many apples does Janet have in all?
+consensus,"Solve the following math word problem.
+
+ Robin had 18 pieces of gum. Her brother gave her some more pieces. Now Robin has 44 pieces in all. How many pieces of gum did Robin's  brother give her?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Robin had 18 pieces of gum. Her brother gave her some more pieces. Now Robin has 44 pieces in all. How many pieces of gum did Robin's  brother give her?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['26'],['26'],math, Robin had 18 pieces of gum. Her brother gave her some more pieces. Now Robin has 44 pieces in all. How many pieces of gum did Robin's  brother give her?,"answer=(44.0-18.0)
+print(answer)",26,test,singleop, Robin had (18/(0.5*2))  pieces of gum. Her brother gave her some more pieces. Now Robin has 44 pieces in all. How many pieces of gum did Robin's  brother give her?, Robin had EXPONENTIAL(LOG(18))  pieces of gum. Her brother gave her some more pieces. Now Robin has 44 pieces in all. How many pieces of gum did Robin's  brother give her?, Robin had (18.0*(cosec^2(18) - cot^2(18)))  pieces of gum. Her brother gave her some more pieces. Now Robin has 44 pieces in all. How many pieces of gum did Robin's  brother give her?
+consensus,"Solve the following math word problem.
+
+ You have collected 7 crickets. How many more crickets do you need to collect to have 11 crickets?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ You have collected 7 crickets. How many more crickets do you need to collect to have 11 crickets?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['4'],['4'],math, You have collected 7 crickets. How many more crickets do you need to collect to have 11 crickets?,"answer=(11.0-7.0)
+print(answer)",4,test,singleop, You have collected 7 crickets. How many more crickets do you need to collect to have (12-(0.5*2))  crickets?, You have collected 7 crickets. How many more crickets do you need to collect to have EXPONENTIAL(LOG(11))  crickets?, You have collected 7 crickets. How many more crickets do you need to collect to have (11.0*(cosec^2(76) - cot^2(76)))  crickets?
+consensus,"Solve the following math word problem.
+
+ The clown blew up 47 balloons. Then he blew up 13 more balloons. How many balloons does the clown have now?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ The clown blew up 47 balloons. Then he blew up 13 more balloons. How many balloons does the clown have now?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['60'],['60'],math, The clown blew up 47 balloons. Then he blew up 13 more balloons. How many balloons does the clown have now?,"answer=(47.0+13.0)
+print(answer)",60,test,singleop, The clown blew up (47.0*(0.5*2))  balloons. Then he blew up 13 more balloons. How many balloons does the clown have now?, The clown blew up LOG(EXPONENTIAL(47))  balloons. Then he blew up 13 more balloons. How many balloons does the clown have now?, The clown blew up (47/(sec^2(85)-tan^2(85)))  balloons. Then he blew up 13 more balloons. How many balloons does the clown have now?
+consensus,"Solve the following math word problem.
+
+ Mrs. Snyder made 86 heart cookies. She made 36 red cookies and the rest are pink. How many pink cookies did she make?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Snyder made 86 heart cookies. She made 36 red cookies and the rest are pink. How many pink cookies did she make?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['50'],['50'],math, Mrs. Snyder made 86 heart cookies. She made 36 red cookies and the rest are pink. How many pink cookies did she make?,"answer=(86.0-36.0)
+print(answer)",50,test,singleop, Mrs. Snyder made (87-(0.5*2))  heart cookies. She made 36 red cookies and the rest are pink. How many pink cookies did she make?, Mrs. Snyder made LOG(EXPONENTIAL(86))  heart cookies. She made 36 red cookies and the rest are pink. How many pink cookies did she make?, Mrs. Snyder made (85+(cos^2(63) + sin^2(63)))  heart cookies. She made 36 red cookies and the rest are pink. How many pink cookies did she make?
+consensus,"Solve the following math word problem.
+
+If Charles strolled 6 miles at 3 miles per hour, how long was Charles travelling?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Charles strolled 6 miles at 3 miles per hour, how long was Charles travelling?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2'],['2'],math,"If Charles strolled 6 miles at 3 miles per hour, how long was Charles travelling?","answer=(6.0/3.0)
+print(answer)",2,test,singleop,"If Charles strolled (6.0*(0.5*2))  miles at 3 miles per hour, how long was Charles travelling?","If Charles strolled LOG(EXPONENTIAL(6))  miles at 3 miles per hour, how long was Charles travelling?","If Charles strolled (6/(sec^2(34)-tan^2(34)))  miles at 3 miles per hour, how long was Charles travelling?"
+consensus,"Solve the following math word problem.
+
+ Mrs. Hilt wants to make a border around her garden. She needs 125 rocks to complete the border. She has 64 rocks. How many more rocks  does she need to complete the border?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Hilt wants to make a border around her garden. She needs 125 rocks to complete the border. She has 64 rocks. How many more rocks  does she need to complete the border?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['61'],['61'],math, Mrs. Hilt wants to make a border around her garden. She needs 125 rocks to complete the border. She has 64 rocks. How many more rocks  does she need to complete the border?,"answer=(125.0-64.0)
+print(answer)",61,test,singleop, Mrs. Hilt wants to make a border around her garden. She needs (126-(41/41))  rocks to complete the border. She has 64 rocks. How many more rocks  does she need to complete the border?, Mrs. Hilt wants to make a border around her garden. She needs EXPONENTIAL(LOG(125))  rocks to complete the border. She has 64 rocks. How many more rocks  does she need to complete the border?, Mrs. Hilt wants to make a border around her garden. She needs (125/(cosec^2(95) - cot^2(95)))  rocks to complete the border. She has 64 rocks. How many more rocks  does she need to complete the border?
+consensus,"Solve the following math word problem.
+
+Scott has 4 tickets. Ernest has with 9 tickets. Ernest finds another 72. How many tickets does Ernest end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Scott has 4 tickets. Ernest has with 9 tickets. Ernest finds another 72. How many tickets does Ernest end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['81'],['81'],math,Scott has 4 tickets. Ernest has with 9 tickets. Ernest finds another 72. How many tickets does Ernest end with?,"answer=(9.0+72.0)
+print(answer)",81,test,singleop,Scott has 4 tickets. Ernest has with (9/(6/6))  tickets. Ernest finds another 72. How many tickets does Ernest end with?,Scott has 4 tickets. Ernest has with LOG(EXPONENTIAL(9))  tickets. Ernest finds another 72. How many tickets does Ernest end with?,Scott has 4 tickets. Ernest has with (8+(cos^2(54) + sin^2(54)))  tickets. Ernest finds another 72. How many tickets does Ernest end with?
+consensus,"Solve the following math word problem.
+
+There are 2 students in the class and 18 pencils. If the pencils are divided equally among the students, how many does each student get?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 2 students in the class and 18 pencils. If the pencils are divided equally among the students, how many does each student get?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['9'],['9'],math,"There are 2 students in the class and 18 pencils. If the pencils are divided equally among the students, how many does each student get?","answer=(18.0/2.0)
+print(answer)",9,test,singleop,"There are (3-(15/15))  students in the class and 18 pencils. If the pencils are divided equally among the students, how many does each student get?","There are LOG(EXPONENTIAL(2))  students in the class and 18 pencils. If the pencils are divided equally among the students, how many does each student get?","There are (3-(cosec^2(73) - cot^2(73)))  students in the class and 18 pencils. If the pencils are divided equally among the students, how many does each student get?"
+consensus,"Solve the following math word problem.
+
+ Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How much did she spend in all for the two toys?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How much did she spend in all for the two toys?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['38'],['38'],math, Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How much did she spend in all for the two toys?,"answer=(24.0+14.0)
+print(answer)",38,test,singleop, Mrs. Hilt bought a yoyo for 24 cents and a whistle for (14.0*(38/38))  cents. How much did she spend in all for the two toys?, Mrs. Hilt bought a yoyo for 24 cents and a whistle for EXPONENTIAL(LOG(14))  cents. How much did she spend in all for the two toys?, Mrs. Hilt bought a yoyo for 24 cents and a whistle for (15-(cosec^2(98) - cot^2(98)))  cents. How much did she spend in all for the two toys?
+consensus,"Solve the following math word problem.
+
+Ernest starts with 17 crayons. Jennifer takes 6 away. How many crayons does Ernest end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Ernest starts with 17 crayons. Jennifer takes 6 away. How many crayons does Ernest end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['11'],['11'],math,Ernest starts with 17 crayons. Jennifer takes 6 away. How many crayons does Ernest end with?,"answer=(17.0-6.0)
+print(answer)",11,test,singleop,Ernest starts with 17 crayons. Jennifer takes (6.0*(0.5*2))  away. How many crayons does Ernest end with?,Ernest starts with 17 crayons. Jennifer takes LOG(EXPONENTIAL(6))  away. How many crayons does Ernest end with?,Ernest starts with 17 crayons. Jennifer takes (6/(cosec^2(41) - cot^2(41)))  away. How many crayons does Ernest end with?
+consensus,"Solve the following math word problem.
+
+Evelyn starts with 18 bottle caps. She finds another 63. How many bottle caps does Evelyn end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Evelyn starts with 18 bottle caps. She finds another 63. How many bottle caps does Evelyn end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['81'],['81'],math,Evelyn starts with 18 bottle caps. She finds another 63. How many bottle caps does Evelyn end with?,"answer=(18.0+63.0)
+print(answer)",81,test,singleop,Evelyn starts with (17+(0.5*2))  bottle caps. She finds another 63. How many bottle caps does Evelyn end with?,Evelyn starts with LOG(EXPONENTIAL(18))  bottle caps. She finds another 63. How many bottle caps does Evelyn end with?,Evelyn starts with (18.0*(cos^2(61) + sin^2(61)))  bottle caps. She finds another 63. How many bottle caps does Evelyn end with?
+consensus,"Solve the following math word problem.
+
+Roger has 95 candies. He gives 3 to Stephanie. How many candies will Roger have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Roger has 95 candies. He gives 3 to Stephanie. How many candies will Roger have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['92'],['92'],math,Roger has 95 candies. He gives 3 to Stephanie. How many candies will Roger have?,"answer=(95.0-3.0)
+print(answer)",92,test,singleop,Roger has (96-(0.5*2))  candies. He gives 3 to Stephanie. How many candies will Roger have?,Roger has LOG(EXPONENTIAL(95))  candies. He gives 3 to Stephanie. How many candies will Roger have?,Roger has (94+(cosec^2(98) - cot^2(98)))  candies. He gives 3 to Stephanie. How many candies will Roger have?
+consensus,"Solve the following math word problem.
+
+ A DVD book holds 126 DVDs. There are 81 DVDs already in the book. How many more DVDs can be put in the book?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ A DVD book holds 126 DVDs. There are 81 DVDs already in the book. How many more DVDs can be put in the book?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['45'],['45'],math, A DVD book holds 126 DVDs. There are 81 DVDs already in the book. How many more DVDs can be put in the book?,"answer=(126.0-81.0)
+print(answer)",45,test,singleop, A DVD book holds 126 DVDs. There are (81.0*(63/63))  DVDs already in the book. How many more DVDs can be put in the book?, A DVD book holds 126 DVDs. There are EXPONENTIAL(LOG(81))  DVDs already in the book. How many more DVDs can be put in the book?, A DVD book holds 126 DVDs. There are (81.0*(cosec^2(14) - cot^2(14)))  DVDs already in the book. How many more DVDs can be put in the book?
+consensus,"Solve the following math word problem.
+
+ Michael has some fish in his fish tank. Ben gave him 18 more fish. Now he has 49. How many fish did he have to begin with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Michael has some fish in his fish tank. Ben gave him 18 more fish. Now he has 49. How many fish did he have to begin with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['31'],['31'],math, Michael has some fish in his fish tank. Ben gave him 18 more fish. Now he has 49. How many fish did he have to begin with?,"answer=(49.0-18.0)
+print(answer)",31,test,singleop, Michael has some fish in his fish tank. Ben gave him (17+(0.5*2))  more fish. Now he has 49. How many fish did he have to begin with?, Michael has some fish in his fish tank. Ben gave him EXPONENTIAL(LOG(18))  more fish. Now he has 49. How many fish did he have to begin with?, Michael has some fish in his fish tank. Ben gave him (17+(cosec^2(26) - cot^2(26)))  more fish. Now he has 49. How many fish did he have to begin with?
+consensus,"Solve the following math word problem.
+
+ Mrs. Hilt saw 3 bugs eat 2 flowers each. How many flowers total did the bugs eat?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Hilt saw 3 bugs eat 2 flowers each. How many flowers total did the bugs eat?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math, Mrs. Hilt saw 3 bugs eat 2 flowers each. How many flowers total did the bugs eat?,"answer=(3.0*2.0)
+print(answer)",6,test,singleop, Mrs. Hilt saw (4-(54/54))  bugs eat 2 flowers each. How many flowers total did the bugs eat?, Mrs. Hilt saw EXPONENTIAL(LOG(3))  bugs eat 2 flowers each. How many flowers total did the bugs eat?, Mrs. Hilt saw (3.0*(cosec^2(98) - cot^2(98)))  bugs eat 2 flowers each. How many flowers total did the bugs eat?
+consensus,"Solve the following math word problem.
+
+ At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock Elementary School received 17 inches of snow. How much more snow  did Mrs. Hilt's house have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock Elementary School received 17 inches of snow. How much more snow  did Mrs. Hilt's house have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math," At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock Elementary School received 17 inches of snow. How much more snow  did Mrs. Hilt's house have?","answer=(29.0-17.0)
+print(answer)",12,test,singleop," At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock Elementary School received (16+(80/80))  inches of snow. How much more snow  did Mrs. Hilt's house have?"," At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock Elementary School received EXPONENTIAL(LOG(17))  inches of snow. How much more snow  did Mrs. Hilt's house have?"," At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock Elementary School received (18-(cosec^2(2) - cot^2(2)))  inches of snow. How much more snow  did Mrs. Hilt's house have?"
+consensus,"Solve the following math word problem.
+
+Emily sprinted to Timothy's house. It is 10 miles from Emily's house to Timothy's house. It took Emily 2 hours to get there. How fast did Emily go?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Emily sprinted to Timothy's house. It is 10 miles from Emily's house to Timothy's house. It took Emily 2 hours to get there. How fast did Emily go?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,Emily sprinted to Timothy's house. It is 10 miles from Emily's house to Timothy's house. It took Emily 2 hours to get there. How fast did Emily go?,"answer=(10.0/2.0)
+print(answer)",5,test,singleop,Emily sprinted to Timothy's house. It is (10/(54/54))  miles from Emily's house to Timothy's house. It took Emily 2 hours to get there. How fast did Emily go?,Emily sprinted to Timothy's house. It is LOG(EXPONENTIAL(10))  miles from Emily's house to Timothy's house. It took Emily 2 hours to get there. How fast did Emily go?,Emily sprinted to Timothy's house. It is (10.0*(sec^2(95)-tan^2(95)))  miles from Emily's house to Timothy's house. It took Emily 2 hours to get there. How fast did Emily go?
+consensus,"Solve the following math word problem.
+
+ Mary’s car gets 20 miles per gallon of gas. How far can she drive on 14 gallons of gas?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mary’s car gets 20 miles per gallon of gas. How far can she drive on 14 gallons of gas?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['280'],['280'],math, Mary’s car gets 20 miles per gallon of gas. How far can she drive on 14 gallons of gas?,"answer=(20.0*14.0)
+print(answer)",280,test,singleop, Mary’s car gets (21-(0.5*2))  miles per gallon of gas. How far can she drive on 14 gallons of gas?, Mary’s car gets LOG(EXPONENTIAL(20))  miles per gallon of gas. How far can she drive on 14 gallons of gas?, Mary’s car gets (21-(cosec^2(74) - cot^2(74)))  miles per gallon of gas. How far can she drive on 14 gallons of gas?
+consensus,"Solve the following math word problem.
+
+There are 4 crayons in each box. How many crayons are in 3 boxes?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 4 crayons in each box. How many crayons are in 3 boxes?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math,There are 4 crayons in each box. How many crayons are in 3 boxes?,"answer=(4.0*3.0)
+print(answer)",12,test,singleop,There are 4 crayons in each box. How many crayons are in (3.0*(0.5*2))  boxes?,There are 4 crayons in each box. How many crayons are in LOG(EXPONENTIAL(3))  boxes?,There are 4 crayons in each box. How many crayons are in (4-(cosec^2(2) - cot^2(2)))  boxes?
+consensus,"Solve the following math word problem.
+
+Each child has 3 oranges. If there are 4 children, how many oranges are there in total?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Each child has 3 oranges. If there are 4 children, how many oranges are there in total?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['12'],['12'],math,"Each child has 3 oranges. If there are 4 children, how many oranges are there in total?","answer=(3.0*4.0)
+print(answer)",12,test,singleop,"Each child has (4-(39/39))  oranges. If there are 4 children, how many oranges are there in total?","Each child has LOG(EXPONENTIAL(3))  oranges. If there are 4 children, how many oranges are there in total?","Each child has (3.0*(sec^2(58)-tan^2(58)))  oranges. If there are 4 children, how many oranges are there in total?"
+consensus,"Solve the following math word problem.
+
+ Brett drove 55 miles every hour. How many miles would he drive in 8 hours?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Brett drove 55 miles every hour. How many miles would he drive in 8 hours?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['440'],['440'],math, Brett drove 55 miles every hour. How many miles would he drive in 8 hours?,"answer=(55.0*8.0)
+print(answer)",440,test,singleop, Brett drove 55 miles every hour. How many miles would he drive in (8.0*(22/22))  hours?, Brett drove 55 miles every hour. How many miles would he drive in EXPONENTIAL(LOG(8))  hours?, Brett drove 55 miles every hour. How many miles would he drive in (7+(sec^2(24)-tan^2(24)))  hours?
+consensus,"Solve the following math word problem.
+
+Emily collects 63 cards. Emily's father gives Emily 7 more. Bruce has 13 apples. How many cards does Emily have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Emily collects 63 cards. Emily's father gives Emily 7 more. Bruce has 13 apples. How many cards does Emily have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['70'],['70'],math,Emily collects 63 cards. Emily's father gives Emily 7 more. Bruce has 13 apples. How many cards does Emily have?,"answer=(63.0+7.0)
+print(answer)",70,test,singleop,Emily collects 63 cards. Emily's father gives Emily (8-(0.5*2))  more. Bruce has 13 apples. How many cards does Emily have?,Emily collects 63 cards. Emily's father gives Emily EXPONENTIAL(LOG(7))  more. Bruce has 13 apples. How many cards does Emily have?,Emily collects 63 cards. Emily's father gives Emily (6+(cosec^2(79) - cot^2(79)))  more. Bruce has 13 apples. How many cards does Emily have?
+consensus,"Solve the following math word problem.
+
+ 219 people are going to the zoo, and there are 3 buses to take people. How many will go in each bus if the same number go in each one and  all of the people go to the zoo?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ 219 people are going to the zoo, and there are 3 buses to take people. How many will go in each bus if the same number go in each one and  all of the people go to the zoo?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['73'],['73'],math," 219 people are going to the zoo, and there are 3 buses to take people. How many will go in each bus if the same number go in each one and  all of the people go to the zoo?","answer=(219.0/3.0)
+print(answer)",73,test,singleop," 219 people are going to the zoo, and there are (3/(0.5*2))  buses to take people. How many will go in each bus if the same number go in each one and  all of the people go to the zoo?"," 219 people are going to the zoo, and there are LOG(EXPONENTIAL(3))  buses to take people. How many will go in each bus if the same number go in each one and  all of the people go to the zoo?"," 219 people are going to the zoo, and there are (3.0*(cosec^2(7) - cot^2(7)))  buses to take people. How many will go in each bus if the same number go in each one and  all of the people go to the zoo?"
+consensus,"Solve the following math word problem.
+
+ Rosa had 67 flowers. Andre gave her some more flowers. Now, Rosa has 90 flowers. How many flowers did Andre give to  Rosa?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Rosa had 67 flowers. Andre gave her some more flowers. Now, Rosa has 90 flowers. How many flowers did Andre give to  Rosa?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['23'],['23'],math," Rosa had 67 flowers. Andre gave her some more flowers. Now, Rosa has 90 flowers. How many flowers did Andre give to  Rosa?","answer=(90.0-67.0)
+print(answer)",23,test,singleop," Rosa had (68-(45/45))  flowers. Andre gave her some more flowers. Now, Rosa has 90 flowers. How many flowers did Andre give to  Rosa?"," Rosa had EXPONENTIAL(LOG(67))  flowers. Andre gave her some more flowers. Now, Rosa has 90 flowers. How many flowers did Andre give to  Rosa?"," Rosa had (67/(sec^2(74)-tan^2(74)))  flowers. Andre gave her some more flowers. Now, Rosa has 90 flowers. How many flowers did Andre give to  Rosa?"
+consensus,"Solve the following math word problem.
+
+Larry has 67 cards. Dennis takes 9 away. How many cards will Larry have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Larry has 67 cards. Dennis takes 9 away. How many cards will Larry have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['58'],['58'],math,Larry has 67 cards. Dennis takes 9 away. How many cards will Larry have?,"answer=(67.0-9.0)
+print(answer)",58,test,singleop,Larry has (67/(81/81))  cards. Dennis takes 9 away. How many cards will Larry have?,Larry has LOG(EXPONENTIAL(67))  cards. Dennis takes 9 away. How many cards will Larry have?,Larry has (66+(cos^2(37) + sin^2(37)))  cards. Dennis takes 9 away. How many cards will Larry have?
+consensus,"Solve the following math word problem.
+
+There are 36 bananas in Diane's banana collection. If the bananas are organized into 6 groups, how big is each group?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 36 bananas in Diane's banana collection. If the bananas are organized into 6 groups, how big is each group?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,"There are 36 bananas in Diane's banana collection. If the bananas are organized into 6 groups, how big is each group?","answer=(36.0/6.0)
+print(answer)",6,test,singleop,"There are (37-(0.5*2))  bananas in Diane's banana collection. If the bananas are organized into 6 groups, how big is each group?","There are LOG(EXPONENTIAL(36))  bananas in Diane's banana collection. If the bananas are organized into 6 groups, how big is each group?","There are (37-(cos^2(15) + sin^2(15)))  bananas in Diane's banana collection. If the bananas are organized into 6 groups, how big is each group?"
+consensus,"Solve the following math word problem.
+
+Carlos starts with 39 bananas. 3 are eaten by a hippopotamus. How many bananas does Carlos end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Carlos starts with 39 bananas. 3 are eaten by a hippopotamus. How many bananas does Carlos end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['36'],['36'],math,Carlos starts with 39 bananas. 3 are eaten by a hippopotamus. How many bananas does Carlos end with?,"answer=(39.0-3.0)
+print(answer)",36,test,singleop,Carlos starts with 39 bananas. (3/(71/71))  are eaten by a hippopotamus. How many bananas does Carlos end with?,Carlos starts with 39 bananas. EXPONENTIAL(LOG(3))  are eaten by a hippopotamus. How many bananas does Carlos end with?,Carlos starts with 39 bananas. (3/(sec^2(88)-tan^2(88)))  are eaten by a hippopotamus. How many bananas does Carlos end with?
+consensus,"Solve the following math word problem.
+
+If Heather bicycled 40 kilometers at 8 kilometers per hour, how long was Heather bicycling?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Heather bicycled 40 kilometers at 8 kilometers per hour, how long was Heather bicycling?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,"If Heather bicycled 40 kilometers at 8 kilometers per hour, how long was Heather bicycling?","answer=(40.0/8.0)
+print(answer)",5,test,singleop,"If Heather bicycled 40 kilometers at (8/(11/11))  kilometers per hour, how long was Heather bicycling?","If Heather bicycled 40 kilometers at LOG(EXPONENTIAL(8))  kilometers per hour, how long was Heather bicycling?","If Heather bicycled 40 kilometers at (9-(cosec^2(71) - cot^2(71)))  kilometers per hour, how long was Heather bicycling?"
+consensus,"Solve the following math word problem.
+
+ Kelly has 121 Nintendo games. How many does she need to give away so that she will have 22 games left?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Kelly has 121 Nintendo games. How many does she need to give away so that she will have 22 games left?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['99'],['99'],math, Kelly has 121 Nintendo games. How many does she need to give away so that she will have 22 games left?,"answer=(121.0-22.0)
+print(answer)",99,test,singleop, Kelly has (120+(87/87))  Nintendo games. How many does she need to give away so that she will have 22 games left?, Kelly has LOG(EXPONENTIAL(121))  Nintendo games. How many does she need to give away so that she will have 22 games left?, Kelly has (121.0*(cosec^2(86) - cot^2(86)))  Nintendo games. How many does she need to give away so that she will have 22 games left?
+verified,"Solve the following math word problem.
+
+ Molly had 14 candles on her birthday cake. She grew older and got 6 more on her birthday cake. How old is Molly now?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Molly had 14 candles on her birthday cake. She grew older and got 6 more on her birthday cake. How old is Molly now?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20'],['20'],math, Molly had 14 candles on her birthday cake. She grew older and got 6 more on her birthday cake. How old is Molly now?,"answer=(14.0+6.0)
+print(answer)",20,test,singleop, Molly had 14 candles on her birthday cake. She grew older and got (6/(0.5*2))  more on her birthday cake. How old is Molly now?, Molly had 14 candles on her birthday cake. She grew older and got LOG(EXPONENTIAL(6))  more on her birthday cake. How old is Molly now?, Molly had 14 candles on her birthday cake. She grew older and got (6.0*(cos^2(92) + sin^2(92)))  more on her birthday cake. How old is Molly now?
+consensus,"Solve the following math word problem.
+
+Craig starts with 5 Skittles. 2 are eaten by a hippopotamus. How many Skittles does Craig end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Craig starts with 5 Skittles. 2 are eaten by a hippopotamus. How many Skittles does Craig end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['3'],['3'],math,Craig starts with 5 Skittles. 2 are eaten by a hippopotamus. How many Skittles does Craig end with?,"answer=(5.0-2.0)
+print(answer)",3,test,singleop,Craig starts with (5.0*(72/72))  Skittles. 2 are eaten by a hippopotamus. How many Skittles does Craig end with?,Craig starts with LOG(EXPONENTIAL(5))  Skittles. 2 are eaten by a hippopotamus. How many Skittles does Craig end with?,Craig starts with (5/(cos^2(65) + sin^2(65)))  Skittles. 2 are eaten by a hippopotamus. How many Skittles does Craig end with?
+consensus,"Solve the following math word problem.
+
+Jeffrey wants to split a collection of bottle caps into groups of 2. Jeffrey has 12 bottle caps. How many groups will be created?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jeffrey wants to split a collection of bottle caps into groups of 2. Jeffrey has 12 bottle caps. How many groups will be created?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['6'],['6'],math,Jeffrey wants to split a collection of bottle caps into groups of 2. Jeffrey has 12 bottle caps. How many groups will be created?,"answer=(12.0/2.0)
+print(answer)",6,test,singleop,Jeffrey wants to split a collection of bottle caps into groups of 2. Jeffrey has (11+(1/1))  bottle caps. How many groups will be created?,Jeffrey wants to split a collection of bottle caps into groups of 2. Jeffrey has EXPONENTIAL(LOG(12))  bottle caps. How many groups will be created?,Jeffrey wants to split a collection of bottle caps into groups of 2. Jeffrey has (13-(sec^2(85)-tan^2(85)))  bottle caps. How many groups will be created?
+consensus,"Solve the following math word problem.
+
+Melissa has 88 bananas. She shares 4 with Joshua. How many bananas will Melissa have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Melissa has 88 bananas. She shares 4 with Joshua. How many bananas will Melissa have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['84'],['84'],math,Melissa has 88 bananas. She shares 4 with Joshua. How many bananas will Melissa have?,"answer=(88.0-4.0)
+print(answer)",84,test,singleop,Melissa has (89-(25/25))  bananas. She shares 4 with Joshua. How many bananas will Melissa have?,Melissa has LOG(EXPONENTIAL(88))  bananas. She shares 4 with Joshua. How many bananas will Melissa have?,Melissa has (88.0*(cos^2(76) + sin^2(76)))  bananas. She shares 4 with Joshua. How many bananas will Melissa have?
+consensus,"Solve the following math word problem.
+
+Clarence has 99 tickets. He gives 7 to Eugene. How many tickets will Clarence have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Clarence has 99 tickets. He gives 7 to Eugene. How many tickets will Clarence have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['92'],['92'],math,Clarence has 99 tickets. He gives 7 to Eugene. How many tickets will Clarence have?,"answer=(99.0-7.0)
+print(answer)",92,test,singleop,Clarence has 99 tickets. He gives (8-(25/25))  to Eugene. How many tickets will Clarence have?,Clarence has 99 tickets. He gives LOG(EXPONENTIAL(7))  to Eugene. How many tickets will Clarence have?,Clarence has 99 tickets. He gives (6+(cos^2(75) + sin^2(75)))  to Eugene. How many tickets will Clarence have?
+consensus,"Solve the following math word problem.
+
+ There are 544 pots. Each pot has 32 flowers in it. How many flowers are there in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ There are 544 pots. Each pot has 32 flowers in it. How many flowers are there in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['17408'],['17408'],math, There are 544 pots. Each pot has 32 flowers in it. How many flowers are there in all?,"answer=(544.0*32.0)
+print(answer)",17408,test,singleop, There are (544/(6/6))  pots. Each pot has 32 flowers in it. How many flowers are there in all?, There are EXPONENTIAL(LOG(544))  pots. Each pot has 32 flowers in it. How many flowers are there in all?, There are (545-(cosec^2(86) - cot^2(86)))  pots. Each pot has 32 flowers in it. How many flowers are there in all?
+consensus,"Solve the following math word problem.
+
+Eric wants to split a collection of peanuts into groups of 8. Eric has 64 peanuts. How many groups will be created?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Eric wants to split a collection of peanuts into groups of 8. Eric has 64 peanuts. How many groups will be created?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['8'],['8'],math,Eric wants to split a collection of peanuts into groups of 8. Eric has 64 peanuts. How many groups will be created?,"answer=(64.0/8.0)
+print(answer)",8,test,singleop,Eric wants to split a collection of peanuts into groups of 8. Eric has (64.0*(0.5*2))  peanuts. How many groups will be created?,Eric wants to split a collection of peanuts into groups of 8. Eric has LOG(EXPONENTIAL(64))  peanuts. How many groups will be created?,Eric wants to split a collection of peanuts into groups of 8. Eric has (64/(cosec^2(70) - cot^2(70)))  peanuts. How many groups will be created?
+consensus,"Solve the following math word problem.
+
+ Your class is having a pizza party. You buy 5 pizzas. Each pizza has 4 slices. How many slices is that altogether?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Your class is having a pizza party. You buy 5 pizzas. Each pizza has 4 slices. How many slices is that altogether?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20'],['20'],math, Your class is having a pizza party. You buy 5 pizzas. Each pizza has 4 slices. How many slices is that altogether?,"answer=(5.0*4.0)
+print(answer)",20,test,singleop, Your class is having a pizza party. You buy 5 pizzas. Each pizza has (4/(33/33))  slices. How many slices is that altogether?, Your class is having a pizza party. You buy 5 pizzas. Each pizza has LOG(EXPONENTIAL(4))  slices. How many slices is that altogether?, Your class is having a pizza party. You buy 5 pizzas. Each pizza has (4/(sec^2(15)-tan^2(15)))  slices. How many slices is that altogether?
+consensus,"Solve the following math word problem.
+
+ Ellen had 2080 Legos, but she lost 17 Legos. How many Legos does she have now?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Ellen had 2080 Legos, but she lost 17 Legos. How many Legos does she have now?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2063'],['2063'],math," Ellen had 2080 Legos, but she lost 17 Legos. How many Legos does she have now?","answer=(2080.0-17.0)
+print(answer)",2063,test,singleop," Ellen had (2080/(0.5*2))  Legos, but she lost 17 Legos. How many Legos does she have now?"," Ellen had LOG(EXPONENTIAL(2080))  Legos, but she lost 17 Legos. How many Legos does she have now?"," Ellen had (2080.0*(sec^2(84)-tan^2(84)))  Legos, but she lost 17 Legos. How many Legos does she have now?"
+consensus,"Solve the following math word problem.
+
+ It takes 4 apples to make 1 pie. How many apples does it take to make 504 pies?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ It takes 4 apples to make 1 pie. How many apples does it take to make 504 pies?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2016'],['2016'],math, It takes 4 apples to make 1 pie. How many apples does it take to make 504 pies?,"answer=(4.0*504.0)
+print(answer)",2016,test,singleop, It takes 4 apples to make (1.0*(0.5*2))  pie. How many apples does it take to make 504 pies?, It takes 4 apples to make LOG(EXPONENTIAL(1))  pie. How many apples does it take to make 504 pies?, It takes 4 apples to make (2-(cosec^2(60) - cot^2(60)))  pie. How many apples does it take to make 504 pies?
+consensus,"Solve the following math word problem.
+
+If there are 7 bottle caps in a box and Linda puts 7 more bottle caps inside, how many bottle caps are in the box?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If there are 7 bottle caps in a box and Linda puts 7 more bottle caps inside, how many bottle caps are in the box?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['14'],['14'],math,"If there are 7 bottle caps in a box and Linda puts 7 more bottle caps inside, how many bottle caps are in the box?","answer=(7.0+7.0)
+print(answer)",14,test,singleop,"If there are (6+(68/68))  bottle caps in a box and Linda puts 7 more bottle caps inside, how many bottle caps are in the box?","If there are LOG(EXPONENTIAL(7))  bottle caps in a box and Linda puts 7 more bottle caps inside, how many bottle caps are in the box?","If there are (7/(cos^2(31) + sin^2(31)))  bottle caps in a box and Linda puts 7 more bottle caps inside, how many bottle caps are in the box?"
+consensus,"Solve the following math word problem.
+
+Jose strolled to Jane's house. It is 24 miles from Jose's house to Jane's house. It took Jose 12 hours to get there. How fast did Jose go?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Jose strolled to Jane's house. It is 24 miles from Jose's house to Jane's house. It took Jose 12 hours to get there. How fast did Jose go?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2'],['2'],math,Jose strolled to Jane's house. It is 24 miles from Jose's house to Jane's house. It took Jose 12 hours to get there. How fast did Jose go?,"answer=(24.0/12.0)
+print(answer)",2,test,singleop,Jose strolled to Jane's house. It is (25-(23/23))  miles from Jose's house to Jane's house. It took Jose 12 hours to get there. How fast did Jose go?,Jose strolled to Jane's house. It is EXPONENTIAL(LOG(24))  miles from Jose's house to Jane's house. It took Jose 12 hours to get there. How fast did Jose go?,Jose strolled to Jane's house. It is (24/(cosec^2(9) - cot^2(9)))  miles from Jose's house to Jane's house. It took Jose 12 hours to get there. How fast did Jose go?
+consensus,"Solve the following math word problem.
+
+There are 4 marbles. 7 marbles more are added. How many are there total?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 4 marbles. 7 marbles more are added. How many are there total?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['11'],['11'],math,There are 4 marbles. 7 marbles more are added. How many are there total?,"answer=(4.0+7.0)
+print(answer)",11,test,singleop,There are 4 marbles. (7.0*(0.5*2))  marbles more are added. How many are there total?,There are 4 marbles. LOG(EXPONENTIAL(7))  marbles more are added. How many are there total?,There are 4 marbles. (7.0*(sec^2(48)-tan^2(48)))  marbles more are added. How many are there total?
+consensus,"Solve the following math word problem.
+
+ Mrs. Hilt impressed 2436 fans at the basketball game on Friday. If the fans were seated in equal groups on 3 sets of bleachers, how many  fans were on each set?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Hilt impressed 2436 fans at the basketball game on Friday. If the fans were seated in equal groups on 3 sets of bleachers, how many  fans were on each set?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['812'],['812'],math," Mrs. Hilt impressed 2436 fans at the basketball game on Friday. If the fans were seated in equal groups on 3 sets of bleachers, how many  fans were on each set?","answer=(2436.0/3.0)
+print(answer)",812,test,singleop," Mrs. Hilt impressed 2436 fans at the basketball game on Friday. If the fans were seated in equal groups on (3/(14/14))  sets of bleachers, how many  fans were on each set?"," Mrs. Hilt impressed 2436 fans at the basketball game on Friday. If the fans were seated in equal groups on EXPONENTIAL(LOG(3))  sets of bleachers, how many  fans were on each set?"," Mrs. Hilt impressed 2436 fans at the basketball game on Friday. If the fans were seated in equal groups on (3/(sec^2(52)-tan^2(52)))  sets of bleachers, how many  fans were on each set?"
+consensus,"Solve the following math word problem.
+
+Bonnie has 10 tickets. If she shares them among 2 friends, how many tickets does each friend get?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Bonnie has 10 tickets. If she shares them among 2 friends, how many tickets does each friend get?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math,"Bonnie has 10 tickets. If she shares them among 2 friends, how many tickets does each friend get?","answer=(10.0/2.0)
+print(answer)",5,test,singleop,"Bonnie has (11-(0.5*2))  tickets. If she shares them among 2 friends, how many tickets does each friend get?","Bonnie has LOG(EXPONENTIAL(10))  tickets. If she shares them among 2 friends, how many tickets does each friend get?","Bonnie has (10.0*(cosec^2(81) - cot^2(81)))  tickets. If she shares them among 2 friends, how many tickets does each friend get?"
+consensus,"Solve the following math word problem.
+
+ I have 80 cents to buy candy. If each gumdrop costs 4 cents, how many gumdrops can I buy?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ I have 80 cents to buy candy. If each gumdrop costs 4 cents, how many gumdrops can I buy?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20'],['20'],math," I have 80 cents to buy candy. If each gumdrop costs 4 cents, how many gumdrops can I buy?","answer=(80.0/4.0)
+print(answer)",20,test,singleop," I have 80 cents to buy candy. If each gumdrop costs (3+(0.5*2))  cents, how many gumdrops can I buy?"," I have 80 cents to buy candy. If each gumdrop costs LOG(EXPONENTIAL(4))  cents, how many gumdrops can I buy?"," I have 80 cents to buy candy. If each gumdrop costs (4.0*(cos^2(45) + sin^2(45)))  cents, how many gumdrops can I buy?"
+consensus,"Solve the following math word problem.
+
+ Adolfo made a tower with 35 blocks. He added some more blocks and now he has 65 blocks. How many did he have to  add?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Adolfo made a tower with 35 blocks. He added some more blocks and now he has 65 blocks. How many did he have to  add?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['30'],['30'],math, Adolfo made a tower with 35 blocks. He added some more blocks and now he has 65 blocks. How many did he have to  add?,"answer=(65.0-35.0)
+print(answer)",30,test,singleop, Adolfo made a tower with (36-(0.5*2))  blocks. He added some more blocks and now he has 65 blocks. How many did he have to  add?, Adolfo made a tower with EXPONENTIAL(LOG(35))  blocks. He added some more blocks and now he has 65 blocks. How many did he have to  add?, Adolfo made a tower with (35.0*(sec^2(18)-tan^2(18)))  blocks. He added some more blocks and now he has 65 blocks. How many did he have to  add?
+consensus,"Solve the following math word problem.
+
+ 3 owls were sitting on the fence. 2 more owls joined them. How many owls are on the fence now?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ 3 owls were sitting on the fence. 2 more owls joined them. How many owls are on the fence now?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['5'],['5'],math, 3 owls were sitting on the fence. 2 more owls joined them. How many owls are on the fence now?,"answer=(3.0+2.0)
+print(answer)",5,test,singleop, (3/(0.5*2))  owls were sitting on the fence. 2 more owls joined them. How many owls are on the fence now?, EXPONENTIAL(LOG(3))  owls were sitting on the fence. 2 more owls joined them. How many owls are on the fence now?, (3/(cosec^2(24) - cot^2(24)))  owls were sitting on the fence. 2 more owls joined them. How many owls are on the fence now?
+consensus,"Solve the following math word problem.
+
+It took Amanda 2 hours to stroll to Kimberly's house at 4 miles per hour. How far is it between Amanda's house and Kimberly's house?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+It took Amanda 2 hours to stroll to Kimberly's house at 4 miles per hour. How far is it between Amanda's house and Kimberly's house?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['8'],['8'],math,It took Amanda 2 hours to stroll to Kimberly's house at 4 miles per hour. How far is it between Amanda's house and Kimberly's house?,"answer=(2.0*4.0)
+print(answer)",8,test,singleop,It took Amanda 2 hours to stroll to Kimberly's house at (3+(67/67))  miles per hour. How far is it between Amanda's house and Kimberly's house?,It took Amanda 2 hours to stroll to Kimberly's house at EXPONENTIAL(LOG(4))  miles per hour. How far is it between Amanda's house and Kimberly's house?,It took Amanda 2 hours to stroll to Kimberly's house at (4/(sec^2(61)-tan^2(61)))  miles per hour. How far is it between Amanda's house and Kimberly's house?
+consensus,"Solve the following math word problem.
+
+ We ordered 21 pizzas. Each pizza has 8 slices. How many slices of pizza are there altogether?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ We ordered 21 pizzas. Each pizza has 8 slices. How many slices of pizza are there altogether?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['168'],['168'],math, We ordered 21 pizzas. Each pizza has 8 slices. How many slices of pizza are there altogether?,"answer=(21.0*8.0)
+print(answer)",168,test,singleop, We ordered (21/(0.5*2))  pizzas. Each pizza has 8 slices. How many slices of pizza are there altogether?, We ordered EXPONENTIAL(LOG(21))  pizzas. Each pizza has 8 slices. How many slices of pizza are there altogether?, We ordered (20+(cos^2(75) + sin^2(75)))  pizzas. Each pizza has 8 slices. How many slices of pizza are there altogether?
+verified,"Solve the following math word problem.
+
+There are 55 oranges in a box. Deborah has 11 oranges in a bag. Susan takes 35 oranges out of the box. How many oranges are left in the box?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+There are 55 oranges in a box. Deborah has 11 oranges in a bag. Susan takes 35 oranges out of the box. How many oranges are left in the box?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['20'],['20'],math,There are 55 oranges in a box. Deborah has 11 oranges in a bag. Susan takes 35 oranges out of the box. How many oranges are left in the box?,"answer=(55.0-35.0)
+print(answer)",20,test,singleop,There are 55 oranges in a box. Deborah has (10+(0.5*2))  oranges in a bag. Susan takes 35 oranges out of the box. How many oranges are left in the box?,There are 55 oranges in a box. Deborah has EXPONENTIAL(LOG(11))  oranges in a bag. Susan takes 35 oranges out of the box. How many oranges are left in the box?,There are 55 oranges in a box. Deborah has (12-(sec^2(56)-tan^2(56)))  oranges in a bag. Susan takes 35 oranges out of the box. How many oranges are left in the box?
+consensus,"Solve the following math word problem.
+
+Helen starts with 82 cards. Gary takes 9 away. How many cards does Helen end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Helen starts with 82 cards. Gary takes 9 away. How many cards does Helen end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['73'],['73'],math,Helen starts with 82 cards. Gary takes 9 away. How many cards does Helen end with?,"answer=(82.0-9.0)
+print(answer)",73,test,singleop,Helen starts with (81+(0.5*2))  cards. Gary takes 9 away. How many cards does Helen end with?,Helen starts with LOG(EXPONENTIAL(82))  cards. Gary takes 9 away. How many cards does Helen end with?,Helen starts with (82.0*(cos^2(67) + sin^2(67)))  cards. Gary takes 9 away. How many cards does Helen end with?
+consensus,"Solve the following math word problem.
+
+ Mrs. Sheridan has 17 cats. Mr. Sheridan gave her 14 more cats. How many cats does Mrs. Sheridan have altogether?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Mrs. Sheridan has 17 cats. Mr. Sheridan gave her 14 more cats. How many cats does Mrs. Sheridan have altogether?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['31'],['31'],math, Mrs. Sheridan has 17 cats. Mr. Sheridan gave her 14 more cats. How many cats does Mrs. Sheridan have altogether?,"answer=(17.0+14.0)
+print(answer)",31,test,singleop, Mrs. Sheridan has 17 cats. Mr. Sheridan gave her (14.0*(0.5*2))  more cats. How many cats does Mrs. Sheridan have altogether?, Mrs. Sheridan has 17 cats. Mr. Sheridan gave her EXPONENTIAL(LOG(14))  more cats. How many cats does Mrs. Sheridan have altogether?, Mrs. Sheridan has 17 cats. Mr. Sheridan gave her (14/(sec^2(45)-tan^2(45)))  more cats. How many cats does Mrs. Sheridan have altogether?
+consensus,"Solve the following math word problem.
+
+ 18 children were riding on the bus. At the bus stop, some more children got on the bus. Then there were 25 children altogether on the bus. How  many children got on the bus at the bus stop?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ 18 children were riding on the bus. At the bus stop, some more children got on the bus. Then there were 25 children altogether on the bus. How  many children got on the bus at the bus stop?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['7'],['7'],math," 18 children were riding on the bus. At the bus stop, some more children got on the bus. Then there were 25 children altogether on the bus. How  many children got on the bus at the bus stop?","answer=(25.0-18.0)
+print(answer)",7,test,singleop," 18 children were riding on the bus. At the bus stop, some more children got on the bus. Then there were (24+(0.5*2))  children altogether on the bus. How  many children got on the bus at the bus stop?"," 18 children were riding on the bus. At the bus stop, some more children got on the bus. Then there were EXPONENTIAL(LOG(25))  children altogether on the bus. How  many children got on the bus at the bus stop?"," 18 children were riding on the bus. At the bus stop, some more children got on the bus. Then there were (25/(cos^2(85) + sin^2(85)))  children altogether on the bus. How  many children got on the bus at the bus stop?"
+consensus,"Solve the following math word problem.
+
+ Tyler had 15 dogs. Each dog had 5 puppies. How many puppies does Tyler now have?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Tyler had 15 dogs. Each dog had 5 puppies. How many puppies does Tyler now have?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['75'],['75'],math, Tyler had 15 dogs. Each dog had 5 puppies. How many puppies does Tyler now have?,"answer=(15.0*5.0)
+print(answer)",75,test,singleop, Tyler had 15 dogs. Each dog had (6-(57/57))  puppies. How many puppies does Tyler now have?, Tyler had 15 dogs. Each dog had LOG(EXPONENTIAL(5))  puppies. How many puppies does Tyler now have?, Tyler had 15 dogs. Each dog had (4+(sec^2(72)-tan^2(72)))  puppies. How many puppies does Tyler now have?
+consensus,"Solve the following math word problem.
+
+ Carla has some marbles. She bought 489 marbles. Now she has 2778 marbles all together. How many did she start with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Carla has some marbles. She bought 489 marbles. Now she has 2778 marbles all together. How many did she start with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['2289'],['2289'],math, Carla has some marbles. She bought 489 marbles. Now she has 2778 marbles all together. How many did she start with?,"answer=(2778.0-489.0)
+print(answer)",2289,test,singleop, Carla has some marbles. She bought 489 marbles. Now she has (2779-(0.5*2))  marbles all together. How many did she start with?, Carla has some marbles. She bought 489 marbles. Now she has EXPONENTIAL(LOG(2778))  marbles all together. How many did she start with?, Carla has some marbles. She bought 489 marbles. Now she has (2777+(cosec^2(34) - cot^2(34)))  marbles all together. How many did she start with?
+consensus,"Solve the following math word problem.
+
+If Rose strolled for 4 hours at 2 miles per hour. How far did Rose go?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+If Rose strolled for 4 hours at 2 miles per hour. How far did Rose go?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['8'],['8'],math,If Rose strolled for 4 hours at 2 miles per hour. How far did Rose go?,"answer=(4.0*2.0)
+print(answer)",8,test,singleop,If Rose strolled for 4 hours at (3-(0.5*2))  miles per hour. How far did Rose go?,If Rose strolled for 4 hours at EXPONENTIAL(LOG(2))  miles per hour. How far did Rose go?,If Rose strolled for 4 hours at (2/(cosec^2(68) - cot^2(68)))  miles per hour. How far did Rose go?
+consensus,"Solve the following math word problem.
+
+ Paul had 42 strawberries in his basket. He picked 78 more strawberries. How many strawberries did he have then?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Paul had 42 strawberries in his basket. He picked 78 more strawberries. How many strawberries did he have then?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['120'],['120'],math, Paul had 42 strawberries in his basket. He picked 78 more strawberries. How many strawberries did he have then?,"answer=(42.0+78.0)
+print(answer)",120,test,singleop, Paul had (41+(100/100))  strawberries in his basket. He picked 78 more strawberries. How many strawberries did he have then?, Paul had EXPONENTIAL(LOG(42))  strawberries in his basket. He picked 78 more strawberries. How many strawberries did he have then?, Paul had (42/(cos^2(15) + sin^2(15)))  strawberries in his basket. He picked 78 more strawberries. How many strawberries did he have then?
+consensus,"Solve the following math word problem.
+
+Edward starts with 92 eggs. He gives 40 to Phillip. How many eggs does Edward end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Edward starts with 92 eggs. He gives 40 to Phillip. How many eggs does Edward end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['52'],['52'],math,Edward starts with 92 eggs. He gives 40 to Phillip. How many eggs does Edward end with?,"answer=(92.0-40.0)
+print(answer)",52,test,singleop,Edward starts with (92/(22/22))  eggs. He gives 40 to Phillip. How many eggs does Edward end with?,Edward starts with EXPONENTIAL(LOG(92))  eggs. He gives 40 to Phillip. How many eggs does Edward end with?,Edward starts with (92/(cosec^2(17) - cot^2(17)))  eggs. He gives 40 to Phillip. How many eggs does Edward end with?
+consensus,"Solve the following math word problem.
+
+Teresa starts with 52 bananas. She gets 2 more from Rachel. How many bananas does Teresa end with?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+Teresa starts with 52 bananas. She gets 2 more from Rachel. How many bananas does Teresa end with?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['54'],['54'],math,Teresa starts with 52 bananas. She gets 2 more from Rachel. How many bananas does Teresa end with?,"answer=(52.0+2.0)
+print(answer)",54,test,singleop,Teresa starts with 52 bananas. She gets (2/(53/53))  more from Rachel. How many bananas does Teresa end with?,Teresa starts with 52 bananas. She gets EXPONENTIAL(LOG(2))  more from Rachel. How many bananas does Teresa end with?,Teresa starts with 52 bananas. She gets (2.0*(cos^2(4) + sin^2(4)))  more from Rachel. How many bananas does Teresa end with?
+consensus,"Solve the following math word problem.
+
+ A garden has 52 rows and 15 columns of bean plans. How many plants are there in all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ A garden has 52 rows and 15 columns of bean plans. How many plants are there in all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['780'],['780'],math, A garden has 52 rows and 15 columns of bean plans. How many plants are there in all?,"answer=(52.0*15.0)
+print(answer)",780,test,singleop, A garden has 52 rows and (15/(0.5*2))  columns of bean plans. How many plants are there in all?, A garden has 52 rows and LOG(EXPONENTIAL(15))  columns of bean plans. How many plants are there in all?, A garden has 52 rows and (15/(cosec^2(37) - cot^2(37)))  columns of bean plans. How many plants are there in all?
+consensus,"Solve the following math word problem.
+
+ I have 648 pencils. If I put 4 pencils in each pencil box, how many pencil boxes will I fill?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ I have 648 pencils. If I put 4 pencils in each pencil box, how many pencil boxes will I fill?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['162'],['162'],math," I have 648 pencils. If I put 4 pencils in each pencil box, how many pencil boxes will I fill?","answer=(648.0/4.0)
+print(answer)",162,test,singleop," I have 648 pencils. If I put (5-(54/54))  pencils in each pencil box, how many pencil boxes will I fill?"," I have 648 pencils. If I put LOG(EXPONENTIAL(4))  pencils in each pencil box, how many pencil boxes will I fill?"," I have 648 pencils. If I put (4.0*(cosec^2(94) - cot^2(94)))  pencils in each pencil box, how many pencil boxes will I fill?"
+consensus,"Solve the following math word problem.
+
+ Albert’s cabbage patch has 12 rows of cabbage. In each row, there are 15 heads of cabbage. How many heads of cabbage does Albert have in  all?
+
+Think step-by-step. Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.","Solve the following math word problem.
+
+ Albert’s cabbage patch has 12 rows of cabbage. In each row, there are 15 heads of cabbage. How many heads of cabbage does Albert have in  all?
+
+Then, provide the final answer as a single number in the format ""Answer: XXX"" with no extra formatting.",['180'],['180'],math," Albert’s cabbage patch has 12 rows of cabbage. In each row, there are 15 heads of cabbage. How many heads of cabbage does Albert have in  all?","answer=(12.0*15.0)
+print(answer)",180,test,singleop," Albert’s cabbage patch has (13-(0.5*2))  rows of cabbage. In each row, there are 15 heads of cabbage. How many heads of cabbage does Albert have in  all?"," Albert’s cabbage patch has LOG(EXPONENTIAL(12))  rows of cabbage. In each row, there are 15 heads of cabbage. How many heads of cabbage does Albert have in  all?"," Albert’s cabbage patch has (11+(sec^2(91)-tan^2(91)))  rows of cabbage. In each row, there are 15 heads of cabbage. How many heads of cabbage does Albert have in  all?"
