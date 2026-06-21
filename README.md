@@ -1,5 +1,7 @@
 # GSM-Identity: Evaluating Mathematical Reasoning in LLMs via Equivalence Transformations
-This code repository contains the GSM-Identity implementation for the [paper](https://link.springer.com/article/10.1007/s10994-026-07029-7s). It is developed in python 3.12.8
+This code repository contains the GSM-Identity implementation for the [paper](https://doi.org/10.1007/s10994-026-07029-7). 
+<br>
+It is developed in python 3.12.8
 <br>
 For assessing an LLM model on a new complex math dataset, use the command below with any input_filepath in the following format:
 <br>
