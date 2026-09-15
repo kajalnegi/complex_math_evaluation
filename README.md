@@ -45,3 +45,17 @@ input_filepath is .csv file with  columns *"question", and 'bodmas_question', 'e
 
 
 *python parsing_generated_output.py --input_filepath <input_filepath>*
+
+<br>
+
+If you use this project or code in your research, please cite it as follows:
+```bibtex
+@article{NEGI2026,
+      title={GSM-Identity: Evaluating Mathematical Reasoning in LLMs via Equivalence Transformations}, 
+      author={Negi, Kajal and Puccetti, Giovanni and Esuli, Andrea},
+      year={2026},
+      journal={Machine Learning},
+      url={https://doi.org/10.1007/s10994-026-07029-7}, 
+      DOI={10.1007/s10994-026-07029-7}
+}
+```
